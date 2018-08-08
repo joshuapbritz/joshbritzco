@@ -1,0 +1,104 @@
+:host {
+  display: block;
+  width: 100%;
+  height: 300px;
+  background-color: #ffffff;
+
+  @media screen and (max-width: 750px) {
+    padding-top: 40px;
+  }
+
+  .inner {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    list-style: none;
+    display: flex;
+    padding: 0;
+    align-items: stretch;
+    justify-content: space-evenly;
+    padding: 20px;
+    height: 100%;
+
+    .icon {
+      flex: 1;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+
+      svg {
+        display: block;
+        width: 50%;
+        max-width: 110px;
+        height: auto;
+
+        .st0,
+        .st1,
+        .st2,
+        .st3,
+        .st4,
+        .st5,
+        .st6,
+        .st7 {
+          fill: #dbdbdb;
+          transition: cubic-bezier(0.165, 0.84, 0.44, 1) 120ms;
+        }
+      }
+
+      &:hover {
+        &.stack {
+          svg {
+            .st0 {
+              fill: #bcbbbb;
+            }
+            .st1 {
+              fill: #f48023;
+            }
+          }
+        }
+
+        &.github {
+          .st0 {
+            fill: #9CDAF1;
+          }
+
+          .st1 {
+            fill: #7DBBE6;
+          }
+
+          .st2 {
+            fill: #000000;
+          }
+
+          .st3 {
+            fill: #F4CBB2;
+          }
+
+          .st4 {
+            fill: #ffffff;
+          }
+
+          .st5 {
+            fill: #AD5C51;
+          }
+
+          .st6 {
+            fill: #C3E4D8;
+          }
+
+          .st7 {
+            fill: #9CDAF1;
+          }
+        }
+
+        &.twitter {
+          .st0 {
+            fill: #1da1f2;
+          }
+        }
+      }
+    }
+  }
+}

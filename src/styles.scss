@@ -1,1 +1,82 @@
-/* You can add global styles to this file, and also import other style files */
+@import './theme/utils/reset';
+
+
+.blur {
+  filter: blur(10px);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.content-wrapper {
+  width: 90%;
+  height: auto;
+  max-width: 900px;
+  margin: auto;
+
+  p {
+    font-size: 19px;
+    color: #333333;
+    font-weight: 300;
+    line-height: 1.6;
+  }
+
+  a {
+    font-weight: 400;
+    color: rgb(142, 192, 175);
+    text-decoration: none;
+    position: relative;
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      height: 1px;
+      width: 0;
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      background-color: rgb(142, 192, 175);
+      transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 120ms;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.title-block {
+  width: 100%;
+  height: auto;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  text-align: center;
+
+  h1 {
+    font-weight: 900;
+    color: #dbdbdb;
+    text-transform: uppercase;
+    font-size: 50px;
+    margin: 0;
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 50%;
+      width: 120px;
+      margin-left: -60px;
+      height: 4px;
+      background-color: #dddddd;
+      bottom: -10px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<a [routerLink]="['/']" class="logo">
+  Joshua Britz
+</a>
+
+<ul class="nav" [class.open]="show_menu">
+  <li (click)="href('/')" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <a [routerLink]="['/']">Home</a>
+  </li>
+  <li (click)="href('/about')" routerLinkActive="active">
+    <a [routerLink]="['/about']">About</a>
+  </li>
+  <li (click)="href('/work')" routerLinkActive="active">
+    <a [routerLink]="['/work']">Work</a>
+  </li>
+  <li (click)="href('/skills')" routerLinkActive="active">
+    <a [routerLink]="['/skills']">Skills</a>
+  </li>
+  <li>
+    <a>Contact Me</a>
+  </li>
+</ul>
+
+<div class="mobile-button" [class.active]="show_menu" (click)="toggle_menu()">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
