@@ -1,3 +1,33 @@
-<div class="timeline-grid">
-  <div class="timeline-section"></div>
+<div class="skills-header">
+  <div class="content-wrapper">
+    <div class="title-block">
+      <h1>MY SKILLS</h1>
+    </div>
+    <p style="text-align: center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam enim eveniet odit fugit exercitationem ipsam modi autem sequi accusantium, ad quaerat sint id incidunt nemo facilis tempora consequatur obcaecati sunt!</p>
+  </div>
 </div>
+
+<app-timeline>
+  <app-timeline-section title="Front-end">
+    <app-timeline-section-item heading="CSS3 / SCSS" [skillLevel]="90" side="left"></app-timeline-section-item>
+    <app-timeline-section-item heading="HTML5" [skillLevel]="90" side="right"></app-timeline-section-item>
+    <app-timeline-section-item heading="JavaScript" [skillLevel]="92" side="left"></app-timeline-section-item>
+    <app-timeline-section-item heading="TypeScript" [skillLevel]="92" side="right"></app-timeline-section-item>
+    <app-timeline-section-item [heading]="angular" [skillLevel]="92" side="left"></app-timeline-section-item>
+    <app-timeline-section-item heading="Ionic 3" [skillLevel]="89" side="right"></app-timeline-section-item>
+  </app-timeline-section>
+  <app-timeline-section title="Backend">
+    <app-timeline-section-item heading="Node.js" [skillLevel]="70" side="left"></app-timeline-section-item>
+    <app-timeline-section-item heading="C#" [skillLevel]="77" side="right"></app-timeline-section-item>
+    <app-timeline-section-item heading="ASP.net" [skillLevel]="70" side="left"></app-timeline-section-item>
+    <app-timeline-section-item heading="MS SQL" [skillLevel]="85" side="right"></app-timeline-section-item>
+    <app-timeline-section-item heading="Firebase" [skillLevel]="89" side="left"></app-timeline-section-item>
+    <app-timeline-section-item heading="Azure" [skillLevel]="80" side="right"></app-timeline-section-item>
+  </app-timeline-section>
+  <app-timeline-section title="Other Skills">
+    <app-timeline-section-item heading="Python 3" [skillLevel]="25" side="left"></app-timeline-section-item>
+    <app-timeline-section-item heading="Git / Github" [skillLevel]="87" side="right"></app-timeline-section-item>
+    <app-timeline-section-item heading="Flutter" [skillLevel]="7" side="left"></app-timeline-section-item>
+    <app-timeline-section-item heading="GraphQL" [skillLevel]="13" side="right"></app-timeline-section-item>
+  </app-timeline-section>
+</app-timeline>

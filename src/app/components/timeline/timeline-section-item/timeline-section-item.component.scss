@@ -1,0 +1,126 @@
+:host {
+  display: block;
+  width: 100%;
+  padding-top: 50px;
+
+  .item-inner {
+    display: block;
+    width: calc(50% - 60px);
+    height: auto;
+    border: solid 2px #dbdbdb;
+    padding: 20px;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      background-color: #dbdbdb;
+      position: absolute;
+    }
+
+    &::before {
+      width: 10px;
+      height: 10px;
+      top: -6px;
+    }
+
+    &::after {
+      height: 2px;
+      width: 60px;
+      top: -2px;
+    }
+
+    &.left {
+      float: left;
+      border-right: none;
+
+      &::before {
+        right: -65px;
+      }
+
+      &::after {
+        right: -60px;
+      }
+    }
+
+    &.right {
+      float: right;
+      border-left: none;
+
+      &::before {
+        left: -65px;
+      }
+
+      &::after {
+        left: -60px;
+      }
+    }
+
+    @media screen and (max-width: 700px) {
+      &.left,
+      &.right {
+        float: left;
+        width: calc(70% - 60px);
+        margin-left: 71px;
+        border-left: none;
+        border-right: solid 2px #dbdbdb;
+
+        &::before {
+          left: -65px;
+          right: auto;
+        }
+
+        &::after {
+          left: -60px;
+          right: auto;
+        }
+      }
+    }
+
+    @media screen and (max-width:550px) {
+      &.left,
+      &.right {
+        width: calc(100% - 70px);
+      }
+    }
+
+    .title {
+      h3 {
+        font-weight: 300;
+        font-size: 30px;
+        margin: 0;
+      }
+    }
+
+    .proficiency {
+      .bar {
+        width: 100%;
+        height: 5px;
+        margin: 3px 0;
+        border: solid 1px #dbdbdb;
+
+        .inner {
+          background-color: #dbdbdb;
+          height: 100%;
+        }
+      }
+      h5 {
+        margin: 0;
+        font-size: 15px;
+        font-family: monospace;
+        color: #dbdbdb;
+      }
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

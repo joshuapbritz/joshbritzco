@@ -23,6 +23,7 @@ import { BrandCarouselComponent } from './components/brand-carousel/brand-carous
 import { BrandCarouselItemComponent } from './components/brand-carousel/brand-carousel-item/brand-carousel-item.component';
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { TimelineSectionComponent } from './components/timeline/timeline-section/timeline-section.component';
+import { TimelineSectionItemComponent } from './components/timeline/timeline-section-item/timeline-section-item.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { TimelineSectionComponent } from './components/timeline/timeline-section
     BrandCarouselItemComponent,
     TimelineComponent,
     TimelineSectionComponent,
+    TimelineSectionItemComponent,
   ],
   imports: [
     BrowserModule,
