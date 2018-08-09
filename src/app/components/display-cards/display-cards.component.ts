@@ -22,14 +22,4 @@ export class DisplayCardsComponent implements OnInit, AfterViewInit {
   ngOnInit() {}
 
   ngAfterViewInit(): void {}
-
-  @HostListener('mousemove', ['$event'])
-  onhover(event: MouseEvent) {
-    console.log('Is in card');
-  }
-
-  @HostListener('mouseleave')
-  onhoverend() {
-    console.log('Is not in card');
-  }
 }
