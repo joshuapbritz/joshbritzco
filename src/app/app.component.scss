@@ -28,3 +28,53 @@ footer {
     }
   }
 }
+
+.contact-links {
+  list-style: none;
+  display: block;
+  width: 90%;
+  max-width: 350px;
+  margin: auto;
+  padding: 0;
+
+  .contact-link {
+    position: relative;
+    border-radius: 5px;
+    overflow: hidden;
+    height: 60px;
+    margin: 0 0 10px 0;
+    padding-left: 60px;
+    border: solid 1px #999999;
+
+    .icon {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #999999;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        color: #ffffff;
+        font-size: 30px;
+      }
+    }
+
+    .label {
+      line-height: 60px;
+      font-size: 20px;
+
+      a {
+        text-indent: 10px;
+        display: block;
+        color: #999999;
+        font-weight: 300;
+        text-decoration: none;
+      }
+    }
+  }
+}

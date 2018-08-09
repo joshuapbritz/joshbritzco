@@ -1,0 +1,104 @@
+:host {
+  display: block;
+  // box-shadow: 1px 1px 7px -1px rgba(0, 0, 0, 0.42);
+  padding-top: 50px;
+  margin-bottom: 60px;
+
+  .card-inner {
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'image content';
+    border: solid 2px #dbdbdb;
+
+    &.right {
+      grid-template-columns: 1fr 400px;
+      grid-template-areas: 'content image';
+      .card-content-container {
+        padding-left: 15px;
+        padding-right: 0;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      grid-template-columns: 1fr !important;
+      grid-template-rows: auto auto !important;
+      grid-template-areas: 'image' 'content' !important;
+
+      .card-content-container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+      }
+
+      .card-image-container .image-border-box {
+        width: 60% !important;
+      }
+    }
+
+    @media screen and (max-width: 490px) {
+      .card-image-container .image-border-box {
+        width: 90% !important;
+      }
+    }
+
+    .card-image-container {
+      grid-area: image;
+
+      .image-border-box {
+        width: 90%;
+        height: auto;
+        margin: auto;
+        padding: 15px;
+        background-color: #ffffff;
+        transform: translateY(-40px);
+        border: solid 2px #dbdbdb;
+
+        img {
+          width: 100%;
+          height: auto;
+          box-shadow: 1px 1px 7px -1px rgba(0, 0, 0, 0.42);
+          display: block;
+        }
+      }
+    }
+
+    .card-content-container {
+      grid-area: content;
+      padding-left: 0;
+      padding-right: 15px;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto 90px;
+
+      .content-action {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        a {
+          will-change: transform;
+          display: block;
+          height: 50px;
+          padding: 0 25px;
+          font-size: 18px;
+          background-color: rgb(142, 192, 175);
+          color: #ffffff;
+          font-weight: 300;
+          text-transform: uppercase;
+          line-height: 50px;
+          transition: transform cubic-bezier(0.165, 0.84, 0.44, 1) 200ms;
+
+          &:hover {
+            transform: scale(1.1);
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

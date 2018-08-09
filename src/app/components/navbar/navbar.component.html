@@ -3,6 +3,7 @@
 </a>
 
 <ul class="nav" [class.open]="show_menu">
+  <div class="panel-after" (click)="close()"></div>
   <li (click)="href('/')" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
     <a [routerLink]="['/']">Home</a>
   </li>
@@ -15,7 +16,7 @@
   <li (click)="href('/skills')" routerLinkActive="active">
     <a [routerLink]="['/skills']">Skills</a>
   </li>
-  <li>
+  <li (click)="contact()">
     <a>Contact Me</a>
   </li>
 </ul>

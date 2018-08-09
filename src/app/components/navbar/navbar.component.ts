@@ -1,5 +1,6 @@
-import { Component, OnInit, ElementRef, AfterContentInit } from '@angular/core';
+import { Component, OnInit, ElementRef, AfterContentInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { ModalComponent } from '../modal/modal.component';
 
 @Component({
   selector: 'app-navbar',
@@ -7,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit, AfterContentInit {
+  @Input() modal: ModalComponent;
   public show_menu: boolean = false;
   public scrolled: boolean = false;
   private element: HTMLElement;
@@ -24,13 +26,11 @@ export class NavbarComponent implements OnInit, AfterContentInit {
   }
 
   toggle_menu() {
-    this.blur.classList.toggle('blur');
     this.show_menu = !this.show_menu;
   }
 
   close() {
     this.show_menu = false;
-    this.blur.classList.remove('blur');
   }
 
   href(link: string) {
@@ -50,5 +50,9 @@ export class NavbarComponent implements OnInit, AfterContentInit {
     window.addEventListener('scroll', () => {
       this.checkScrollPosition();
     });
+  }
+
+  contact() {
+    this.modal.open();
   }
 }

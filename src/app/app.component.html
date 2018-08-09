@@ -1,6 +1,5 @@
 <div class="spacer"></div>
-
-<app-navbar></app-navbar>
+<app-navbar [modal]="modal"></app-navbar>
 
 <div id="blur">
   <router-outlet></router-outlet>
@@ -13,3 +12,36 @@
     </div>
   </footer>
 </div>
+
+
+<content-modal #modal>
+  <div class="title-block">
+    <h2>Contact Me</h2>
+    <p>
+      Please feel free to give me a call or
+      <br>drop me an email
+    </p>
+  </div>
+  <ul class="contact-links">
+    <li class="contact-link">
+      <div class="icon">
+        <i class="material-icons">
+          phone_android
+        </i>
+      </div>
+      <div class="label">
+        <a href="tel:+2766 266 9858">+2766 266 9858</a>
+      </div>
+    </li>
+    <li class="contact-link">
+      <div class="icon">
+        <i class="material-icons">
+          alternate_email
+        </i>
+      </div>
+      <div class="label">
+        <a href="mailto:joshuabritz@gmail.com">joshuabritz@gmail.com</a>
+      </div>
+    </li>
+  </ul>
+</content-modal>

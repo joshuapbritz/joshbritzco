@@ -24,6 +24,9 @@ import { BrandCarouselItemComponent } from './components/brand-carousel/brand-ca
 import { TimelineComponent } from './components/timeline/timeline.component';
 import { TimelineSectionComponent } from './components/timeline/timeline-section/timeline-section.component';
 import { TimelineSectionItemComponent } from './components/timeline/timeline-section-item/timeline-section-item.component';
+import { SourceCodeComponent } from './components/source-code/source-code.component';
+import { DisplayCardsComponent } from './components/display-cards/display-cards.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 @NgModule({
   declarations: [
@@ -41,12 +44,15 @@ import { TimelineSectionItemComponent } from './components/timeline/timeline-sec
     TimelineComponent,
     TimelineSectionComponent,
     TimelineSectionItemComponent,
+    SourceCodeComponent,
+    DisplayCardsComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot(router.routes),
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
   ],
   providers: [
     ApiService,

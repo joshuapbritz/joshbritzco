@@ -1,4 +1,11 @@
 <div class="slide-title" *ngIf="slideTitle">
   <span>{{slideTitle}}</span>
 </div>
-<div class="slide-content"><ng-content></ng-content></div>
+<div class="slide-content">
+  <ng-content></ng-content>
+</div>
+<div class="link" *ngIf="link">
+  <i class="material-icons">
+    open_in_new
+  </i>
+</div>

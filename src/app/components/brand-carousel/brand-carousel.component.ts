@@ -33,7 +33,6 @@ export class BrandCarouselComponent implements AfterContentInit, OnDestroy {
     }, 7000);
 
     window.addEventListener('resize', () => {
-      console.log('ressizez');
       clearInterval(this.interval);
       this.setUp();
       this.interval = setInterval(() => {
@@ -66,7 +65,6 @@ export class BrandCarouselComponent implements AfterContentInit, OnDestroy {
   hover() {
     clearInterval(this.interval);
     this.interval = undefined;
-    console.log('Hovered');
   }
 
   @HostListener('mouseleave')
