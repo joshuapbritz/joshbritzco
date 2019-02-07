@@ -1,7 +1,19 @@
 @import './theme/utils/reset';
+@import '~prismjs/themes/prism-twilight.css';
 
 .blur {
   filter: blur(10px);
+}
+
+.token {
+  color: #ffffff;
+  font-family: monospace;
+}
+
+pre {
+  margin: 0;
+  padding: 7px 0;
+  font-family: monospace;
 }
 
 .no-scroll {

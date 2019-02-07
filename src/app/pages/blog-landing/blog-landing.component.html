@@ -1,0 +1,23 @@
+<div class="blog-landing-page">
+  <div class="content-wrapper">
+    <div class="title-block">
+      <h1>Codelabs</h1>
+      <p>
+        Writings, snippets, tutorials.
+      </p>
+    </div>
+    <div class="blog-post-list">
+      <app-blog-card-row
+        *ngFor="let row of posts; let i = index"
+        [rowalign]="getClass(i)"
+      >
+        <app-blog-card-item
+          *ngFor="let post of row"
+          [title]="post.title"
+          [snippet]="post.snippet"
+          [src]="post.image"
+        ></app-blog-card-item>
+      </app-blog-card-row>
+    </div>
+  </div>
+</div>

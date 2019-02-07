@@ -1,0 +1,25 @@
+:host {
+  display: block;
+  max-width: 700px;
+  height: auto;
+  width: 90%;
+  margin: 20px auto;
+  border-radius: 5px;
+  padding: 15px;
+  background-image: repeating-linear-gradient(
+    to bottom right,
+    rgb(0, 4, 54) 0%,
+    rgb(27, 33, 59) 100%
+  );
+  box-shadow: 0px 0px 8px -1px rgba(4, 0, 54, 1);
+  .snippet-wrapper {
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+    .snippet-outlet {
+      color: #ffffff;
+      font-family: monospace !important;
+      user-select: all;
+    }
+  }
+}

@@ -1,0 +1,37 @@
+import { AppBrandCarousel } from 'src/app/components/brand-carousel/brand-carousel.module';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { AppBlogCards } from './blog-cards/blog-cards.module';
+import { AppDisplayCards } from './display-cards/display-cards.module';
+import { AppModal } from './modal/modal.module';
+import { AppNavbar } from './navbar/navbar.module';
+import { AppSnippets } from './snippets/snippets.module';
+import { AppSocial } from './social/social.module';
+import { AppTimeline } from './timeline/timeline.module';
+import { AppToast } from './toast/toast.module';
+
+@NgModule({
+  imports: [
+    AppBlogCards,
+    AppBrandCarousel,
+    AppDisplayCards,
+    AppModal,
+    AppNavbar,
+    AppSnippets,
+    AppSocial,
+    AppTimeline,
+    AppToast,
+  ],
+  exports: [
+    AppBlogCards,
+    AppBrandCarousel,
+    AppDisplayCards,
+    AppModal,
+    AppNavbar,
+    AppSnippets,
+    AppSocial,
+    AppTimeline,
+    AppToast,
+  ],
+})
+export class AppComponentsModule {}

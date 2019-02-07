@@ -1,24 +1,35 @@
-import { SkillsComponent } from './pages/skills/skills.component';
-import { AboutComponent } from './pages/about/about.component';
-import { HomeComponent } from './pages/home/home.component';
 import { Routes } from '@angular/router';
-import { WorkComponent } from './pages/work/work.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
+    loadChildren: './pages/home/home.module#HomePageModule',
   },
   {
     path: 'about',
-    component: AboutComponent,
+    loadChildren: './pages/about/about.module#AboutPageModule',
   },
   {
     path: 'work',
-    component: WorkComponent,
+    loadChildren: './pages/work/work.module#WorkPageModule',
   },
   {
     path: 'skills',
-    component: SkillsComponent,
+    loadChildren: './pages/skills/skills.module#SkillsPageModule',
+  },
+  {
+    path: 'codelabs',
+    loadChildren:
+      './pages/blog-landing/blog-landing.module#BlogLandingPageModule',
+  },
+  {
+    path: `codelabs/create-a-keybinding-service-in-angular`,
+    loadChildren:
+      './pages/blog-posts/create-keybind-service/create-keybind-service.module#CreateKeybindServicePost',
+  },
+  {
+    path: 'codelabs/the-magic-of-css-variables',
+    loadChildren:
+      './pages/blog-posts/magic-of-css/magic-of-css.module#MagicOfCssPost',
   },
 ];
