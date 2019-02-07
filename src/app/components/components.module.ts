@@ -9,6 +9,7 @@ import { AppSnippets } from './snippets/snippets.module';
 import { AppSocial } from './social/social.module';
 import { AppTimeline } from './timeline/timeline.module';
 import { AppToast } from './toast/toast.module';
+import { AppBlogPostHeader } from './blog-post-header/blog-post-header.module';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import { AppToast } from './toast/toast.module';
     AppSocial,
     AppTimeline,
     AppToast,
+    AppBlogPostHeader,
   ],
   exports: [
     AppBlogCards,
@@ -32,6 +34,7 @@ import { AppToast } from './toast/toast.module';
     AppSocial,
     AppTimeline,
     AppToast,
+    AppBlogPostHeader,
   ],
 })
 export class AppComponentsModule {}

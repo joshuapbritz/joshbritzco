@@ -7,4 +7,4 @@ import { BlogPostHeaderComponent } from './blog-post-header.component';
   declarations: [BlogPostHeaderComponent],
   exports: [BlogPostHeaderComponent],
 })
-export class BlogPostHeaderModule {}
+export class AppBlogPostHeader {}
