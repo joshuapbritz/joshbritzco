@@ -1,6 +1,5 @@
 import { AppBrandCarousel } from 'src/app/components/brand-carousel/brand-carousel.module';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { AppBlogCards } from './blog-cards/blog-cards.module';
 import { AppDisplayCards } from './display-cards/display-cards.module';
 import { AppModal } from './modal/modal.module';
