@@ -9,6 +9,8 @@ export class BlogCardRowComponent implements OnInit {
   @Input() @HostBinding('class') public rowalign: 'left' | 'center' | 'right' =
     'center';
 
+  public title: string = 'hello2';
+
   constructor() {}
 
   ngOnInit() {}

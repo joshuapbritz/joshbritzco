@@ -8,9 +8,8 @@ describe('BlogCardRowComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BlogCardRowComponent ]
-    })
-    .compileComponents();
+      declarations: [BlogCardRowComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -21,5 +20,9 @@ describe('BlogCardRowComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should create title', () => {
+    expect(component.title).toEqual('hello');
   });
 });
