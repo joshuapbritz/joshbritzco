@@ -159,7 +159,7 @@ export const KEYS = {
   ZERO: 48,
 };
 
-export type KEYNAMES =
+export type KeyNames =
   | 'MAC_ENTER'
   | 'BACKSPACE'
   | 'TAB'
@@ -306,6 +306,15 @@ export function hasModifierKey(
     // Do action
   }
 });`,
+    snippet8: `public match(
+  matchKeys: KeyNames[],
+  matchModifiers: ModifierKey[],
+  listenOn: EventTarget = window
+): Observable<KeyboardEvent> {
+  return new Observable(({ next }) => {
+    const listener$ = fromEvent(listenOn, 'keydown');
+  });
+}`,
   };
 
   constructor() {}

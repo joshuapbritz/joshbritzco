@@ -1,3 +1,9 @@
+<app-blog-post-header
+  title="Create a Keybinding Service in Angular"
+  subtitle="Create a service to help you manage key combinations in your next app"
+  image="assets/images/pexels-photo-1638061.jpeg"
+></app-blog-post-header>
+
 <article class="content-wrapper">
   <p>
     A common frustration I come across when working with Angular (or any other
@@ -87,6 +93,19 @@
     This code is much cleaner, but we can do better than that. What we want is a
     declarative way of listening to key events.
   </p>
+
+  <p>
+    In the key bind service you will create a new method called
+    <strong>match()</strong>. We will have parameters so that you can specify
+    the keys and modifiers you want to listen for, an optional EventTarget so
+    that you can specify where to listen for the events, and return an
+    Observable that fires when the binding is matched.
+  </p>
+
+  <app-code-snippet
+    [snippet]="snippets.snippet8"
+    lang="javascript"
+  ></app-code-snippet>
 </article>
 <!-- <app-code-snippet
   [snippet]="snippets.test"

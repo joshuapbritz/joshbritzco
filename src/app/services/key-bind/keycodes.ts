@@ -129,7 +129,7 @@ export const KEYS = {
   ZERO: 48,
 };
 
-export type KEYNAMES =
+export type KeyNames =
   | 'MAC_ENTER'
   | 'BACKSPACE'
   | 'TAB'
