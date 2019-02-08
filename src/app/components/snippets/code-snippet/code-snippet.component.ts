@@ -21,6 +21,7 @@ export class CodeSnippetComponent implements OnInit {
   public snippetCode: string;
 
   @Input() public lang: string;
+  @Input() public src: string;
   constructor(private toast: ToastService) {}
 
   ngOnInit() {

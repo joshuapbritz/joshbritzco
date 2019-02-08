@@ -36,12 +36,35 @@
 <article class="content-wrapper">
   <h2>Setting things Up</h2>
   <p>
-    First of all we need to create a service that will do all our work. 
+    First of all we need to create a service that will do all our work.
   </p>
   <app-terminal-snippet>{{ snippets.snippet3 }}</app-terminal-snippet>
   <p>
-    You should now have a fresh project to work in.
+    Your newly made service should look something like this.
   </p>
+  <app-code-snippet
+    [snippet]="snippets.snippet4"
+    lang="javascript"
+    src="key-bind.service.ts"
+  ></app-code-snippet>
+  <p>
+    In the same folder as your service, create two new files: one called
+    <strong>modifiers.ts</strong> and one called
+    <strong>keycodes.ts</strong> and copy the following code into them. You can
+    move these later, but for now it is easier to keep them in the same folder
+    as your service.
+  </p>
+  <app-code-snippet
+    [snippet]="snippets.snippet5"
+    lang="javascript"
+    src="keycodes.ts"
+  ></app-code-snippet>
+
+  <app-code-snippet
+    [snippet]="snippets.snippet6"
+    lang="javascript"
+    src="modifiers.ts"
+  ></app-code-snippet>
 </article>
 <!-- <app-code-snippet
   [snippet]="snippets.test"
