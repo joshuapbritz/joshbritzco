@@ -33,15 +33,15 @@ jobs:
 
       - run:
           name: Linting
-          command: yarn lint
+          command: npm run lint
 
       - run: 
           name: Testing
-          command: yarn test
+          command: npm run test
 
       - run:
           name: Build
-          command: yarn build
+          command: npm run build
 
       - save_cache:
           key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
