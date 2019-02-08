@@ -8,9 +8,7 @@ jobs:
     working_directory: ~/project
     docker:
       # specify the version you desire here
-      - image: circleci/node:11.7
-        environment:
-            CHROME_BIN: "/usr/bin/google-chrome"
+      - image: circleci/node:11.7-browsers
     steps:
       - checkout
 

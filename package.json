@@ -5,7 +5,7 @@
     "ng": "ng",
     "start": "ng serve --open --port 7200 --host 0.0.0.0",
     "build": "ng build --prod",
-    "test": "ng test --watch=false --progress=false --browsers=ChromeHeadlessCI",
+    "test": "ng test --watch=false --progress=false --browsers=ChromeNoSandboxHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
