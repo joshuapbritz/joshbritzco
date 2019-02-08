@@ -43,42 +43,49 @@ jobs:
           name: Build
           command: npm run build
 
+      - run:
+          name: Deploy Master to Firebase
+          # command: npm run deploy:ci
+          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+
       - save_cache:
           key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
           paths:
             - dist
+#   deploy:
+#     working_directory: ~/project
+#     docker:
+#       # specify the version you desire here
+#       - image: circleci/node:11.7-browsers
 
-  deploy:
-    working_directory: ~/project
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:11.7-browsers
+#     steps:
+#       # Log the current branch
+#       - run:
+#           name: Show current branch
+#           command: echo ${CIRCLE_BRANCH}
 
-    steps:
-      # Log the current branch
-      - run:
-          name: Show current branch
-          command: echo ${CIRCLE_BRANCH}
+#       - restore_cache:
+#           key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
 
-      - restore_cache:
-          key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
+#       - restore_cache:
+#           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run: npm install -g firebase-tools
+#       - run:
 
-      - run:
-          name: Deploy Master to Firebase
-          # command: npm run deploy:ci
-          command: firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+#       - run:
+#           name: Deploy Master to Firebase
+#           # command: npm run deploy:ci
+#           command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
 
-workflows:
-  version: 2
+# workflows:
+#   version: 2
 
-  build_and_deploy:
-    jobs:
-      - build
-      - deploy:
-          requires:
-            - build
-          filters:
-            branches:
-              only: master
+#   build_and_deploy:
+#     jobs:
+#       - build
+#       - deploy:
+#           requires:
+#             - build
+#           filters:
+#             branches:
+#               only: master
