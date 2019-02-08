@@ -18,7 +18,7 @@ jobs:
       # Download and cache dependencies
       - restore_cache:
           keys:
-            - v1-dependencies-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
+            - v1-dependencies-{{ checksum "package.json" }}
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
@@ -27,7 +27,7 @@ jobs:
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
+          key: v1-dependencies-{{ checksum "package.json" }}
 
       - run:
           name: Linting
@@ -63,13 +63,12 @@ jobs:
       - restore_cache:
           key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
 
-      - restore_cache:
-          key: v1-dependencies-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
+      - run: npm install -g firebase-tools
 
       - run:
           name: Deploy Master to Firebase
           # command: npm run deploy:ci
-          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+          command: firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
 
 workflows:
   version: 2
