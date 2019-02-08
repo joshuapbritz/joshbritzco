@@ -97,13 +97,59 @@
   <p>
     In the key bind service you will create a new method called
     <strong>match()</strong>. We will have parameters so that you can specify
-    the keys and modifiers you want to listen for, an optional EventTarget so
-    that you can specify where to listen for the events, and return an
-    Observable that fires when the binding is matched.
+    the keys and modifiers you want to listen for, some extra options, and we
+    will return an Observable that fires when the binding is matched.
   </p>
 
   <app-code-snippet
     [snippet]="snippets.snippet8"
+    lang="javascript"
+  ></app-code-snippet>
+
+  <p>
+    And a class for you extra config
+  </p>
+
+  <app-code-snippet
+    [snippet]="snippets.snippet9"
+    lang="javascript"
+  ></app-code-snippet>
+
+  <p>
+    Now that we have out plumbing in place, we will need to subscribe to our
+    keydown listener, and check if the current event's keys match the binding
+    specified. To do that, we will use the methods defined in
+    <strong>keycodes.ts</strong> and <strong>modifiers.ts</strong>.
+  </p>
+
+  <app-code-snippet
+    [snippet]="snippets.snippet10"
+    lang="javascript"
+  ></app-code-snippet>
+
+  <p>
+    <i>*note</i> we added
+    <strong
+      >(!matchModifiers.length || hasModifierKey(event,
+      ...matchModifiers)</strong
+    >
+    to the if statement so that it can match a binding that has no modifiers.
+  </p>
+
+  <p>
+    The service is now ready to be used. You can provide it to a component
+    through the constructor.
+  </p>
+
+  <app-code-snippet
+    [snippet]="snippets.snippet11"
+    lang="javascript"
+  ></app-code-snippet>
+
+  <p>And to use it</p>
+
+  <app-code-snippet
+    [snippet]="snippets.snippet12"
     lang="javascript"
   ></app-code-snippet>
 </article>

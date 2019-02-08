@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { hasKeycode, KEYS } from 'src/app/services/key-bind/keycodes';
 import { hasModifierKey } from 'src/app/services/key-bind/modifiers';
+import { KeyBindService } from 'src/app/services/key-bind/key-bind.service';
 
 @Component({
   selector: 'app-create-keybind-service',
@@ -307,17 +308,59 @@ export function hasModifierKey(
   }
 });`,
     snippet8: `public match(
-  matchKeys: KeyNames[],
-  matchModifiers: ModifierKey[],
-  listenOn: EventTarget = window
+  matchKey: number,
+  matchModifiers: ModifierKey[] = [],
+  options?: MatchConfig
 ): Observable<KeyboardEvent> {
-  return new Observable(({ next }) => {
+
+  const { listenOn } = new MatchConfig(options);
+
+  return new Observable((observer) => {
     const listener$ = fromEvent(listenOn, 'keydown');
   });
 }`,
+    snippet9: `export class MatchConfig {
+  public listenOn: EventTarget = window;
+
+  constructor(init: Partial<MatchConfig>) {
+    Object.assign(this, init);
+  }
+}`,
+    snippet10: `public match(
+  matchKey: number,
+  matchModifiers: ModifierKey[] = [],
+  options?: MatchConfig
+): Observable<KeyboardEvent> {
+
+  const { listenOn } = new MatchConfig(options);
+
+  return new Observable((observer) => {
+    const listener$ = fromEvent(listenOn, 'keydown');
+
+    listener$.subscribe((event: KeyboardEvent) => {
+      if (
+        hasKeycode(event, matchKey) &&
+        (!matchModifiers.length || hasModifierKey(event, ...matchModifiers))
+      ) {
+        observer.next(event);
+      }
+    });
+  });
+}`,
+    snippet11: `constructor(private keybind: KeyBindService) {}`,
+    snippet12: `const binding$ = this.keybind.match(KEYS.RIGHT_ARROW, ['ctrlKey]).subscribe(() => {
+  alert('binding pressed');
+});
+
+// to stop listening to the binding call .unsubscribe on it
+binding$.unsubscribe()`,
   };
 
-  constructor() {}
+  constructor(private keybind: KeyBindService) {
+    this.keybind.match(KEYS.RIGHT_ARROW).subscribe(() => {
+      alert('sub hit');
+    });
+  }
 
   ngOnInit() {}
 }
