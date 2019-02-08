@@ -1,4 +1,51 @@
-<app-code-snippet [snippet]="snippets.test" lang="javascript"></app-code-snippet>
+<article class="content-wrapper">
+  <p>
+    A common frustration I come across when working with Angular (or any other
+    framework for that matter), is running functions based on key bindings. The
+    typical method of doing this is unreadable and messy. For example, if you
+    wanted to run a function when a user hit <strong>CTRL+ALT+D</strong> your
+    code would look something like this.
+  </p>
+  <app-code-snippet
+    [snippet]="snippets.snippet1"
+    lang="javascript"
+  ></app-code-snippet>
+  <p>
+    True, it could be worse. Never the less, doing this can become very messy
+    very quickly. It is also difficult to quickly find and fix problems because
+    you have to know exactly which key code is which to know what key command is
+    being listened for. In a recent project I was working on, I decided to
+    remedy the issue by abstracting the proccess into an Angular service and now
+    I'm going to show you how to do it.
+  </p>
+</article>
+<br />
+<article class="content-wrapper">
+  <h2>Creating a project</h2>
+  <p>
+    Because we are making an Angular service, you will need to have an angular
+    project to work in. You can use an exsisting one, or you can create a new
+    blank project to play around with.
+  </p>
+  <app-terminal-snippet>{{ snippets.snippet2 }}</app-terminal-snippet>
+  <p>
+    You should now have a fresh project to work in.
+  </p>
+</article>
+<br />
+<article class="content-wrapper">
+  <h2>Setting things Up</h2>
+  <p>
+    First of all we need to create a service that will do all our work. 
+  </p>
+  <app-terminal-snippet>{{ snippets.snippet3 }}</app-terminal-snippet>
+  <p>
+    You should now have a fresh project to work in.
+  </p>
+</article>
+<!-- <app-code-snippet
+  [snippet]="snippets.test"
+  lang="javascript"
+></app-code-snippet>
 <app-code-snippet [snippet]="snippets.html" lang="html"></app-code-snippet>
-<app-code-snippet [snippet]="snippets.css" lang="css"></app-code-snippet>
-<app-terminal-snippet>ng g service services/key-bind</app-terminal-snippet>
+<app-code-snippet [snippet]="snippets.css" lang="css"></app-code-snippet> -->

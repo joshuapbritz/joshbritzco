@@ -21,6 +21,6 @@ export class TerminalSnippetComponent implements OnInit {
 
   @HostListener('click') public onclick() {
     copytext(this.host.nativeElement.textContent);
-    this.toast.show({ message: 'Code has been copied to your clipboard' });
+    this.toast.show({ message: 'Command has been copied to your clipboard' });
   }
 }

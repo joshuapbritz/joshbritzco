@@ -7,17 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateKeybindServiceComponent implements OnInit {
   public snippets = {
-    test: `function doThing()
-{
-  alert('thing done');
-}`,
-    html: `<div class="parent">
-  <span>Title</span>
-</div>
+    snippet1: `window.addEventListener('keydown', (event: KeyboardEvent) => {
+    // Fall back to event.which if event.keyCode is null
+    const keycode = event.keyCode || event.which;
 
-<div class="parent">
-  <span>Title</span>
-</div>`,
+    if (keycode === 68 && event.ctrlKey && event.altKey) {
+      // Do stuff here
+    }
+});`,
+    snippet2: `ng new KeyBindServiceApp`,
+    snippet3: `ng g service path/to/services/key-bind`,
     css: `.selector {
   width: 300px;
   height: 300px;
@@ -28,3 +27,12 @@ export class CreateKeybindServiceComponent implements OnInit {
 
   ngOnInit() {}
 }
+
+// window.addEventListener('keydown', (event: KeyboardEvent) => {
+//   // Fall back to event.which if event.keyCode is null
+//   const keycode = event.keyCode || event.which;
+
+//   if (keycode === 68 && event.ctrlKey && event.altKey) {
+//     // Do stuff here
+//   }
+// });
