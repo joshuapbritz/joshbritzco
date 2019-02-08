@@ -63,6 +63,8 @@ jobs:
       - restore_cache:
           key: v1-dist-{{ .Environment.CIRCLE_BRANCH }}-{{ .Environment.CIRCLE_SHA1 }}
 
+      - run: npm install
+
       - run:
           name: Deploy Master to Firebase
           command: npm run deploy:ci
