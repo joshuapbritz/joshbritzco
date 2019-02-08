@@ -65,6 +65,28 @@
     lang="javascript"
     src="modifiers.ts"
   ></app-code-snippet>
+
+  <p>
+    These files contain helpers we will use to make our service work properly.
+    For example <strong>keycodes.ts</strong> has a list of all the key codes,
+    mapped to readable names, and <strong>modifiers.ts</strong> has a helper
+    function to check if one or more modifier keys are present in and event.
+  </p>
+
+  <p>
+    Theoretically, they already make your life easier. You could use them as
+    below.
+  </p>
+
+  <app-code-snippet
+    [snippet]="snippets.snippet7"
+    lang="javascript"
+  ></app-code-snippet>
+
+  <p>
+    This code is much cleaner, but we can do better than that. What we want is a
+    declarative way of listening to key events.
+  </p>
 </article>
 <!-- <app-code-snippet
   [snippet]="snippets.test"

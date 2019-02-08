@@ -1,40 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { hasKeycode, KEYS } from 'src/app/services/key-bind/keycodes';
-import { hasModifierKey } from 'src/app/services/key-bind/modifiers';
-
-@Component({
-  selector: 'app-create-keybind-service',
-  templateUrl: './create-keybind-service.component.html',
-  styleUrls: ['./create-keybind-service.component.scss'],
-})
-export class CreateKeybindServiceComponent implements OnInit {
-  public snippets = {
-    snippet1: `window.addEventListener('keydown', (event: KeyboardEvent) => {
-    // Fall back to event.which if event.keyCode is null
-    const keycode = event.keyCode || event.which;
-
-    if (keycode === 68 && event.ctrlKey && event.altKey) {
-      // Do stuff here
-    }
-});`,
-    snippet2: `ng new KeyBindServiceApp`,
-    snippet3: `ng g service path/to/services/key-bind`,
-    snippet4: `import { Injectable } from '@angular/core';
-
-@Injectable({
-  providedIn: 'root'
-})
-export class KeyBindService {
-
-  constructor() { }
-}`,
-    snippet5: `/**
-* Checks if an event has any of the provided
-* keycodes
-* @param {KeyboardEvent} event
-* @param {Array<number>} codes
-*/
-export function hasKeycode(event: KeyboardEvent, codes: number[]): boolean {
+/**
+ * Checks if an event has any of the provided
+ * keycodes
+ * @param {KeyboardEvent} event
+ * @param {Array<number>} codes
+ */
+export function hasKeycode(event: KeyboardEvent, ...codes: number[]): boolean {
   return codes.some(value => (event.keyCode || event.which) === value);
 }
 
@@ -277,54 +247,4 @@ export type KEYNAMES =
   | 'BACKSLASH'
   | 'CLOSE_SQUARE_BRACKET'
   | 'SINGLE_QUOTE'
-  | 'MAC_META';`,
-    snippet6: `export type ModifierKey = 'altKey' | 'shiftKey' | 'ctrlKey' | 'metaKey';
-
-export const MODIFIERS = ['altKey', 'shiftKey', 'ctrlKey', 'metaKey'];
-
-/**
- * Checks whether a modifier key is pressed.
- * @param event Event to be checked.
- */
-export function hasModifierKey(
-  event: KeyboardEvent,
-  ...modifiers: ModifierKey[]
-): boolean {
-  if (modifiers.length) {
-    return modifiers.some(modifier => event[modifier]);
-  }
-
-  return event.altKey || event.shiftKey || event.ctrlKey || event.metaKey;
-}`,
-    snippet7: `window.addEventListener('keydown', (event: KeyboardEvent) => {
-  const { D } = KEYS;
-
-  if (
-    hasKeycode(event, D) &&
-    hasModifierKey(event, 'ctrlKey', 'altKey')
-  ) {
-    // Do action
-  }
-});`,
-  };
-
-  constructor() {}
-
-  ngOnInit() {}
-}
-
-// window.addEventListener('keydown', (event: KeyboardEvent) => {
-//   // Fall back to event.which if event.keyCode is null
-//   const keycode = event.keyCode || event.which;
-
-//   if (keycode === 68 && event.ctrlKey && event.altKey) {
-//     // Do stuff here
-//   }
-// });
-
-window.addEventListener('keydown', (event: KeyboardEvent) => {
-  const { D } = KEYS;
-  if (hasKeycode(event, D) && hasModifierKey(event, 'ctrlKey', 'altKey')) {
-    alert('hit');
-  }
-});
+  | 'MAC_META';
