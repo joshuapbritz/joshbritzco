@@ -35,10 +35,6 @@ jobs:
           name: Linting
           command: npm run lint
 
-      - run: 
-          name: Testing
-          command: npm run test
-
       - run:
           name: Build
           command: npm run build
