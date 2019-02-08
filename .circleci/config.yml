@@ -36,7 +36,11 @@ jobs:
           command: npm run lint
 
       - run: npm rebuild node-sass
-      
+
+      - run: 
+          name: Testing
+          command: npm run test
+
       - run:
           name: Build
           command: npm run build

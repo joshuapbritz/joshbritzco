@@ -1,9 +1,10 @@
+import { DirectivesModule } from './../../directives/directives.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SocialComponent } from './social.component';
 
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, DirectivesModule],
   declarations: [SocialComponent],
   exports: [SocialComponent],
 })
