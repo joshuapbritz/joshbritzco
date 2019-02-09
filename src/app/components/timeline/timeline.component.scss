@@ -17,8 +17,8 @@
     text-align: center;
     padding: 0 15px;
     transform: translateX(-50%);
-    background-color: #cfcfcf;
-    border: solid 2px #cfcfcf;
+    background-color: var(--accent-tint);
+    border: solid 2px var(--accent-tint);
     font-size: 20px;
     color: #ffffff;
   }

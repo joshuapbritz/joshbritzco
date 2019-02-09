@@ -1,4 +1,5 @@
 @import './theme/utils/reset';
+@import './theme/colors';
 @import '~prismjs/themes/prism-twilight.css';
 
 .blur {
@@ -79,7 +80,7 @@ pre {
 
   h1 {
     font-weight: 900;
-    color: #dbdbdb;
+    color: var(--accent);
     text-transform: uppercase;
     font-size: 50px;
     margin: 0;
@@ -93,7 +94,7 @@ pre {
       width: 120px;
       margin-left: -60px;
       height: 4px;
-      background-color: #dddddd;
+      background-color: var(--accent-tint);
       bottom: -10px;
     }
   }

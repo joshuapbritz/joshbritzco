@@ -55,11 +55,11 @@
       }
 
       &:hover::after {
-        background-color: #eeeeee;
+        background-color: var(--accent-tint);
       }
 
       &.active::after {
-        background-color: #dbdbdb;
+        background-color: var(--accent);
       }
 
       a {

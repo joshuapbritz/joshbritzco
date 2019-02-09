@@ -16,9 +16,9 @@
     padding: 0 15px;
     transform: translateX(-50%);
     background-color: #ffffff;
-    border: solid 2px #dbdbdb;
+    border: solid 2px var(--accent-tint);
     font-size: 20px;
-    color: #cfcfcf;
+    color: var(--accent);
   }
 
   @media screen and (max-width: 700px) {

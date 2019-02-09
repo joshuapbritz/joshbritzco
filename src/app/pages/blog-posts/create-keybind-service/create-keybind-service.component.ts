@@ -1,7 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { hasKeycode, KEYS } from 'src/app/services/key-bind/keycodes';
-import { hasModifierKey } from 'src/app/services/key-bind/modifiers';
-import { KeyBindService } from 'src/app/services/key-bind/key-bind.service';
 
 @Component({
   selector: 'app-create-keybind-service',
@@ -356,27 +353,7 @@ export function hasModifierKey(
 binding$.unsubscribe()`,
   };
 
-  constructor(private keybind: KeyBindService) {
-    this.keybind.match('RIGHT_ARROW').subscribe(() => {
-      alert('sub hit');
-    });
-  }
+  constructor() {}
 
   ngOnInit() {}
 }
-
-// window.addEventListener('keydown', (event: KeyboardEvent) => {
-//   // Fall back to event.which if event.keyCode is null
-//   const keycode = event.keyCode || event.which;
-
-//   if (keycode === 68 && event.ctrlKey && event.altKey) {
-//     // Do stuff here
-//   }
-// });
-
-// window.addEventListener('keydown', (event: KeyboardEvent) => {
-//   const { D } = KEYS;
-//   if (hasKeycode(event, D) && hasModifierKey(event, 'ctrlKey', 'altKey')) {
-//     alert('hit');
-//   }
-// });

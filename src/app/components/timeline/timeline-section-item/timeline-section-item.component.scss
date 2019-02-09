@@ -7,7 +7,7 @@
     display: block;
     width: calc(50% - 60px);
     height: auto;
-    border: solid 2px #dbdbdb;
+    border: solid 2px var(--accent-tint);
     padding: 20px;
     position: relative;
 
@@ -15,7 +15,7 @@
     &::after {
       content: '';
       display: block;
-      background-color: #dbdbdb;
+      background-color: var(--accent-tint);
       position: absolute;
     }
 
@@ -64,7 +64,7 @@
         width: calc(70% - 60px);
         margin-left: 71px;
         border-left: none;
-        border-right: solid 2px #dbdbdb;
+        border-right: solid 2px var(--accent-tint);
 
         &::before {
           left: -65px;
@@ -78,7 +78,7 @@
       }
     }
 
-    @media screen and (max-width:550px) {
+    @media screen and (max-width: 550px) {
       &.left,
       &.right {
         width: calc(100% - 70px);
@@ -98,10 +98,10 @@
         width: 100%;
         height: 5px;
         margin: 3px 0;
-        border: solid 1px #dbdbdb;
+        border: solid 1px var(--accent-tint);
 
         .inner {
-          background-color: #dbdbdb;
+          background-color: var(--accent-tint);
           height: 100%;
         }
       }
@@ -109,7 +109,7 @@
         margin: 0;
         font-size: 15px;
         font-family: monospace;
-        color: #dbdbdb;
+        color: var(--accent-tint);
       }
     }
 

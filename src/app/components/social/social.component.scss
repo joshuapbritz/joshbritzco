@@ -42,7 +42,7 @@
         .st5,
         .st6,
         .st7 {
-          fill: #dbdbdb;
+          fill: var(--accent-tint);
           transition: cubic-bezier(0.165, 0.84, 0.44, 1) 120ms;
         }
       }
