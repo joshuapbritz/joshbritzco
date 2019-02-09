@@ -3,6 +3,16 @@ import { Injectable } from '@angular/core';
 import { Observable, fromEvent } from 'rxjs';
 import { ModifierKey, hasModifierKey } from './modifiers';
 
+class MatchConfig {
+  public listenOn: EventTarget = window;
+
+  constructor(init: Partial<MatchConfig>) {
+    Object.assign(this, init);
+  }
+}
+
+type MatchMode = 'some' | 'every';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -30,13 +40,3 @@ export class KeyBindService {
     });
   }
 }
-
-class MatchConfig {
-  public listenOn: EventTarget = window;
-
-  constructor(init: Partial<MatchConfig>) {
-    Object.assign(this, init);
-  }
-}
-
-type MatchMode = 'some' | 'every';
