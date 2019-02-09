@@ -35,7 +35,7 @@ export class KeyBindService {
 * @param {KeyboardEvent} event
 * @param {Array<number>} codes
 */
-export function hasKeycode(event: KeyboardEvent, codes: number[]): boolean {
+export function hasKeycode(event: KeyboardEvent, ...codes: number[]): boolean {
   return codes.some(value => (event.keyCode || event.which) === value);
 }
 
