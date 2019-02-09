@@ -308,7 +308,7 @@ export function hasModifierKey(
   }
 });`,
     snippet8: `public match(
-  matchKey: number,
+  matchKey: KeyNames,
   matchModifiers: ModifierKey[] = [],
   options?: MatchConfig
 ): Observable<KeyboardEvent> {
@@ -327,7 +327,7 @@ export function hasModifierKey(
   }
 }`,
     snippet10: `public match(
-  matchKey: number,
+  matchKey: KeyNames,
   matchModifiers: ModifierKey[] = [],
   options?: MatchConfig
 ): Observable<KeyboardEvent> {
@@ -339,7 +339,7 @@ export function hasModifierKey(
 
     listener$.subscribe((event: KeyboardEvent) => {
       if (
-        hasKeycode(event, matchKey) &&
+        hasKeycode(event, KEYS[matchKey]) &&
         (!matchModifiers.length || hasModifierKey(event, ...matchModifiers))
       ) {
         observer.next(event);
@@ -357,7 +357,7 @@ binding$.unsubscribe()`,
   };
 
   constructor(private keybind: KeyBindService) {
-    this.keybind.match(KEYS.RIGHT_ARROW).subscribe(() => {
+    this.keybind.match('RIGHT_ARROW').subscribe(() => {
       alert('sub hit');
     });
   }
@@ -374,9 +374,9 @@ binding$.unsubscribe()`,
 //   }
 // });
 
-window.addEventListener('keydown', (event: KeyboardEvent) => {
-  const { D } = KEYS;
-  if (hasKeycode(event, D) && hasModifierKey(event, 'ctrlKey', 'altKey')) {
-    alert('hit');
-  }
-});
+// window.addEventListener('keydown', (event: KeyboardEvent) => {
+//   const { D } = KEYS;
+//   if (hasKeycode(event, D) && hasModifierKey(event, 'ctrlKey', 'altKey')) {
+//     alert('hit');
+//   }
+// });

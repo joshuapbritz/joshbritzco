@@ -1,4 +1,4 @@
-import { KeyNames, hasKeycode } from './keycodes';
+import { KeyNames, hasKeycode, KEYS } from './keycodes';
 import { Injectable } from '@angular/core';
 import { Observable, fromEvent } from 'rxjs';
 import { ModifierKey, hasModifierKey } from './modifiers';
@@ -20,7 +20,7 @@ export class KeyBindService {
   constructor() {}
 
   public match(
-    matchKey: number,
+    matchKey: KeyNames,
     matchModifiers: ModifierKey[] = [],
     options?: MatchConfig
   ): Observable<KeyboardEvent> {
@@ -31,7 +31,7 @@ export class KeyBindService {
 
       listener$.subscribe((event: KeyboardEvent) => {
         if (
-          hasKeycode(event, matchKey) &&
+          hasKeycode(event, KEYS[matchKey]) &&
           (!matchModifiers.length || hasModifierKey(event, ...matchModifiers))
         ) {
           observer.next(event);
