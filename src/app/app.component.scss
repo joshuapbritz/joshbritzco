@@ -4,31 +4,6 @@
   }
 }
 
-mat-toolbar a {
-  padding: 0 15px;
-  text-decoration: none;
-}
-
-footer {
-  height: 55px;
-  width: 100%;
-  background-color: #dbdbdb;
-
-  .inner {
-    width: 90%;
-    max-width: 900px;
-    margin: auto;
-
-    span {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 300;
-      line-height: 55px;
-      font-size: 18px;
-      color: #999999;
-    }
-  }
-}
-
 .contact-links {
   list-style: none;
   display: block;
@@ -74,6 +49,33 @@ footer {
         color: #999999;
         font-weight: 300;
         text-decoration: none;
+      }
+    }
+  }
+}
+
+footer {
+  height: 55px;
+  width: 100%;
+  background-color:  var(--primary);
+  border-top: solid 1px var(--accent-tint);
+
+  .inner {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+    .copywright {
+      flex: 1;
+
+      span {
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        line-height: 55px;
+        font-size: 18px;
+        color: var(--accent);
       }
     }
   }

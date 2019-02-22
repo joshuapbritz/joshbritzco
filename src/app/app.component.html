@@ -8,18 +8,22 @@
 
   <footer>
     <div class="inner">
-      <span>&copy; Joshua Britz {{year}}.</span>
+      <div class="copywright">
+        <span>&copy; Joshua Britz {{ year }}.</span>
+      </div>
+      <div *ngIf="false" class="about-this-website">
+        <span>ABOUT THIS WEBSITE</span>
+      </div>
     </div>
   </footer>
 </div>
-
 
 <content-modal #modal>
   <div class="title-block">
     <h2>Contact Me</h2>
     <p>
       Please feel free to give me a call or
-      <br>drop me an email
+      <br />drop me an email
     </p>
   </div>
   <ul class="contact-links">
