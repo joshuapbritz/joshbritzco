@@ -37,5 +37,4 @@ export const routes: Routes = [
     loadChildren:
       './pages/blog-posts/object-recognition-in-browser/object-recognition-in-browser.module#ObjectRecognitionInBrowserPost',
   },
-  //ObjectRecognitionInBrowserPost
 ];
