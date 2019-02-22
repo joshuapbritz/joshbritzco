@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 60px 0;
+  border-top: solid var(--accent-tint) 1px;
+  border-bottom: solid var(--accent-tint) 1px;
+
+  h1 {
+      color: var(--font-color-light);
+  }
+}

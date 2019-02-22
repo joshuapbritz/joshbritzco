@@ -32,4 +32,10 @@ export const routes: Routes = [
     loadChildren:
       './pages/blog-posts/magic-of-css/magic-of-css.module#MagicOfCssPost',
   },
+  {
+    path: 'codelabs/object-recognition-in-the-browser-with-tensorflowjs',
+    loadChildren:
+      './pages/blog-posts/object-recognition-in-browser/object-recognition-in-browser.module#ObjectRecognitionInBrowserPost',
+  },
+  //ObjectRecognitionInBrowserPost
 ];

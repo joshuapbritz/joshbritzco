@@ -9,6 +9,7 @@ import { AppSocial } from './social/social.module';
 import { AppTimeline } from './timeline/timeline.module';
 import { AppToast } from './toast/toast.module';
 import { AppBlogPostHeader } from './blog-post-header/blog-post-header.module';
+import { AppComingSoon } from './coming-soon/coming-soon.module';
 
 @NgModule({
   imports: [
@@ -22,6 +23,7 @@ import { AppBlogPostHeader } from './blog-post-header/blog-post-header.module';
     AppTimeline,
     AppToast,
     AppBlogPostHeader,
+    AppComingSoon,
   ],
   exports: [
     AppBlogCards,
@@ -34,6 +36,7 @@ import { AppBlogPostHeader } from './blog-post-header/blog-post-header.module';
     AppTimeline,
     AppToast,
     AppBlogPostHeader,
+    AppComingSoon,
   ],
 })
 export class AppComponentsModule {}

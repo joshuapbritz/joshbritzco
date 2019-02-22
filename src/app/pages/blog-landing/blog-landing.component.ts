@@ -15,28 +15,28 @@ export class BlogLandingComponent implements OnInit {
     },
 
     {
-      title: 'The Magic of CSS Variables',
-      snippet: `A common frustration I come across when working with Angular (or any other framework for that matter), is running functions based on key bindings...`,
-      image: 'assets/images/posts/magic-css-variables.jpeg',
+      title: 'Object Recognition in the Browser with TensorFlowJs',
+      snippet: `Get started with basic object recognition in the browser using the TensorFlow JavaScript library and MobileNet...`,
+      image: 'assets/images/posts/object-recognition.jpeg',
     },
 
-    {
-      title: 'The Magic of CSS Variables',
-      snippet: `A common frustration I come across when working with Angular (or any other framework for that matter), is running functions based on key bindings...`,
-      image: 'assets/images/posts/magic-css-variables.jpeg',
-    },
+    // {
+    //   title: 'The Magic of CSS Variables',
+    //   snippet: `A common frustration I come across when working with Angular (or any other framework for that matter), is running functions based on key bindings...`,
+    //   image: 'assets/images/posts/magic-css-variables.jpeg',
+    // },
 
-    {
-      title: 'The Magic of CSS Variables',
-      snippet: `A common frustration I come across when working with Angular (or any other framework for that matter), is running functions based on key bindings...`,
-      image: 'assets/images/posts/magic-css-variables.jpeg',
-    },
+    // {
+    //   title: 'The Magic of CSS Variables',
+    //   snippet: `A common frustration I come across when working with Angular (or any other framework for that matter), is running functions based on key bindings...`,
+    //   image: 'assets/images/posts/magic-css-variables.jpeg',
+    // },
 
-    {
-      title: 'The Magic of CSS Variables',
-      snippet: `A common frustration I come across when working with Angular (or any other framework for that matter), is running functions based on key bindings...`,
-      image: 'assets/images/posts/magic-css-variables.jpeg',
-    },
+    // {
+    //   title: 'The Magic of CSS Variables',
+    //   snippet: `A common frustration I come across when working with Angular (or any other framework for that matter), is running functions based on key bindings...`,
+    //   image: 'assets/images/posts/magic-css-variables.jpeg',
+    // },
   ];
 
   constructor() {}
