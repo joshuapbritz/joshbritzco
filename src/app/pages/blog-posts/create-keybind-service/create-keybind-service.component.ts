@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-create-keybind-service',
@@ -353,7 +354,25 @@ export function hasModifierKey(
 binding$.unsubscribe()`,
   };
 
-  constructor() {}
+  constructor(private title: Title, private meta: Meta) {
+    this.title.setTitle(
+      'Josh Britz - Codelabs: Create a Key-binding service in Angular'
+    );
+
+    this.meta.updateTag({
+      name: 'description',
+      content: `A common frustration I come across when working with Angular (or any other
+          framework for that matter), is running functions based on key bindings. The
+          typical method of doing this is unreadable and messy..`,
+    });
+
+    this.meta.updateTag({
+      name: 'keywords',
+      content:
+        'Web development,Angular development,UI devloper,HTML,CSS,JavaScript' +
+        ',Angular,Web technologies,Accessablility,User interaction',
+    });
+  }
 
   ngOnInit() {}
 }

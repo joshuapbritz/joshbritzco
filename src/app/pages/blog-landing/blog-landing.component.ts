@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 // tslint:disable:max-line-length
 
 @Component({
@@ -39,7 +40,22 @@ export class BlogLandingComponent implements OnInit {
     // },
   ];
 
-  constructor() {}
+  constructor(private title: Title, private meta: Meta) {
+    this.title.setTitle('Josh Britz - Codelabs');
+
+    this.meta.updateTag({
+      name: 'description',
+      content: `Some tutorials and how-to's that will (hopefully) help you become a better developer`,
+    });
+
+    this.meta.updateTag({
+      name: 'keywords',
+      content:
+        'Web development,Angular development,UI devloper,HTML,CSS,JavaScript' +
+        ',Angular,Web technologies,Accessablility,User interaction,Machine learning,App development,' +
+        'Hybrid app development,Api development',
+    });
+  }
 
   ngOnInit() {}
 
