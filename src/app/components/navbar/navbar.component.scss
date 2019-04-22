@@ -89,25 +89,6 @@
 
       &.open {
         right: 0;
-
-        .panel-after {
-          transform: translateX(0);
-        }
-      }
-
-      .panel-after {
-        content: '';
-        display: block;
-        width: 10%;
-        min-width: calc(100vw - 300px);
-        height: calc(100% - 80px);
-        background-color: rgba(0, 0, 0, 0.22);
-      transition: cubic-bezier(0.165, 0.84, 0.44, 1) 300ms;
-        position: fixed;
-        left: 0;
-        top: 80px;
-        z-index: -20;
-        transform: translateX(-100%);
       }
 
       li {
@@ -156,5 +137,23 @@
     @media screen and (min-width: 800px) {
       display: none;
     }
+  }
+}
+
+.mobile-backdrop {
+  display: block;
+  width: 10%;
+  min-width: calc(100vw - 300px);
+  height: calc(100% - 80px);
+  background-color: rgba(0, 0, 0, 0.22);
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 300ms;
+  position: fixed;
+  left: 0;
+  top: 80px;
+  z-index: -20;
+  transform: translateX(-100%);
+
+  &.open {
+    transform: translateX(0);
   }
 }

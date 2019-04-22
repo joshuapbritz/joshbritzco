@@ -2,8 +2,10 @@
   Joshua Britz
 </a>
 
+<div class="mobile-backdrop" [class.open]="show_menu"></div>
+
 <ul class="nav" [class.open]="show_menu">
-  <div class="panel-after" (click)="close()"></div>
+  <!-- <div class="panel-after" (click)="close()"></div> -->
   <li
     (click)="href('/')"
     routerLinkActive="active"

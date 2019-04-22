@@ -7,17 +7,17 @@
         "source": "**",
         "destination": "/index.html"
       }
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(css|jpg|jpeg|webp|png|gif|js|ico|svg)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          }
+        ]
+      }
     ]
-  },
-  "headers": [
-    {
-      "source": "**/*.@(css|jpg|jpeg|webp|png|gif|js|ico|svg)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "max-age=31536000"
-        }
-      ]
-    }
-  ]
+  }
 }
