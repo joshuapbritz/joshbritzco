@@ -19,22 +19,26 @@ export const routes: Routes = [
   },
   {
     path: 'codelabs',
-    loadChildren:
-      './pages/blog-landing/blog-landing.module#BlogLandingPageModule',
+    loadChildren: './pages/blog/blog.module#BlogModule',
   },
-  {
-    path: `codelabs/create-a-keybinding-service-in-angular`,
-    loadChildren:
-      './pages/blog-posts/create-keybind-service/create-keybind-service.module#CreateKeybindServicePost',
-  },
-  {
-    path: 'codelabs/the-magic-of-css-variables',
-    loadChildren:
-      './pages/blog-posts/magic-of-css/magic-of-css.module#MagicOfCssPost',
-  },
-  {
-    path: 'codelabs/object-recognition-in-the-browser-with-tensorflowjs',
-    loadChildren:
-      './pages/blog-posts/object-recognition-in-browser/object-recognition-in-browser.module#ObjectRecognitionInBrowserPost',
-  },
+  // {
+  //   path: 'codelabs',
+  //   loadChildren:
+  //     './pages/blog-landing/blog-landing.module#BlogLandingPageModule',
+  // },
+  // {
+  //   path: `codelabs/create-a-keybinding-service-in-angular`,
+  //   loadChildren:
+  //     './pages/blog-posts/create-keybind-service/create-keybind-service.module#CreateKeybindServicePost',
+  // },
+  // {
+  //   path: 'codelabs/the-magic-of-css-variables',
+  //   loadChildren:
+  //     './pages/blog-posts/magic-of-css/magic-of-css.module#MagicOfCssPost',
+  // },
+  // {
+  //   path: 'codelabs/object-recognition-in-the-browser-with-tensorflowjs',
+  //   loadChildren:
+  //     './pages/blog-posts/object-recognition-in-browser/object-recognition-in-browser.module#ObjectRecognitionInBrowserPost',
+  // },
 ];
