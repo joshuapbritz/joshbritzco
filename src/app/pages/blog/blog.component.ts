@@ -13,9 +13,7 @@ export class BlogComponent implements OnInit {
   constructor(protected route: ActivatedRoute, protected api: ApiService) {}
 
   async ngOnInit() {
-    this.posts = await this.api.get(`/get`);
-
-    console.log(this.posts);
+    this.api.get(`blog`).subscribe(v => console.log(v));
   }
 
   public getClass(index: number): 'right' | 'left' {
