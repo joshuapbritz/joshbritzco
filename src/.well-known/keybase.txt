@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/joshuapaulbritz
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://joshbritz.co
+  * I am joshuapaulbritz (https://keybase.io/joshuapaulbritz) on keybase.
+  * I have a public key ASDelTmNQ_iLeQQdrGuvohJPeQt8YhbqCwPyWJspGjzaXgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120de95398d43f88b79041dac6bafa2124f790b7c6216ea0b03f2589b291a3cda5e0a",
+      "host": "keybase.io",
+      "kid": "0120de95398d43f88b79041dac6bafa2124f790b7c6216ea0b03f2589b291a3cda5e0a",
+      "uid": "f7cad53ef47e451ad14269198c3e9819",
+      "username": "joshuapaulbritz"
+    },
+    "merkle_root": {
+      "ctime": 1558340262,
+      "hash": "9b31d7331d72318962a8999251fced7409bed9829ec2409c8320199891adf91d5e31b4aa17c992c90c331df2cb8790b1783420d6bb8cfaa420e3f90752be5c4b",
+      "hash_meta": "d1a78f777ebb342434c8692ab9869395a56499658ffbc371d18266adebbbc544",
+      "seqno": 5408303
+    },
+    "service": {
+      "entropy": "gukAATe/+1spg0yEIbZ1IFLb",
+      "hostname": "joshbritz.co",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.0.1"
+  },
+  "ctime": 1558340277,
+  "expire_in": 504576000,
+  "prev": "edff19fc2103e7046b118f09524ff1cd82370ef9cc656f4dfce1fba81d2df52b",
+  "seqno": 6,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg3pU5jUP4i3kEHaxrr6IST3kLfGIW6gsD8libKRo82l4Kp3BheWxvYWTESpcCBsQg7f8Z/CED5wRrEY8JUk/xzYI3DvnMZW9N/OH7qB0t9SvEIAp+qDW6J3kYWEoYMhQ1nOWx6K+VmJeZEdzgvNBUzuVoAgHCo3NpZ8RAmnJu4bqRIPM4RkpPXM5v720/u5oSHH4kz1+n6UPxc9aY6GdImgJy2RU3pqCLjerHZE/iaK4e0moKwhpRNqPFDqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJW/akE0GbN5MmN9fJbmQ44BT3GQN/uPDH08Ih0zlnHro3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/joshuapaulbritz
+
+==================================================================

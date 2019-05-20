@@ -24,7 +24,12 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
-            "assets": ["src/icon.jpg", "src/assets", "src/manifest.json"],
+            "assets": [
+              "src/icon.jpg",
+              "src/assets",
+              "src/manifest.json",
+              "src/.well-known"
+            ],
             "styles": ["src/styles.scss"],
             "scripts": []
           },
