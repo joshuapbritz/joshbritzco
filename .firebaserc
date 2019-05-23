@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "joshuabritz-3fa79"
+  },
+  "targets": {
+    "joshuabritz-3fa79": {
+      "hosting": {
+        "prod": [
+          "joshuabritz-3fa79"
+        ],
+        "staging": [
+          "page-beta"
+        ]
+      }
+    }
   }
 }

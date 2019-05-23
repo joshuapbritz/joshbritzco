@@ -77,7 +77,14 @@ jobs:
       - run:
           name: Deploy Master to Firebase
           # command: npm run deploy:ci
-          command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+          command: |
+            if ["${CIRCLE_BRANCH}" === "development"]; then
+              ./node_modules/.bin/firebase deploy --only hosting:staging --token=$FIREBASE_DEPLOY_TOKEN
+            fi
+            if ["${CIRCLE_BRANCH}" === "master"]; then
+              ./node_modules/.bin/firebase deploy --only hosting:prod --token=$FIREBASE_DEPLOY_TOKEN
+            fi
+
 
 workflows:
   version: 2
@@ -90,4 +97,6 @@ workflows:
             - test
           filters:
             branches:
-              only: master
+              only: -
+                master
+                development
