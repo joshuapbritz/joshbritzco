@@ -79,9 +79,11 @@ jobs:
           # command: npm run deploy:ci
           command: |
             if ["${CIRCLE_BRANCH}" == "development"]; then
-              ./node_modules/.bin/firebase deploy --only hosting:staging --token=$FIREBASE_DEPLOY_TOKEN
+              # ./node_modules/.bin/firebase deploy --only hosting:staging --token=$FIREBASE_DEPLOY_TOKEN
+              npm run deploy:ci:staging
             elif ["${CIRCLE_BRANCH}" == "master"]; then
-              ./node_modules/.bin/firebase deploy --only hosting:prod --token=$FIREBASE_DEPLOY_TOKEN
+              # ./node_modules/.bin/firebase deploy --only hosting:prod --token=$FIREBASE_DEPLOY_TOKEN
+              npm run deploy:ci:prod
             fi
 
 workflows:
