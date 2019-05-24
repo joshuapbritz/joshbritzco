@@ -8,7 +8,8 @@
     "test": "ng test --watch=false --progress=false --browsers=ChromeNoSandboxHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy:ci": "firebase deploy --token=$FIREBASE_DEPLOY_TOKEN"
+    "deploy:ci:prod": "firebase deploy --only hosting:prod --token=$FIREBASE_DEPLOY_TOKEN",
+    "deploy:ci:staging": "firebase deploy --only hosting:staging --token=$FIREBASE_DEPLOY_TOKEN"
   },
   "private": true,
   "dependencies": {
