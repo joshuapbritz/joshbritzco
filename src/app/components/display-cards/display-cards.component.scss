@@ -80,15 +80,16 @@
         a {
           will-change: transform;
           display: block;
-          height: 50px;
+          height: 40px;
           padding: 0 25px;
           font-size: 18px;
-          background-color: var(--accent-tint);
+          background-color: var(--accent);
           color: #ffffff;
           font-weight: 300;
           text-transform: uppercase;
-          line-height: 50px;
+          line-height: 40px;
           transition: transform cubic-bezier(0.165, 0.84, 0.44, 1) 200ms;
+          border-radius: 10px;
 
           &:hover {
             transform: scale(0.95);
