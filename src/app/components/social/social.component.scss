@@ -107,4 +107,9 @@
       }
     }
   }
+
+  @media screen and (max-width: 500px) {
+    height: 100px;
+    padding: 0;
+  }
 }
