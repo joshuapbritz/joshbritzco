@@ -2,7 +2,6 @@
 @import './theme/colors';
 @import '~prismjs/themes/prism-twilight.css';
 
-
 .token {
   color: #ffffff;
   font-family: monospace;
@@ -49,7 +48,7 @@ pre {
       position: absolute;
       left: 0;
       bottom: -2px;
-      background-color:  var(--accent-tint);
+      background-color: var(--accent-tint);
       transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 120ms;
     }
   }
@@ -116,7 +115,6 @@ pre {
   }
 }
 
-
 hr {
   display: block;
   border: none;
@@ -125,3 +123,5 @@ hr {
   background-color: #dbdbdb;
   margin: 40px 0;
 }
+
+
