@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ApplicationRef,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 
@@ -6,6 +11,7 @@ import { ApiService } from 'src/app/services/api.service';
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BlogComponent implements OnInit {
   public posts: any[];

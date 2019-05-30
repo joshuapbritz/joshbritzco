@@ -14,7 +14,7 @@ import { ToastService } from '../../toast/toast.service';
   styleUrls: ['./terminal-snippet.component.scss'],
 })
 export class TerminalSnippetComponent implements OnInit {
-  @ViewChild('hostel') private host: ElementRef<HTMLElement>;
+  @ViewChild('hostel', { static: true }) private host: ElementRef<HTMLElement>;
   constructor(private toast: ToastService) {}
 
   ngOnInit() {}
