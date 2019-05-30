@@ -2,9 +2,9 @@
   Joshua Britz
 </a>
 
-<div class="mobile-backdrop" [class.open]="show_menu"></div>
+<div class="mobile-backdrop" [class.open]="showMenu"></div>
 
-<ul class="nav" [class.open]="show_menu">
+<ul class="nav" [class.open]="showMenu">
   <!-- <div class="panel-after" (click)="close()"></div> -->
   <li
     (click)="href('/')"
@@ -30,7 +30,7 @@
   </li>
 </ul>
 
-<div class="mobile-button" [class.active]="show_menu" (click)="toggle_menu()">
+<div class="mobile-button" [class.active]="showMenu" (click)="toggle_menu()">
   <div></div>
   <div></div>
   <div></div>

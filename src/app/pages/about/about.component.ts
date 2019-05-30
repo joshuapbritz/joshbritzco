@@ -1,13 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ApplicationRef,
+  ChangeDetectionStrategy,
+} from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutComponent implements OnInit {
-  constructor(private title: Title, private meta: Meta) {
+  constructor(
+    private title: Title,
+    private meta: Meta,
+    private app: ApplicationRef
+  ) {
     this.title.setTitle('Josh Britz - About');
 
     this.meta.updateTag({
@@ -26,5 +36,6 @@ export class AboutComponent implements OnInit {
 
   ngOnInit() {
     const name = 'JOSHUA';
+    this.app.tick();
   }
 }

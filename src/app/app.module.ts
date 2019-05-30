@@ -31,11 +31,11 @@ import { AppComponentsModule } from './components/components.module';
   bootstrap: [AppComponent],
 })
 export class AppModule {
-  constructor(private _router: Router) {
-    this._router.events.subscribe(event => {
+  constructor(private routerInstance: Router) {
+    this.routerInstance.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
-        (<any>window).ga('set', 'page', event.urlAfterRedirects);
-        (<any>window).ga('send', 'pageview');
+        (window as any).ga('set', 'page', event.urlAfterRedirects);
+        (window as any).ga('send', 'pageview');
         window.scrollTo(0, 0);
         if (!environment.production) {
           console.log(event.urlAfterRedirects);

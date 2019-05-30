@@ -1,4 +1,4 @@
-import { Component, OnInit, VERSION } from '@angular/core';
+import { Component, OnInit, VERSION, ApplicationRef } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
