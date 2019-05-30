@@ -31,7 +31,7 @@ jobs:
 
       - run:
           name: Linting
-          command: yarn lint
+          command: npm run lint
 
       - run: npm rebuild node-sass
 
