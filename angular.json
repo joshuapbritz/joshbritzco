@@ -51,7 +51,8 @@
               "vendorChunk": true,
               "buildOptimizer": true,
               "serviceWorker": true,
-              "commonChunk": true
+              "commonChunk": true,
+              "es5BrowserSupport": true
             }
           }
         },

@@ -10,7 +10,7 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 export class ToastComponent {
   public message: string;
 
-  @ViewChild('wrapper') public wrapper: ElementRef<HTMLElement>;
+  @ViewChild('wrapper', { static: true }) public wrapper: ElementRef<HTMLElement>;
 
   detach() {
     return new Promise(res => {
