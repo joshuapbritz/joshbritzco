@@ -11,12 +11,12 @@ import { ToastService } from '../../toast/toast.service';
 export class CodeSnippetComponent implements OnInit {
   @Input()
   public get snippet(): string {
-    return this._snippet;
+    return this.snippetValue;
   }
   public set snippet(value: string) {
-    this._snippet = value;
+    this.snippetValue = value;
   }
-  private _snippet: string;
+  private snippetValue: string;
 
   public snippetCode: string;
 
@@ -43,24 +43,20 @@ export class CodeSnippetComponent implements OnInit {
     }
   }
 
-  private handleHTML(string: string): string {
-    return `<pre>${Prism.highlight(
-      string,
-      Prism.languages.html,
-      'html'
-    )}</pre>`;
+  private handleHTML(value: string): string {
+    return `<pre>${Prism.highlight(value, Prism.languages.html, 'html')}</pre>`;
   }
 
-  private handleJS(string: string): string {
-    return `<pre>${Prism.highlight(string, Prism.languages.javascript)}</pre>`;
+  private handleJS(value: string): string {
+    return `<pre>${Prism.highlight(value, Prism.languages.javascript)}</pre>`;
   }
 
-  private handleCSS(string: string): string {
-    return `<pre>${Prism.highlight(string, Prism.languages.css)}</pre>`;
+  private handleCSS(value: string): string {
+    return `<pre>${Prism.highlight(value, Prism.languages.css)}</pre>`;
   }
 
-  private handleDEFAULT(string: string): string {
-    return string;
+  private handleDEFAULT(value: string): string {
+    return value;
   }
 
   @HostListener('click') public onclick() {

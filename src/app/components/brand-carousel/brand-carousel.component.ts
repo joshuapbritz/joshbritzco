@@ -15,10 +15,9 @@ import { RESOURCE_CACHE_PROVIDER } from '@angular/platform-browser-dynamic';
 export class BrandCarouselComponent implements AfterContentInit, OnDestroy {
   private readonly container: HTMLElement;
   private items: HTMLElement[];
-  private $width: number;
-  private $child_width: number;
-  private _moved: number = 0;
-  private _number_of_items: number;
+  private childWidth: number;
+  private moved: number = 0;
+  private numberOfItems: number;
   private interval: any;
 
   constructor(private el: ElementRef) {
@@ -47,15 +46,15 @@ export class BrandCarouselComponent implements AfterContentInit, OnDestroy {
 
   // @HostListener('click')
   slide() {
-    this._moved = this._moved + 1;
+    this.moved = this.moved + 1;
     let i = 1;
     for (const slide of this.items) {
-      if (this._moved < this.items.length - (this._number_of_items - 1)) {
-        slide.style.transform = `translate3D(-${this.$child_width *
-          this._moved}px, 0, 0)`;
+      if (this.moved < this.items.length - (this.numberOfItems - 1)) {
+        slide.style.transform = `translate3D(-${this.childWidth *
+          this.moved}px, 0, 0)`;
       } else {
         slide.style.transform = `translate3D(${0}px, 0, 0)`;
-        this._moved = 0;
+        this.moved = 0;
       }
       i++;
     }
@@ -75,15 +74,15 @@ export class BrandCarouselComponent implements AfterContentInit, OnDestroy {
   }
 
   setUp() {
-    this.$width = this.container.clientWidth;
-    this.$child_width = this.items[0].clientWidth;
+    this.width = this.container.clientWidth;
+    this.childWidth = this.items[0].clientWidth;
     const $ = window.innerWidth;
     if ($ > 750) {
-      this._number_of_items = 3;
+      this.numberOfItems = 3;
     } else if ($ <= 750 && $ > 550) {
-      this._number_of_items = 2;
+      this.numberOfItems = 2;
     } else if ($ <= 550) {
-      this._number_of_items = 1;
+      this.numberOfItems = 1;
     }
   }
 }
