@@ -15,6 +15,7 @@ import { RESOURCE_CACHE_PROVIDER } from '@angular/platform-browser-dynamic';
 export class BrandCarouselComponent implements AfterContentInit, OnDestroy {
   private readonly container: HTMLElement;
   private items: HTMLElement[];
+  public width: number;
   private childWidth: number;
   private moved: number = 0;
   private numberOfItems: number;
