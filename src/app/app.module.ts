@@ -1,6 +1,5 @@
 import { environment } from './../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import {
   RouterModule,
@@ -17,7 +16,6 @@ import { AppComponentsModule } from './components/components.module';
   declarations: [AppComponent],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot(router.routes, {
       preloadingStrategy: PreloadAllModules,
