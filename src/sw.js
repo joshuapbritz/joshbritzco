@@ -18,6 +18,7 @@ importScripts(
 const precacheManifest = [];
 
 workbox.precaching.precacheAndRoute(precacheManifest);
+workbox.googleAnalytics.initialize();
 
 workbox.routing.registerRoute(
   /.*.(?:png|jpg|jpeg|svg)$/,
