@@ -1,9 +1,4 @@
-import {
-  Component,
-  OnInit,
-  ApplicationRef,
-  ChangeDetectionStrategy,
-} from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
@@ -13,11 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AboutComponent implements OnInit {
-  constructor(
-    private title: Title,
-    private meta: Meta,
-    private app: ApplicationRef
-  ) {
+  constructor(private title: Title, private meta: Meta) {
     this.title.setTitle('Josh Britz - About');
 
     this.meta.updateTag({
@@ -34,8 +25,5 @@ export class AboutComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-    const name = 'JOSHUA';
-    this.app.tick();
-  }
+  ngOnInit() {}
 }

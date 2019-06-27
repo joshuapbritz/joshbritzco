@@ -1,4 +1,10 @@
-import { Component, OnInit, ElementRef, AfterContentInit, Input } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  ElementRef,
+  AfterContentInit,
+  Input,
+} from '@angular/core';
 import { Router } from '@angular/router';
 import { ModalComponent } from '../modal/modal.component';
 
@@ -9,21 +15,23 @@ import { ModalComponent } from '../modal/modal.component';
 })
 export class NavbarComponent implements OnInit, AfterContentInit {
   @Input() modal: ModalComponent;
+
   public showMenu: boolean = false;
+
   public scrolled: boolean = false;
-  private element: HTMLElement;
-  private blur: HTMLElement;
+
+  private get element(): HTMLElement {
+    return this.el.nativeElement;
+  }
+
   constructor(private router: Router, private el: ElementRef) {
-    this.element = this.el.nativeElement;
     this.checkScrollPosition();
     this.addScrollListener();
   }
 
   ngOnInit() {}
 
-  ngAfterContentInit() {
-    this.blur = document.getElementById('blur');
-  }
+  ngAfterContentInit() {}
 
   toggle_menu() {
     this.showMenu = !this.showMenu;
