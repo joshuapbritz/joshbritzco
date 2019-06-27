@@ -11,7 +11,6 @@ import {
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import * as router from './app.routes';
-import { ServiceWorkerModule } from '@angular/service-worker';
 import { AppComponentsModule } from './components/components.module';
 
 @NgModule({

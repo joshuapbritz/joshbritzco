@@ -18,7 +18,7 @@ export class PostComponent implements OnInit {
 
       this.post = void 0;
 
-      this.post = await this.api.get(`/get/${slug}`);
+      this.post = await this.api.get(`/get/${this.slug}`);
     });
   }
 

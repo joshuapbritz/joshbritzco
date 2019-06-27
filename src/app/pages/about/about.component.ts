@@ -1,9 +1,4 @@
-import {
-  Component,
-  OnInit,
-  ApplicationRef,
-  ChangeDetectionStrategy,
-} from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
