@@ -28,7 +28,8 @@
               "src/icon.jpg",
               "src/assets",
               "src/manifest.json",
-              "src/.well-known"
+              "src/.well-known",
+              "src/sw.js"
             ],
             "styles": ["src/styles.scss"],
             "scripts": []
@@ -42,7 +43,7 @@
                 }
               ],
               "optimization": true,
-              "outputHashing": "all",
+              "outputHashing": "none",
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
@@ -50,7 +51,7 @@
               "extractLicenses": true,
               "vendorChunk": true,
               "buildOptimizer": true,
-              "serviceWorker": true,
+              "serviceWorker": false,
               "commonChunk": true,
               "es5BrowserSupport": true
             }

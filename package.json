@@ -4,10 +4,12 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --open --port 7200 --host 0.0.0.0",
-    "build": "ng build --prod",
+    "build": "ng build --prod && yarn run generate-sw",
+    "generate-sw": "workbox injectManifest workbox-config.js",
     "test": "ng test --watch=false --progress=false --browsers=ChromeNoSandboxHeadless",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "start-prod": "yarn run build && cd dist && serve -s -n -p 8181",
     "deploy:ci:prod": "firebase deploy --only hosting:prod --token=$FIREBASE_DEPLOY_TOKEN",
     "deploy:ci:staging": "firebase deploy --only hosting:staging --token=$FIREBASE_DEPLOY_TOKEN"
   },
@@ -49,6 +51,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "karma-phantomjs-launcher": "^1.0.4",
     "protractor": "~5.3.0",
+    "serve": "^11.0.2",
     "ts-node": "~8.2.0",
     "tslint": "~5.16.0",
     "typescript": "~3.5.1"

@@ -23,9 +23,6 @@ import { AppComponentsModule } from './components/components.module';
     RouterModule.forRoot(router.routes, {
       preloadingStrategy: PreloadAllModules,
     }),
-    ServiceWorkerModule.register('/ngsw-worker.js', {
-      enabled: environment.production,
-    }),
     AppComponentsModule,
   ],
   bootstrap: [AppComponent],
