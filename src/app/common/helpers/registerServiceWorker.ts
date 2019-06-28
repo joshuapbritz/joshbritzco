@@ -9,7 +9,7 @@ export function registerServiceWorker() {
   if (environment.production && 'serviceWorker' in navigator) {
     navigator.serviceWorker
       .register('sw.js')
-      .then(registration => {
+      .then((registration: ServiceWorkerRegistration) => {
         logger.log('Registration successful', registration);
 
         registration.onupdatefound = () => {
@@ -43,12 +43,8 @@ export function registerServiceWorker() {
           };
         };
       })
-      .catch(e => {
-        logger.error('Error during service worker registration:', e);
-      });
-  } else {
-    if (!environment.production) {
-      logger.info('Service Worker not available in development mode');
-    } else logger.warn('Service Worker is not supported');
-  }
+      .catch(e => logger.error('Error during service worker registration:', e));
+  } else if (!environment.production) {
+    logger.info('Service Worker not available in development mode');
+  } else logger.warn('Service Worker is not supported');
 }
