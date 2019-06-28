@@ -22,6 +22,10 @@ export const routes: Routes = [
     loadChildren: './pages/blog/blog.module#BlogModule',
   },
   {
+    path: 'contact-me',
+    loadChildren: './pages/contact-me/contact-me.module#ContactMeModule',
+  },
+  {
     path: '**',
     loadChildren: './pages/not-found/not-found.module#NotFoundModule',
   },

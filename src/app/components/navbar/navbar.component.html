@@ -6,27 +6,23 @@
 
 <ul class="nav" [class.open]="showMenu">
   <!-- <div class="panel-after" (click)="close()"></div> -->
-  <li
-    (click)="href('/')"
-    routerLinkActive="active"
-    [routerLinkActiveOptions]="{ exact: true }"
-  >
-    <a [routerLink]="['/']">Home</a>
+  <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+    <a routerLink="/">Home</a>
   </li>
   <!-- <li (click)="href('/codelabs')" routerLinkActive="active">
     <a [routerLink]="['/codelabs']">Codelabs</a>
   </li> -->
-  <li (click)="href('/about')" routerLinkActive="active">
-    <a [routerLink]="['/about']">About</a>
+  <li routerLinkActive="active">
+    <a routerLink="/about">About</a>
   </li>
-  <li (click)="href('/work')" routerLinkActive="active">
-    <a [routerLink]="['/work']">Work</a>
+  <li routerLinkActive="active">
+    <a routerLink="/work">Work</a>
   </li>
-  <li (click)="href('/skills')" routerLinkActive="active">
-    <a [routerLink]="['/skills']">Skills</a>
+  <li routerLinkActive="active">
+    <a routerLink="/skills">Skills</a>
   </li>
-  <li (click)="contact()">
-    <a>Contact Me</a>
+  <li routerLinkActive="active">
+    <a routerLink="/contact-me">Contact Me</a>
   </li>
 </ul>
 
