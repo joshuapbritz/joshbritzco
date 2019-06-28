@@ -1,8 +1,8 @@
 {
   "name": "Josh Britz",
   "short_name": "joshbritzco",
-  "theme_color": "#dedede",
-  "background_color": "#ffffff",
+  "theme_color": "#6860ff",
+  "background_color": "#9e99ff",
   "display": "fullscreen",
   "scope": "/",
   "start_url": "/",
