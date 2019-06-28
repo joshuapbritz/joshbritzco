@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import * as router from './app.routes';
 import { AppComponentsModule } from './components/components.module';
 import { Logger } from './common/helpers/logger';
+import { isProduction } from './common/helpers/isProductions';
 
 @NgModule({
   declarations: [AppComponent],
@@ -34,7 +35,7 @@ export class AppModule {
         (window as any).ga('set', 'page', event.urlAfterRedirects);
         (window as any).ga('send', 'pageview');
         window.scrollTo(0, 0);
-        if (!environment.production) {
+        if (!isProduction()) {
           galogger.info(
             'Navigation to',
             `"${event.urlAfterRedirects}"`,

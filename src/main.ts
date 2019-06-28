@@ -5,14 +5,12 @@ import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 import { registerServiceWorker } from './app/common/helpers/registerServiceWorker';
 import { Logger } from './app/common/helpers/logger';
+import { isProduction } from './app/common/helpers/isProductions';
 
 if (environment.production) {
   enableProdMode();
 
-  if (
-    window.location.href.includes('//joshbritz.co') ||
-    window.location.href.includes('//www.joshbritz.co')
-  ) {
+  if (isProduction()) {
     Object.keys(console).forEach(type => {
       console[type] = () => {};
     });
