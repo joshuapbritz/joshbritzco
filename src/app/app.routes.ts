@@ -21,6 +21,10 @@ export const routes: Routes = [
     path: 'codelabs',
     loadChildren: './pages/blog/blog.module#BlogModule',
   },
+  {
+    path: '**',
+    loadChildren: './pages/not-found/not-found.module#NotFoundModule',
+  },
   // {
   //   path: 'codelabs',
   //   loadChildren:
