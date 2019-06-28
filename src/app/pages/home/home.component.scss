@@ -69,8 +69,8 @@
         border-radius: 10px;
         font-size: 18px;
         letter-spacing: 2px;
-        background-color: #6c63ff;
-        border: solid 2px #6c63ff;
+        background-color: var(--accent);
+        border: solid 2px var(--accent);
         color: #ffffff;
         cursor: pointer;
         margin: 0;
@@ -83,8 +83,8 @@
 
         &:hover,
         &:active {
-          border-color: hsl(243, 100%, 59%);
-          background-color: hsl(243, 100%, 59%);
+          border-color: var(--accent-dark);
+          background-color: var(--accent-dark);
           color: #ffffff;
         }
       }

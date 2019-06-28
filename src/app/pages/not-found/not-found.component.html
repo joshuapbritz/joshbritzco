@@ -2,7 +2,7 @@
   <div class="image">
     <object
       [style.transform]="
-        'translate3d(' + movex / 6 + 'px, ' + movey / 6 + 'px, 0)'
+        'translate3d(' + movex / 10 + 'px, ' + movey / 10 + 'px, 0)'
       "
       data="assets/images/not_found.svg"
       type="image/svg+xml"
@@ -11,10 +11,16 @@
   <div class="text">
     <h1
       [style.transform]="
-        'translate3d(' + movex / 3 + 'px, ' + movey / 3 + 'px, 0)'
+        'translate3d(' + movex / 6 + 'px, ' + movey / 6 + 'px, 0)'
       "
     >
-      404
+      <span>4</span>
+      <span>0</span>
+      <span>4</span>
     </h1>
+  </div>
+
+  <div class="button">
+    <a routerLink="/">RETURN HOME</a>
   </div>
 </div>

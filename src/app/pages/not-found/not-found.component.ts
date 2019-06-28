@@ -1,5 +1,9 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 
+const SIZE_QUERY: MediaQueryList = window.matchMedia(
+  'screen and (max-width: 1024px)'
+);
+
 @Component({
   selector: 'app-not-found',
   templateUrl: './not-found.component.html',
@@ -24,11 +28,16 @@ export class NotFoundComponent implements OnInit {
   @HostListener('window:mousemove', ['$event']) public onmousemove(
     event: MouseEvent
   ): void {
-    this.movex = event.clientX - this.quadrantWidth;
-    this.movey = event.clientY - this.quadrantHeight;
+    if (!SIZE_QUERY.matches) {
+      this.movex = event.clientX - this.quadrantWidth;
+      this.movey = event.clientY - this.quadrantHeight;
+    } else this.onmouseleave();
   }
 
-  @HostListener('window:mouseleave') public onmouseleave() {
+  @HostListener('window:mouseleave')
+  @HostListener('window:mouseout')
+  @HostListener('window:blur')
+  public onmouseleave() {
     this.movex = 0;
     this.movey = 0;
   }

@@ -3,6 +3,46 @@
   overflow: hidden;
   height: calc(100vh - 80px);
 
+  .button {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    pointer-events: all;
+
+    button,
+    a {
+      display: inline-block;
+      text-decoration: none;
+      width: 250px;
+      height: 40px;
+      line-height: 36px;
+      text-align: center;
+      border-radius: 10px;
+      font-size: 18px;
+      letter-spacing: 2px;
+      background-color: var(--accent);
+      border: solid 2px var(--accent);
+      color: #ffffff;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+
+      &::after {
+        display: none;
+      }
+
+      &:hover,
+      &:active {
+        border-color: var(--accent-dark);
+        background-color: var(--accent-dark);
+        color: #ffffff;
+      }
+    }
+  }
+
   .not-found-wrapper {
     width: 100%;
     height: 100%;
@@ -25,6 +65,12 @@
         display: block;
         width: 100%;
         height: auto;
+        will-change: transform;
+        transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 140ms;
+      }
+
+      @media screen and (max-width: 500px) {
+        width: 60%;
       }
     }
 
@@ -35,17 +81,35 @@
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 90vmin;
-      line-height: 100vh;
       letter-spacing: 20px;
       z-index: 1;
       color: var(--accent);
       opacity: 0.2;
       text-shadow: inset 0px 0px 10px -2px rgb(43, 43, 43);
+      text-align: center;
 
       h1 {
         font-size: 90vmin;
         line-height: 100vh;
         letter-spacing: 20px;
+        will-change: transform;
+        text-align: center;
+        transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 140ms;
+      }
+
+      @media screen and (max-width: 1024px) {
+        opacity: 0.3;
+
+        h1 {
+          line-height: normal;
+          font-size: 50vmin;
+        }
+      }
+
+      @media screen and (max-width: 500px) {
+        h1 {
+          font-size: 46vmin;
+        }
       }
     }
   }
