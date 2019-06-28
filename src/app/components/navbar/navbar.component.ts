@@ -1,19 +1,16 @@
-import {
-  Component,
-  OnInit,
-  ElementRef,
-  AfterContentInit,
-  Input,
-} from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, ElementRef, Input, OnDestroy } from '@angular/core';
+import { Router, NavigationEnd } from '@angular/router';
 import { ModalComponent } from '../modal/modal.component';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent implements OnInit, AfterContentInit {
+export class NavbarComponent implements OnInit, OnDestroy {
+  private subscription: Subscription;
+
   @Input() modal: ModalComponent;
 
   public showMenu: boolean = false;
@@ -29,24 +26,34 @@ export class NavbarComponent implements OnInit, AfterContentInit {
     this.addScrollListener();
   }
 
-  ngOnInit() {}
+  public ngOnInit(): void {
+    this.subscription = this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.close();
+      }
+    });
+  }
 
-  ngAfterContentInit() {}
+  public ngOnDestroy(): void {
+    if (!!this.subscription && !!this.subscription.closed) {
+      this.subscription.unsubscribe();
+    }
+  }
 
-  toggle_menu() {
+  public toggleMenu(): void {
     this.showMenu = !this.showMenu;
   }
 
-  close() {
+  public close(): void {
     this.showMenu = false;
   }
 
-  href(link: string) {
+  public href(link: string): void {
     this.router.navigate([link]);
     this.close();
   }
 
-  checkScrollPosition() {
+  public checkScrollPosition(): void {
     if (window.scrollY > 10) {
       this.element.classList.add('scrolled');
     } else {
@@ -54,13 +61,13 @@ export class NavbarComponent implements OnInit, AfterContentInit {
     }
   }
 
-  addScrollListener() {
+  public addScrollListener(): void {
     window.addEventListener('scroll', () => {
       this.checkScrollPosition();
     });
   }
 
-  contact() {
+  public contact(): void {
     this.modal.open();
   }
 }

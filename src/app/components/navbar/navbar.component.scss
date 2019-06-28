@@ -1,12 +1,14 @@
 :host {
   height: 80px;
   width: 100%;
-  display: block;
+  display: flex;
+  align-items: stretch;
   background-color: #ffffff;
   box-sizing: border-box;
   overflow: hidden;
 
   @media screen and (max-width: 800px) {
+    overflow: visible;
     position: fixed;
     top: 0;
     left: 0;
@@ -32,10 +34,10 @@
 
   .nav {
     list-style: none;
-    float: right;
     height: 100%;
     width: auto;
     margin: 0;
+    margin-left: auto;
     padding: 0;
     padding: 0 20px;
 
@@ -76,38 +78,38 @@
     }
 
     @media screen and (max-width: 800px) {
-      float: none;
-      padding: 0;
       position: fixed;
       top: 80px;
-      right: -100%;
-      width: 90%;
-      max-width: 300px;
-      background-color: #ffffff;
+      right: 0;
+      width: 100%;
       height: calc(100vh - 80px);
-      z-index: 999999;
-      overflow-y: auto;
-      transition: cubic-bezier(0.165, 0.84, 0.44, 1) 300ms;
-      transform-origin: top center;
-
-      &.open {
-        right: 0;
-      }
+      background-color: #ffffff;
+      z-index: 500;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      opacity: 0;
+      will-change: transform, opacity;
+      transition: cubic-bezier(0.23, 1, 0.32, 1) 450ms;
 
       li {
-        float: none;
-        width: 100%;
-        margin: auto;
         text-align: center;
-        border-bottom: solid 1px #dbdbdb;
 
         &::after {
-          display: none;
+          height: 100%;
+          z-index: -1;
+          border-radius: 100px;
         }
 
-        &.active {
-          background-color: #dddddd;
+        &.active a {
+          color: hsl(208, 100%, 97%);
+          font-size: 20px;
         }
+      }
+
+      &.open {
+        transform: translateX(0);
+        opacity: 1;
       }
     }
   }
@@ -117,7 +119,7 @@
     height: 80px;
     background-color: #ffffff;
     position: relative;
-    float: right;
+    margin-left: auto;
 
     &.active div:nth-child(1) {
       transform: rotate(0);
@@ -137,26 +139,9 @@
         transform: rotate(90deg);
       }
     }
+
     @media screen and (min-width: 800px) {
       display: none;
     }
-  }
-}
-
-.mobile-backdrop {
-  display: block;
-  width: 10%;
-  min-width: calc(100vw - 300px);
-  height: calc(100% - 80px);
-  background-color: rgba(0, 0, 0, 0.22);
-  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 300ms;
-  position: fixed;
-  left: 0;
-  top: 80px;
-  z-index: -20;
-  transform: translateX(-100%);
-
-  &.open {
-    transform: translateX(0);
   }
 }

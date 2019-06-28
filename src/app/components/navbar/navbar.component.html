@@ -2,10 +2,7 @@
   Joshua Britz
 </a>
 
-<div class="mobile-backdrop" [class.open]="showMenu"></div>
-
 <ul class="nav" [class.open]="showMenu">
-  <!-- <div class="panel-after" (click)="close()"></div> -->
   <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
     <a routerLink="/">Home</a>
   </li>
@@ -26,7 +23,7 @@
   </li>
 </ul>
 
-<div class="mobile-button" [class.active]="showMenu" (click)="toggle_menu()">
+<div class="mobile-button" [class.active]="showMenu" (click)="toggleMenu()">
   <div></div>
   <div></div>
   <div></div>

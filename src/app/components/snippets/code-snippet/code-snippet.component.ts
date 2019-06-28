@@ -29,8 +29,6 @@ export class CodeSnippetComponent implements OnInit {
   }
 
   private processLang(code: string): string {
-    console.log(this.lang);
-
     switch (this.lang) {
       case 'javascript':
         return this.handleJS(code);
