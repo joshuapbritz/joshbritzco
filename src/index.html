@@ -4,17 +4,25 @@
     <meta charset="utf-8" />
     <title>Josh Britz - Home</title>
     <base href="/" />
+
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
-      rel="stylesheet"
+      rel="preload"
+      as="style"
+      onload="this.rel = 'stylesheet'"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Material+Icons&display=swap"
     />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
+
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Material+Icons&display=swap"
+      />
+    </noscript>
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/x-icon" href="icon.jpg" />
     <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#6860ff" />
 
     <style type="text/css">
       .ie-content-blocker {
@@ -34,7 +42,8 @@
         width: 500px;
       }
 
-      .ie-content-blocker .content h1, .ie-content-blocker .content h4 {
+      .ie-content-blocker .content h1,
+      .ie-content-blocker .content h4 {
         margin: 0;
         text-align: center;
       }
@@ -59,6 +68,23 @@
   </head>
 
   <body>
+    <noscript>
+      <div class="nojs-wrapper">
+        <div class="nojs-inner">
+          <div class="image">
+            <img src="assets/images/no_js_3.svg" alt="No JavaScript Image" />
+          </div>
+          <div class="content">
+            <h1>You Seem To Have JavaScript Turned Off</h1>
+            <p>
+              This site heavilty relies on JavaScript to provide and awesome
+              experience. Please enbale JavaScript and refresh the page
+            </p>
+          </div>
+        </div>
+      </div>
+    </noscript>
+
     <app-root></app-root>
 
     <div class="ie-content-blocker">

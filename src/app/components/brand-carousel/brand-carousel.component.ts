@@ -5,7 +5,6 @@ import {
   HostListener,
   OnDestroy,
 } from '@angular/core';
-import { RESOURCE_CACHE_PROVIDER } from '@angular/platform-browser-dynamic';
 
 @Component({
   selector: 'app-brand-carousel',
@@ -13,7 +12,9 @@ import { RESOURCE_CACHE_PROVIDER } from '@angular/platform-browser-dynamic';
   styleUrls: ['./brand-carousel.component.scss'],
 })
 export class BrandCarouselComponent implements AfterContentInit, OnDestroy {
-  private readonly container: HTMLElement;
+  private get container(): HTMLElement {
+    return this.el.nativeElement;
+  }
   private items: HTMLElement[];
   public width: number;
   private childWidth: number;
@@ -21,9 +22,7 @@ export class BrandCarouselComponent implements AfterContentInit, OnDestroy {
   private numberOfItems: number;
   private interval: any;
 
-  constructor(private el: ElementRef) {
-    this.container = el.nativeElement;
-  }
+  constructor(private el: ElementRef) {}
 
   ngAfterContentInit() {
     this.items = Array.from(this.container.children) as HTMLElement[];
@@ -45,10 +44,8 @@ export class BrandCarouselComponent implements AfterContentInit, OnDestroy {
     clearInterval(this.interval);
   }
 
-  // @HostListener('click')
   slide() {
     this.moved = this.moved + 1;
-    let i = 1;
     for (const slide of this.items) {
       if (this.moved < this.items.length - (this.numberOfItems - 1)) {
         slide.style.transform = `translate3D(-${this.childWidth *
@@ -57,7 +54,6 @@ export class BrandCarouselComponent implements AfterContentInit, OnDestroy {
         slide.style.transform = `translate3D(${0}px, 0, 0)`;
         this.moved = 0;
       }
-      i++;
     }
   }
 

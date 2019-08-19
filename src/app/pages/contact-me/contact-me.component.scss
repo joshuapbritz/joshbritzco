@@ -1,0 +1,66 @@
+:host {
+  display: block;
+
+  .contact-me-page {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    padding-top: 50px;
+
+    .image {
+      margin: auto;
+      width: 90%;
+      max-width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      object {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .info {
+      padding-top: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .title {
+        text-align: center;
+        padding-bottom: 20px;
+
+        h2 {
+          font-weight: 300;
+          font-size: 60px;
+          position: relative;
+          margin: 0;
+          color: var(--font-color-dark);
+        }
+
+        h5 {
+          margin: 0;
+          font-weight: 300;
+          font-size: 18px;
+          color: var(--font-color-light);
+        }
+      }
+
+      .info-list {
+        height: auto;
+        min-height: 250px;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li {
+          line-height: 45px;
+          font-size: 30px;
+          font-weight: 300;
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+}

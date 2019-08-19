@@ -1,11 +1,4 @@
-import {
-  Component,
-  OnInit,
-  ApplicationRef,
-  ChangeDetectorRef,
-  ChangeDetectionStrategy,
-} from '@angular/core';
-import { HomeService } from './home.service';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 
 @Component({
@@ -15,11 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent implements OnInit {
-  constructor(
-    private service: HomeService,
-    private title: Title,
-    private meta: Meta
-  ) {
+  constructor(private title: Title, private meta: Meta) {
     this.title.setTitle('Josh Britz - Home');
 
     this.meta.updateTag({
