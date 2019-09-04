@@ -48,7 +48,7 @@
     "karma-jasmine-html-reporter": "^0.2.2",
     "karma-phantomjs-launcher": "^1.0.4",
     "protractor": "~5.3.0",
-    "serve": "^11.0.2",
+    "serve": "^11.1.0",
     "ts-node": "~8.2.0",
     "tslint": "~5.16.0",
     "typescript": "~3.4.5",
