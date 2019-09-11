@@ -24,6 +24,8 @@ jobs:
 
       - run: yarn install
 
+      - run: yarn global add parcel-bundler
+
       - save_cache:
           paths:
             - node_modules
