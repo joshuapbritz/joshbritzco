@@ -1,0 +1,15 @@
+@import './variables';
+
+@import './util/reset';
+
+@import './components/animations';
+@import './components/button';
+@import './components/footer';
+@import './components/header.large';
+@import './components/navbar';
+@import './components/slider';
+@import './components/card';
+
+.content-section {
+  padding: 150px 0;
+}
