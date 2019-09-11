@@ -1,0 +1,64 @@
+{
+    "hosting": [
+        {
+            "target": "prod",
+            "public": "dist",
+            "ignore": [
+                "firebase.json",
+                "**/.*",
+                "**/node_modules/**"
+            ],
+            "rewrites": [
+                {
+                    "source": "/",
+                    "destination": "/index.html"
+                },
+                {
+                    "source": "/contact",
+                    "destination": "/contact.html"
+                }
+            ],
+            "headers": [
+                {
+                    "source": "**/*.@(css|jpg|jpeg|webp|png|gif|js|ico|svg)",
+                    "headers": [
+                        {
+                            "key": "Cache-Control",
+                            "value": "max-age=31536000"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "target": "staging",
+            "public": "dist",
+            "ignore": [
+                "firebase.json",
+                "**/.*",
+                "**/node_modules/**"
+            ],
+            "rewrites": [
+                {
+                    "source": "/",
+                    "destination": "/index.html"
+                },
+                {
+                    "source": "/contact",
+                    "destination": "/contact.html"
+                }
+            ],
+            "headers": [
+                {
+                    "source": "**/*.@(css|jpg|jpeg|webp|png|gif|js|ico|svg)",
+                    "headers": [
+                        {
+                            "key": "Cache-Control",
+                            "value": "max-age=31536000"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
