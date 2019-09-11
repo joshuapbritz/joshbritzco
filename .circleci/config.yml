@@ -61,6 +61,8 @@ jobs:
 
       - run: yarn install
 
+      - run: yarn global add parcel-bundler
+
       - save_cache:
           paths:
             - node_modules
@@ -93,6 +95,8 @@ jobs:
             - v1-dependencies-
 
       - run: yarn install
+
+      - run: yarn global add parcel-bundler
 
       - save_cache:
           paths:
