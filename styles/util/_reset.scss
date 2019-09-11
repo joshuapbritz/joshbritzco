@@ -1,0 +1,44 @@
+@import url('https://rsms.me/inter/inter.css');
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  * {
+    font-family: 'Inter var', sans-serif;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  margin: 0;
+  padding: 90px 0 0 0;
+  background-color: var(--background);
+}
+
+.main-content {
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  margin: auto;
+  width: 90%;
+  max-width: 1000px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}

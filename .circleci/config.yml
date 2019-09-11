@@ -24,20 +24,20 @@ jobs:
 
       - run: yarn install
 
+      - run: yarn global add parcel-bundler
+
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      - run:
-          name: Linting
-          command: npm run lint
+      # - run:
+      #     name: Linting
+      #     command: npm run lint
 
-      - run: npm rebuild node-sass
-
-      - run:
-          name: Testing
-          command: yarn test
+      # - run:
+      #     name: Testing
+      #     command: yarn test
 
       - run:
           name: Build
@@ -63,12 +63,12 @@ jobs:
 
       - run: yarn install
 
+      - run: yarn global add parcel-bundler
+
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
-      - run: npm rebuild node-sass
 
       - run:
           name: Build
@@ -98,12 +98,12 @@ jobs:
 
       - run: yarn install
 
+      - run: yarn global add parcel-bundler
+
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
-      - run: npm rebuild node-sass
 
       - run:
           name: Build

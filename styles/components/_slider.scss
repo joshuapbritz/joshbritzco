@@ -1,0 +1,14 @@
+.slider {
+  width: 100%;
+
+  .track {
+    display: flex;
+    align-items: stretch;
+
+    .slider-item {
+      flex: 1;
+      background-color: transparent;
+      padding-right: 100px;
+    }
+  }
+}

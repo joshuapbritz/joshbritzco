@@ -1,0 +1,106 @@
+header {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  .header-inner {
+    height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+
+    .header-title {
+      width: 100px;
+      position: relative;
+
+      h1 {
+        line-height: 100px;
+        white-space: nowrap;
+        position: absolute;
+        top: 435px;
+        left: 0;
+        transform-origin: top left;
+        transform: rotate(-90deg);
+        font-size: 70px;
+        color: var(--text-dark);
+      }
+    }
+
+    .header-description {
+      flex-basis: 50%;
+      max-width: 50%;
+      padding: 20px 80px 20px 20px;
+      background-color: var(--background);
+
+      h2,
+      p {
+        color: var(--text-medium);
+      }
+
+      h2 {
+        font-size: 30px;
+        font-weight: 300;
+        margin-bottom: 15px;
+      }
+
+      p {
+        text-align: justify;
+        font-size: 20px;
+        font-weight: 300;
+        margin-bottom: 15px;
+      }
+
+      .header-buttons {
+        button,
+        .button {
+          margin-right: 15px;
+
+          &:nth-last-child(1) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .header-image {
+      flex-basis: calc(50% - 100px);
+      max-width: calc(50% - 100px);
+      height: 100%;
+
+      object {
+        display: block;
+        height: 100%;
+      }
+    }
+
+    .header-down-arrow {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      width: 40px;
+      height: auto;
+      margin-left: -20px;
+
+      span {
+        display: block;
+        width: 40px;
+        height: 40px;
+        animation-name: Bouncy;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+
+        &::after {
+          content: '';
+          display: block;
+          width: 40px;
+          height: 40px;
+          border: solid 2px var(--text-dark);
+          transform: rotate(45deg);
+          border-top: none;
+          border-left: none;
+        }
+      }
+    }
+  }
+}

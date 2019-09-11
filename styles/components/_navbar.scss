@@ -1,0 +1,13 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 90px;
+  width: 100%;
+  background-color: var(--background);
+  z-index: 50;
+
+  &.scrolled {
+    border-bottom: solid 2px var(--primary);
+  }
+}
