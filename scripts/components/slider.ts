@@ -20,17 +20,26 @@ export class Slider {
     this.track.style.width = `${this.slideWidth * this.slides.length}px`;
 
     this.next.addEventListener('click', () => {
-      this.index++;
+      if (this.index < this.slides.length - 2) {
+        this.index++;
 
-      this.track.style.transform = `translateX(-${Math.abs(this.slideWidth) *
-        this.index}px)`;
+        const slideAmount: number = Math.min(
+          this.slideWidth * (this.slides.length - 2) - 100,
+          Math.abs(this.slideWidth) * this.index
+        );
+
+        this.track.style.transform = `translateX(-${slideAmount}px)`;
+      }
     });
 
     this.previous.addEventListener('click', () => {
-      this.index--;
+      if (this.index > 0) {
+        this.index--;
 
-      this.track.style.transform = `translateX(-${Math.abs(this.slideWidth) *
-        this.index}px)`;
+        const slideAmount: number = Math.abs(this.slideWidth) * this.index;
+
+        this.track.style.transform = `translateX(-${slideAmount}px)`;
+      }
     });
   }
 }

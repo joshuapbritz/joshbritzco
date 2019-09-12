@@ -4,6 +4,8 @@
   .track {
     display: flex;
     align-items: stretch;
+    will-change: transform;
+    transition: transform cubic-bezier(0.785, 0.135, 0.15, 0.86) 500ms;
 
     .slider-item {
       flex: 1;
