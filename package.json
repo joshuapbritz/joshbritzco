@@ -6,6 +6,7 @@
   "scripts": {
     "start": "parcel serve *.html",
     "build": "parcel build *.html",
+    "generate-sw": "workbox injectManifest workbox-config.js",
     "build:prod": "./node_modules/parcel-bundler/bin/parcel build *.html",
     "deploy:ci:prod": "firebase deploy --only hosting:prod --token=$FIREBASE_DEPLOY_TOKEN",
     "deploy:ci:staging": "firebase deploy --only hosting:staging --token=$FIREBASE_DEPLOY_TOKEN"
