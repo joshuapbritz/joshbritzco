@@ -1,3 +1,5 @@
+import './components/navbar';
+
 import { Slider } from './components/slider';
 
 window.addEventListener('load', () => {
