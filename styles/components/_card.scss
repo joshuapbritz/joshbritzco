@@ -1,10 +1,13 @@
 .card {
-  display: block;
+  display: flex;
+  flex-flow: column wrap;
   width: 100%;
-  height: auto;
+  height: 100%;
   border-radius: 10px;
   border: solid 2px var(--primary);
   padding: 20px;
+  padding-bottom: 85px;
+  position: relative;
 
   .card-image {
     width: 100%;
@@ -26,12 +29,13 @@
   .card-content {
     padding-top: 20px;
     text-align: center;
+    flex: 1;
 
     h4 {
-      font-size: 18px;
+      font-size: 20px;
       font-weight: 400;
       letter-spacing: 2px;
-      margin-bottom: 6px;
+      margin-bottom: 10px;
       color: var(--text-dark);
     }
 
@@ -42,9 +46,13 @@
       width: 80%;
       margin: auto;
     }
+  }
 
-    .action-area {
-      padding-top: 15px;
-    }
+  .action-area {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    left: 0;
+    bottom: 15px;
   }
 }

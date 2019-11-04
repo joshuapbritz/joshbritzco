@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "parcel serve *.html",
+    "start": "parcel serve *.html --open",
     "build": "parcel build *.html",
     "generate-sw": "workbox injectManifest workbox-config.js",
     "build:prod": "./node_modules/parcel-bundler/bin/parcel build *.html",

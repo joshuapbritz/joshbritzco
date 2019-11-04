@@ -11,8 +11,13 @@ window.addEventListener('load', () => {
       const href = anchor.getAttribute('href');
       if (href.startsWith('#')) {
         event.preventDefault();
-        console.log('scroll here');
-        window.location.hash = href;
+        event.stopPropagation();
+
+        const section = document.querySelector(href);
+        if (!!section) {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          window.history.pushState(null, null, window.location.pathname + href);
+        } else console.warn('No target found for ' + href);
       }
     });
   }
@@ -23,5 +28,6 @@ window.addEventListener('load', () => {
     document.querySelector('.next'),
     document.querySelector('.previous')
   );
+
   slider.start();
 });
