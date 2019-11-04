@@ -18,8 +18,9 @@ nav {
 
     span {
       opacity: 0;
-      will-change: opacity;
-      transition: opacity cubic-bezier(0.455, 0.03, 0.515, 0.955) 200ms;
+      transform: translateY(-100%);
+      will-change: opacity, transform;
+      transition: all cubic-bezier(0.455, 0.03, 0.515, 0.955) 200ms;
       font-weight: 200;
       letter-spacing: 2px;
     }
@@ -78,6 +79,7 @@ nav {
     .logo {
       span {
         opacity: 1;
+        transform: translateY(0);
       }
     }
   }

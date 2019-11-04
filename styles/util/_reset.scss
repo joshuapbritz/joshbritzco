@@ -44,3 +44,13 @@ h6,
 p {
   margin: 0;
 }
+
+a:not(.logo):not(.button):not(.nav-list-link) {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+
+  &:hover {
+    opacity: 0.4;
+  }
+}
