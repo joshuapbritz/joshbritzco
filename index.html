@@ -151,6 +151,37 @@
           </div>
         </div>
       </section>
+
+      <section id="aboutme" class="content-section">
+        <div class="container">
+          <h2>About Me</h2>
+          <p>
+            I am a self taught developer from Johannesburg, South Africa. I
+            started my development journey at the age of thirteen and it has
+            been all love since then.
+          </p>
+          <p>
+            I have now been working for
+            <script>
+              const today = new Date();
+              const started = new Date(2017, 0, 26);
+
+              const months = today.getMonth() - started.getMonth();
+              const years = today.getFullYear() - started.getFullYear();
+
+              document.currentScript.outerHTML = `${years} years and ${months} month${
+                months === 1 ? '' : 's'
+              }`;
+            </script>
+            as of this month. My passion is frontend development and my current
+            role is UX Engineer. Under this title I work to improve relations
+            between designers and developers, create and maitain component
+            librararies and style guides, as well as researching new tech and
+            frameworks. I also create tools for the other developers I work with
+            to make their workflows easier.
+          </p>
+        </div>
+      </section>
     </main>
 
     <footer></footer>
