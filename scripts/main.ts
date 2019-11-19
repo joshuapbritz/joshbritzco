@@ -1,4 +1,5 @@
 import './components/navbar';
+import './components/intersect';
 
 import { Slider } from './components/slider';
 

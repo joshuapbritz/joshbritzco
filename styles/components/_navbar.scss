@@ -9,6 +9,9 @@ nav {
   display: flex;
   align-items: stretch;
   padding: 0 20px;
+  will-change: box-shadow;
+  transition: box-shadow cubic-bezier(0.455, 0.03, 0.515, 0.955) 200ms;
+  box-shadow: 0px 0px 3px 4px rgba(48, 48, 48, 0);
 
   .logo {
     margin-right: auto;
@@ -50,7 +53,7 @@ nav {
       }
 
       &::after {
-        content: '';
+        content: "";
         display: block;
         width: 70%;
         background-color: var(--primary-transparent);
@@ -74,7 +77,7 @@ nav {
   }
 
   &.scrolled {
-    border-bottom: solid 2px var(--primary);
+    box-shadow: 0px 0px 3px 4px rgba(48, 48, 48, 0.2);
 
     .logo {
       span {
