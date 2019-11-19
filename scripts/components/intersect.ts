@@ -8,11 +8,12 @@ window.addEventListener(
         for (const block of entries) {
           if (block.isIntersecting) {
             block.target.classList.add('visible');
+            observer.unobserve(block.target);
           }
         }
       },
       {
-        threshold: 0.4,
+        threshold: 0.7,
       }
     );
 
