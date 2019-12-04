@@ -8,10 +8,12 @@
 }
 
 :root {
+  // justification: http://whocanuse.com/?b=6600cc&c=fff&f=20&s=b
   --test-background: #6600cc;
   --test-foreground: #ffffff;
 
   @media (prefers-color-scheme: light) {
+    // justification: http://whocanuse.com/?b=ffffff&c=6600cc&f=20&s=b
     --test-background: #ffffff;
     --test-foreground: #6600cc;
   }
