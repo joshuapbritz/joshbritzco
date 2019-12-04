@@ -1,0 +1,42 @@
+section.content-section {
+  width: 100%;
+  background-color: var(--background);
+  position: relative;
+  overflow: hidden;
+
+  .inner {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px 0;
+
+    h1 {
+      font-size: 80px;
+      color: var(--foreground);
+      text-align: right;
+      font-weight: 200;
+      margin-bottom: 30px;
+    }
+
+    p {
+      color: var(--text-light);
+    }
+  }
+
+  &.invert {
+    background-color: var(--foreground);
+
+    h1 {
+      color: var(--background);
+      text-align: left;
+    }
+
+    p {
+      color: var(--text);
+    }
+  }
+
+  &.first-child {
+    padding-top: 100px;
+  }
+}

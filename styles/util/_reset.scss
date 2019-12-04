@@ -19,8 +19,7 @@
 
 body {
   margin: 0;
-  padding: 90px 0 0 0;
-  background-color: var(--background);
+  padding: 0;
 }
 
 .main-content {
@@ -46,11 +45,15 @@ p {
 }
 
 a:not(.logo):not(.button):not(.nav-list-link) {
-  color: var(--primary);
+  color: currentColor;
   text-decoration: none;
   font-weight: 500;
 
   &:hover {
     opacity: 0.4;
   }
+}
+
+p {
+  font-size: 18px;
 }

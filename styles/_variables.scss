@@ -1,20 +1,24 @@
-:root {
-  --background: #f8f8f8;
-  --primary: #fc624d;
-  --primary-transparent: rgba(252, 97, 77, 0.4);
+// :root {
+//   --background: #f8f8f8;
+//   --primary: #fc624d;
+//   --primary-transparent: rgba(252, 97, 77, 0.4);
 
-  --text-dark: #202020;
-  --text-medium: #3f3f3f;
-}
+//   --text-dark: #202020;
+//   --text-medium: #3f3f3f;
+// }
 
 :root {
   // justification: http://whocanuse.com/?b=6600cc&c=fff&f=20&s=b
-  --test-background: #6600cc;
-  --test-foreground: #ffffff;
+  --background: #6600cc;
+  --foreground: #ffffff;
+  --text: #3b3b3b;
+  --text-light: #e6ccff;
 
   @media (prefers-color-scheme: light) {
     // justification: http://whocanuse.com/?b=ffffff&c=6600cc&f=20&s=b
-    --test-background: #ffffff;
-    --test-foreground: #6600cc;
+    --background: #ffffff;
+    --foreground: #6600cc;
+    --text: #e6ccff;
+    --text-light: #3b3b3b;
   }
 }
