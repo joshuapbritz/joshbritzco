@@ -6,3 +6,13 @@
   --text-dark: #202020;
   --text-medium: #3f3f3f;
 }
+
+:root {
+  --test-background: #6600cc;
+  --test-foreground: #ffffff;
+
+  @media (prefers-color-scheme: light) {
+    --test-background: #ffffff;
+    --test-foreground: #6600cc;
+  }
+}
