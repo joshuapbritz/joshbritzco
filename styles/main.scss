@@ -492,7 +492,11 @@ footer {
 
   h3 {
     font-weight: 300;
-    text-align: justify;
+    text-align: left;
+
+    @media screen and (max-width: 620px) {
+      font-size: 14px;
+    }
   }
 }
 
