@@ -3,7 +3,12 @@ import { parseDate } from './lib/date';
 import { html } from './lib/html';
 import { Post } from './models/post';
 
-(async (url: string, element: HTMLElement, dialog: HTMLDialogElement) => {
+(async (
+  url: string,
+  element: HTMLElement,
+  dialog: HTMLDialogElement,
+  anchors: HTMLAnchorElement[]
+) => {
   const result: Array<Article> = await fetch(url).then(data => data.json());
 
   let articles: Array<Article> = [];
@@ -105,8 +110,31 @@ import { Post } from './models/post';
 
     element.appendChild(item);
   }
+
+  anchors.forEach(anchor => {
+    anchor.addEventListener('click', (event: MouseEvent) => {
+      const target = document.querySelector(anchor.getAttribute('href'));
+      if (target && 'scrollIntoView' in target) {
+        event.preventDefault();
+        event.stopPropagation();
+
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start',
+          inline: 'start',
+        });
+
+        window.history.replaceState(
+          null,
+          null,
+          '/' + anchor.getAttribute('href')
+        );
+      }
+    });
+  });
 })(
   'https://dev.to/api/articles?username=joshuapbritz',
   document.getElementById('article'),
-  document.getElementById('article-container') as any
+  document.getElementById('article-container') as any,
+  Array.from(document.querySelectorAll('a'))
 );
