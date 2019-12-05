@@ -202,6 +202,9 @@
 
       @media screen and (max-width: 620px) {
         padding: 0;
+        & > .highlight {
+          width: calc(100% + 40px);
+        }
       }
     }
 
