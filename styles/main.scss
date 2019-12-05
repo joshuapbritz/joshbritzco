@@ -475,6 +475,27 @@ footer {
       margin: 35px 0;
     }
   }
+
+  &.loading {
+    height: calc(100vh - 50px);
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 60px;
+      border: solid 4px var(--background);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin: -30px;
+      border-radius: 50%;
+      border-bottom-color: var(--foreground);
+      border-top-color: var(--foreground);
+      animation: LoadSpin infinite linear 1000ms;
+    }
+  }
 }
 
 .ltag-github-readme-tag {
@@ -522,4 +543,14 @@ hr {
   background-color: var(--background);
   border-radius: 4px;
   opacity: 0.5;
+}
+
+@keyframes LoadSpin {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -7,6 +7,7 @@ const locationId = `https://dev.to/api/articles/${
 }`;
 
 (async (url: string, home: HTMLElement) => {
+  home.classList.add('loading');
   const results: Post = await fetch(url).then(i => i.json());
 
   if (!('error' in results)) {
@@ -38,6 +39,8 @@ const locationId = `https://dev.to/api/articles/${
         ${results.body_html}
       </article>
     `;
+
+    home.classList.remove('loading');
   } else {
     home.innerHTML = html`
       <header class="not-found">
