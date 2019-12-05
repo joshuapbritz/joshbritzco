@@ -382,6 +382,10 @@ footer {
       font-size: 50px;
       text-align: center;
       font-weight: 300;
+
+      @media screen and (max-width: 620px) {
+        font-size: 20px;
+      }
     }
   }
 
