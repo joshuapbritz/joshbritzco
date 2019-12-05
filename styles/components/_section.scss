@@ -2,7 +2,6 @@ section.content-section {
   width: 100%;
   background-color: var(--background);
   position: relative;
-  overflow: hidden;
 
   .inner {
     width: 90%;
@@ -23,7 +22,32 @@ section.content-section {
     }
   }
 
+  &::after,
+  &::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100vw 100px 0;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+  }
+
+  &::after {
+    border-color: transparent var(--background) transparent transparent;
+  }
+
+  &::before {
+    border-color: transparent var(--background) transparent transparent;
+    filter: blur(5px);
+    bottom: -104px;
+    opacity: 0.7;
+  }
+
   &.invert {
+    margin-top: 100px;
+    padding-bottom: 140px;
     background-color: var(--foreground);
 
     h1 {
@@ -34,9 +58,28 @@ section.content-section {
     p {
       color: var(--text);
     }
-  }
 
-  &.first-child {
-    padding-top: 100px;
+    &::after,
+    &::before {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 100px 0 0 100vw;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    &::after {
+      border-color: transparent transparent transparent var(--background);
+    }
+
+    &::before {
+      border-color: transparent transparent transparent var(--background);
+      filter: blur(5px);
+      bottom: 4px;
+      opacity: 0.7;
+    }
   }
 }

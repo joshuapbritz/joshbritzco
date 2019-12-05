@@ -17,15 +17,37 @@
     <link rel="preconnect" href="https://rsms.me" />
   </head>
   <body>
+    <nav class="navbar">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#home" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#writing" class="nav-link">Writings</a>
+        </li>
+        <li class="nav-item">
+          <a href="#work-and-skills" class="nav-link">My Work</a>
+        </li>
+        <li class="nav-item">
+          <a href="#work-and-skills" class="nav-link">Get In Touch</a>
+        </li>
+      </ul>
+    </nav>
     <main class="main-content">
       <header class="app-header">
         <div class="inner-content">
           <h1>Josh Britz</h1>
-          <button>SEE MY WORK</button>
+          <h3>UX Engineer, Web Tinkerer, Cat Dad</h3>
         </div>
       </header>
 
-      <section class="content-section invert first-child" style="z-index:40;">
+      <section
+        class="content-section invert first-child about-me-section"
+        style="z-index:40;"
+      >
         <div class="inner">
           <h1>About Me</h1>
           <article class="about-me-content">
@@ -44,9 +66,9 @@
               </p>
               <br />
               <p>
-                In my free enjoy experimenting with new stuff and creating funky
-                and unusual things on the web, writing about tech stuff, playing
-                music, and cuddling with my cats
+                In my free time I enjoy experimenting with new web technologies,
+                creating funky and unusual things on the web, writing about tech
+                stuff, and playing music.
               </p>
             </div>
           </article>
@@ -55,16 +77,37 @@
 
       <section class="content-section" style="z-index:30;">
         <div class="inner">
-          <h1>My Work</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde
-            doloremque libero rem, necessitatibus ut asperiores tenetur officiis
-            fuga doloribus cum nostrum cupiditate quod porro accusantium laborum
-            sed nobis deserunt temporibus?
-          </p>
+          <h1>My Writings</h1>
+          <ul class="article-list" id="article"></ul>
+
+          <div class="readmore">
+            <a href="https://dev.to/joshuapbritz">SEE MORE</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section invert">
+        <div class="inner">
+          <h1>My Work & Skills</h1>
+          <article class="work-and-skils">
+            <div class="column work"></div>
+            <div class="column skills"></div>
+          </article>
         </div>
       </section>
     </main>
+
+    <footer></footer>
+
+    <dialog class="article-dialog" id="article-container">
+      <nav>
+        <div class="close" onclick="window['article-container'].close()">
+          close
+          <span></span>
+        </div>
+      </nav>
+      <div id="inner-content"></div>
+    </dialog>
     <!-- <nav>
       <a class="logo">
         <span>Josh Britz</span>

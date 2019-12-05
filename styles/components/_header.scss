@@ -17,6 +17,12 @@ header.app-header {
     color: var(--foreground);
   }
 
+  h3 {
+    font-weight: 400;
+    color: var(--foreground);
+    opacity: 0.8;
+  }
+
   &::after,
   &::before {
     content: '';
