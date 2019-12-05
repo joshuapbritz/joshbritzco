@@ -7,8 +7,11 @@ import { Post } from './models/post';
   url: string,
   element: HTMLElement,
   dialog: HTMLDialogElement,
-  anchors: HTMLAnchorElement[]
+  anchors: HTMLAnchorElement[],
+  year: HTMLElement
 ) => {
+  year.innerHTML = new Date().getFullYear().toString();
+
   const result: Array<Article> = await fetch(url).then(data => data.json());
 
   let articles: Array<Article> = [];
@@ -136,5 +139,6 @@ import { Post } from './models/post';
   'https://dev.to/api/articles?username=joshuapbritz',
   document.getElementById('article'),
   document.getElementById('article-container') as any,
-  Array.from(document.querySelectorAll('a'))
+  Array.from(document.querySelectorAll('a')),
+  document.getElementById('year')
 );
