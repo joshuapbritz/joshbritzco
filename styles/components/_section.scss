@@ -15,6 +15,11 @@ section.content-section {
       text-align: right;
       font-weight: 200;
       margin-bottom: 30px;
+
+      @media screen and (max-width: 620px) {
+        text-align: center !important;
+        font-size: 60px;
+      }
     }
 
     p {
@@ -43,6 +48,10 @@ section.content-section {
     filter: blur(5px);
     bottom: -104px;
     opacity: 0.7;
+
+    @media (prefers-color-scheme: light) {
+      display: none;
+    }
   }
 
   &.invert {

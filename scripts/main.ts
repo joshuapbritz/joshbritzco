@@ -35,6 +35,8 @@ import { Post } from './models/post';
         dialog.classList.add('loading');
         dialog.showModal();
 
+        document.body.style.overflow = 'hidden';
+
         fetch(`https://dev.to/api/articles/${article.id}`)
           .then(data => data.json())
           .then((data: Post) => {
@@ -76,6 +78,12 @@ import { Post } from './models/post';
               <article class="content">
                 ${data.body_html}
               </article>
+
+              <footer>
+                <a target="_blank" rel="noopener" href="${data.url}">
+                  VIEW ON DEV.TO
+                </a>
+              </footer>
             `;
 
             host.appendChild(content);
@@ -142,3 +150,8 @@ import { Post } from './models/post';
   Array.from(document.querySelectorAll('a')),
   document.getElementById('year')
 );
+
+window['closeDialog'] = (dialog: HTMLDialogElement) => {
+  dialog.close();
+  document.body.style.overflow = '';
+};

@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel serve index.html --open",
-    "build": "parcel build *.html",
+    "build": "rm -rf dist && parcel build index.html && yarn generate-sw",
     "generate-sw": "workbox injectManifest workbox-config.js",
     "build:prod": "./node_modules/parcel-bundler/bin/parcel build *.html",
     "deploy:ci:prod": "firebase deploy --only hosting:prod --token=$FIREBASE_DEPLOY_TOKEN",

@@ -46,4 +46,27 @@
   --si: #fdff95;
 
   --c1: #cfa2fc;
+
+  @media (prefers-color-scheme: light) {
+    --kd: #607d8b;
+    --k: #607d8b;
+    --kr: #607d8b;
+
+    --nx: #03a9f4;
+    --na: #03a9f4;
+
+    --o: #ff69b4;
+    --nt: #ff69b4;
+    --nc: #ff69b4;
+
+    --mi: #0fc7de;
+    --nb: #0fc7de;
+
+    --dl: #ff9800;
+    --s1: #ff9800;
+    --s2: #ff9800;
+    --si: #ff9800;
+
+    --c1: #a54aff;
+  }
 }

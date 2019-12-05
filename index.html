@@ -13,7 +13,7 @@
     <title>Josh Britz</title>
     <link rel="stylesheet" href="./styles/main.scss" />
 
-    <!-- <link rel="dns-prefetch" href="https://rsms.me" /> -->
+    <link rel="dns-prefetch" href="https://rsms.me" />
     <link rel="preconnect" href="https://rsms.me" />
   </head>
   <body>
@@ -190,196 +190,70 @@
 
     <dialog class="article-dialog" id="article-container">
       <nav>
-        <div class="close" onclick="window['article-container'].close()">
+        <div
+          class="close"
+          onclick="window.closeDialog(window['article-container'])"
+        >
           close
           <span></span>
         </div>
       </nav>
       <div id="inner-content"></div>
     </dialog>
-    <!-- <nav>
-      <a class="logo">
-        <span>Josh Britz</span>
-      </a>
 
-      <ul class="nav-list">
-        <li class="nav-list-item">
-          <a href="#top" class="nav-list-link">Home</a>
-        </li>
-        <li class="nav-list-item">
-          <a href="#mywork" class="nav-list-link">My Work</a>
-        </li>
-        <li class="nav-list-item">
-          <a href="/contact" class="nav-list-link">Contact</a>
-        </li>
-      </ul>
-    </nav>
+    <script async defer>
+      (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        (i[r] =
+          i[r] ||
+          function() {
+            (i[r].q = i[r].q || []).push(arguments);
+          }),
+          (i[r].l = 1 * new Date());
+        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m);
+      })(
+        window,
+        document,
+        'script',
+        'https://www.google-analytics.com/analytics.js',
+        'ga'
+      );
+      ga('create', 'UA-97700713-1', 'auto');
+    </script>
+    <script async defer>
+      (function(h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function() {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 876577, hjsv: 6 };
+        a = o.getElementsByTagName('head')[0];
+        r = o.createElement('script');
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
 
-    <main class="main-content">
-      <header>
-        <div class="header-inner container">
-          <div class="header-title"><h1>JOSH BRITZ</h1></div>
-          <div class="header-description">
-            <h2>
-              UX Engineer &
-              <br class="title-break" />
-              Web Tinkerer
-            </h2>
-            <p>
-              Hi 👋 I'm a Front-end developer working at
-              <a href="https://onepointfour.io">OnePointFour</a>
-              where I create and test components and component libraries for
-              various projects, as well as developer tools and utilities.
-            </p>
-            <div class="header-buttons">
-              <a class="button" href="#mywork" inverted>MY WORK</a>
-              <a class="button" href="/contact">CONTACT ME</a>
-            </div>
-          </div>
-          <div class="header-image">
-            <object
-              data="./assets/undraw_on_the_office_fbfs.svg"
-              type="image/svg+xml"
-            >
-              Illustration of man on a desk with a phone
-            </object>
-          </div>
-          <div class="header-down-arrow">
-            <span></span>
-          </div>
-        </div>
-      </header>
-
-      <section id="mywork" class="content-section">
-        <div class="work-grid container">
-          <div class="item">
-            <div class="card">
-              <div class="card-content">
-                <h4>Schalk Bezuidenhout</h4>
-                <p>
-                  Schalk Bezuidenhout is a top notch South African comedian with
-                  flamboyant personality. He's a colouful and artsy kind of
-                  person, and his website is made to reflect this.
-                </p>
-              </div>
-
-              <div class="action-area">
-                <a
-                  rel="noopener"
-                  href="https://schalkbezuidenhout.com/"
-                  class="button"
-                >
-                  SEE SITE
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="card">
-              <div class="card-content">
-                <h4>WesBank Auctions</h4>
-                <p>
-                  Built to bridge the gap between auction houses and consumers,
-                  WesBank's auction portal is a platoform for finding and
-                  getting infomation about auctions that are happening near you.
-                </p>
-              </div>
-
-              <div class="action-area">
-                <a
-                  rel="noopener"
-                  href="https://www.wesbank.co.za/auctions/"
-                  class="button"
-                >
-                  SEE SITE
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="card">
-              <div class="card-content">
-                <h4>WesBank Website</h4>
-                <p>
-                  Recently I worked on a major upgrade to the wesbite for
-                  WesBank - South Africa's leading financial provider. The
-                  update included a UI refresh as well as huge improvements in
-                  User Experience.
-                </p>
-              </div>
-
-              <div class="action-area">
-                <a
-                  rel="noopener"
-                  href="https://www.wesbank.co.za/home/"
-                  class="button"
-                >
-                  SEE SITE
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="card">
-              <div class="card-content">
-                <h4>Dramabuzz</h4>
-                <p>
-                  A website made for the acclaimed performance group Dramabuzz.
-                  This site was one of my first projects that I undertook and is
-                  a constant maintenance work as I try to improve it.
-                </p>
-              </div>
-
-              <div class="action-area">
-                <a
-                  rel="noopener"
-                  href="https://www.dramabuzz.co.za"
-                  class="button"
-                >
-                  SEE SITE
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="aboutme" class="content-section">
-        <div class="container">
-          <h2>About Me</h2>
-          <p>
-            I am a self taught developer from Johannesburg, South Africa. I
-            started my development journey at the age of thirteen and it has
-            been all love since then.
-          </p>
-          <p>
-            I have now been working for
-            <script>
-              const today = new Date();
-              const started = new Date(2017, 0, 26);
-
-              const months = today.getMonth() - started.getMonth();
-              const years = today.getFullYear() - started.getFullYear();
-
-              document.currentScript.outerHTML = `${years} years and ${months} month${
-                months === 1 ? '' : 's'
-              }`;
-            </script>
-            as of this month. My passion is frontend development and my current
-            role is UX Engineer. Under this title I work to improve relations
-            between designers and developers, create and maitain component
-            librararies and style guides, as well as researching new tech and
-            frameworks. I also create tools for the other developers I work with
-            to make their workflows easier.
-          </p>
-        </div>
-      </section>
-    </main>
-
-    <footer></footer> -->
+    <script defer async>
+      if (
+        'serviceWorker' in navigator &&
+        process.env.NODE_ENV === 'production'
+      ) {
+        navigator.serviceWorker
+          .register('sw.js')
+          .then(registration => {
+            console.log('Service Worker Registered');
+          })
+          .catch(() => console.log('Error In Service Worker Registration'));
+      } else {
+        console.log('Service Workers Not Available Or App In Development Mode');
+      }
+    </script>
 
     <script src="./scripts/main.ts"></script>
   </body>
