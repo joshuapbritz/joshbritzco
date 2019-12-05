@@ -483,6 +483,10 @@ footer {
     img {
       width: 50px;
       margin-right: 15px;
+
+      @media screen and (max-width: 620px) {
+        display: none;
+      }
     }
   }
 
