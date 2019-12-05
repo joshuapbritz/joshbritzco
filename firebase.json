@@ -14,8 +14,8 @@
                     "destination": "/index.html"
                 },
                 {
-                    "source": "/contact",
-                    "destination": "/contact.html"
+                    "source": "/post/*",
+                    "destination": "/post.html"
                 }
             ],
             "headers": [
@@ -44,8 +44,8 @@
                     "destination": "/index.html"
                 },
                 {
-                    "source": "/contact",
-                    "destination": "/contact.html"
+                    "source": "/post/*",
+                    "destination": "/post.html"
                 }
             ],
             "headers": [

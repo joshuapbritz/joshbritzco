@@ -22,7 +22,9 @@ import { Post } from './models/post';
   for (const article of articles) {
     const item: HTMLElement = document.createElement('a');
     item.classList.add(`article-item`);
-    item.setAttribute('href', `/post/${article.id}`);
+
+    const pathToPost = `/post/${article.id}`;
+    item.setAttribute('href', pathToPost);
 
     item.addEventListener('click', (event: MouseEvent) => {
       if ('HTMLDialogElement' in window) {
@@ -36,6 +38,8 @@ import { Post } from './models/post';
         dialog.showModal();
 
         document.body.style.overflow = 'hidden';
+
+        window.history.pushState(null, null, pathToPost);
 
         fetch(`https://dev.to/api/articles/${article.id}`)
           .then(data => data.json())
@@ -154,4 +158,5 @@ import { Post } from './models/post';
 window['closeDialog'] = (dialog: HTMLDialogElement) => {
   dialog.close();
   document.body.style.overflow = '';
+  window.history.back();
 };

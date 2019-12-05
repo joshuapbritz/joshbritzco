@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel serve index.html --open",
-    "build": "rm -rf dist && parcel build index.html && yarn generate-sw",
+    "start:post": "parcel serve post.html --open",
+    "build": "rm -rf dist && parcel build *.html && yarn generate-sw",
     "generate-sw": "workbox injectManifest workbox-config.js",
     "lint": "prettier --write \"styles/**/*.{scss,css}\" \"scripts/**/*.{ts,js,json}\" \"*.html\"",
     "build:prod": "./node_modules/parcel-bundler/bin/parcel build *.html",
