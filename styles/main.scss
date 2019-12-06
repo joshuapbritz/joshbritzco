@@ -28,6 +28,10 @@
   .content {
     padding-left: 50px;
     width: calc(100% - 250px);
+
+    p {
+      font-weight: 300;
+    }
   }
 
   @media screen and (max-width: 800px) {
