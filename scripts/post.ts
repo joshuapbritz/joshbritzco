@@ -11,6 +11,8 @@ const locationId = `https://dev.to/api/articles/${
   const results: Post = await fetch(url).then(i => i.json());
 
   if (!('error' in results)) {
+    document.head.title = `Josh Britz - Post | ${results.title}`;
+
     home.innerHTML = html`
       <header class="post-title">
         <h1>${results.title}</h1>
