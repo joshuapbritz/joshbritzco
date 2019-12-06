@@ -318,6 +318,17 @@
   @media screen and (max-width: 620px) {
     .column .columns {
       columns: 1 !important;
+
+      ul {
+        li {
+          line-height: 45px;
+
+          a {
+            display: block;
+            line-height: 45px;
+          }
+        }
+      }
     }
   }
 }
