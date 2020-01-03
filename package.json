@@ -17,7 +17,7 @@
     "fibers": "^4.0.2",
     "firebase-tools": "^6.3.1",
     "parcel-bundler": "^1.10.3",
-    "sass": "^1.23.0-module.beta.1",
+    "sass": "^1.24.1",
     "typescript": "^3.6.3",
     "prettier": "^1.19.1",
     "workbox-cli": "^4.3.1"
