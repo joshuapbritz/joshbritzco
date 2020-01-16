@@ -17,9 +17,9 @@
     "fibers": "^4.0.2",
     "firebase-tools": "^7.12.1",
     "parcel-bundler": "^1.10.3",
+    "parcel-plugin-static-files-copy": "^2.2.1",
     "prettier": "^1.19.1",
     "sass": "^1.23.0-module.beta.1",
-    "parcel-plugin-static-files-copy": "^2.2.1",
     "typescript": "^3.6.3",
     "workbox-cli": "^4.3.1"
   },
