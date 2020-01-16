@@ -16,6 +16,22 @@
       bottom: -5px;
     }
   }
+
+  .actions {
+    text-align: center;
+
+    a {
+      display: inline-block;
+      line-height: 45px;
+      background-color: var(--background);
+      padding: 0 20px;
+      border-radius: 15px;
+      font-weight: 300 !important;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--foreground) !important;
+    }
+  }
 }
 
 .work-grid {
