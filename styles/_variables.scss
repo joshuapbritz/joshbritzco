@@ -11,6 +11,7 @@
   // justification: http://whocanuse.com/?b=6600cc&c=fff&f=20&s=b
   --background: #6600cc;
   --background-transparent: rgba(102, 0, 204, 0.8);
+  --background-transparent-light: rgba(102, 0, 204, 0.5);
   --foreground: #ffffff;
   --text: #3b3b3b;
   --text-light: #e6ccff;
@@ -19,6 +20,7 @@
     // justification: http://whocanuse.com/?b=ffffff&c=6600cc&f=20&s=b
     --background: #ffffff;
     --background-transparent: rgba(255, 255, 255, 0.8);
+    --background-transparent-light: rgba(255, 255, 255, 0.5);
     --foreground: #6600cc;
     --text: #e6ccff;
     --text-light: #3b3b3b;
