@@ -14,12 +14,14 @@ document.addEventListener('DOMContentLoaded', event => {
 
   const obs = new IntersectionObserver(
     entries => {
-      for (const entry of entries) {
-        entry.target.classList.toggle('is-visible', entry.isIntersecting);
-      }
+      for (const entry of entries) toggleVisibility(entry);
     },
     { threshold: 0, root: null }
   );
 
   for (const section of sections) obs.observe(section);
 });
+
+function toggleVisibility(entry: IntersectionObserverEntry): void {
+  entry.target.classList.toggle('is-visible', entry.isIntersecting);
+}
