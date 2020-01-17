@@ -7,7 +7,7 @@
 // an element is about to scroll into view.
 //
 // The class "is-visible" is added to the element
-// when it is scrolled into view
+// when it is scrolled into view.
 
 document.addEventListener('DOMContentLoaded', event => {
   const sections = document.querySelectorAll('section');
