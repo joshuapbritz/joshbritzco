@@ -49,6 +49,7 @@
   border-radius: 10px;
   border: solid 2px var(--background-transparent);
   overflow: hidden;
+  cursor: pointer;
 
   .image {
     img {
@@ -105,30 +106,23 @@
     content: '';
     display: block;
     position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 5px;
-    height: 50px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     border-radius: 80px;
-    will-change: width, height, border-radius, bottom, left, transform;
-    transition: width cubic-bezier(0.25, 0.46, 0.45, 0.94) 300ms,
-      height cubic-bezier(0.25, 0.46, 0.45, 0.94) 300ms,
-      bottom cubic-bezier(0.25, 0.46, 0.45, 0.94) 300ms,
-      left cubic-bezier(0.25, 0.46, 0.45, 0.94) 300ms,
-      transform cubic-bezier(0.25, 0.46, 0.45, 0.94) 300ms,
+    transform-origin: center calc(100% - 25px);
+    transform: scale(0);
+    will-change: border-radius, transform;
+    transition: transform cubic-bezier(0.25, 0.46, 0.45, 0.94) 300ms,
       border-radius cubic-bezier(0.25, 0.46, 0.45, 0.94) 300ms;
     background-color: var(--background-transparent-light);
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(3px);
   }
 
   &:hover::after {
-    width: 100%;
-    height: 100%;
-    border-radius: 7px;
-    bottom: 0;
-    left: 0;
-    transform: translateX(0);
+    transform: scale(1);
+    border-radius: 6px;
   }
 
   &:nth-child(even) {
