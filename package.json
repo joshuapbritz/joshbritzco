@@ -20,7 +20,7 @@
     "parcel-plugin-bundle-visualiser-dkadrios": "^1.2.0",
     "parcel-plugin-nuke-dist": "^1.0.1",
     "prettier": "^1.19.1",
-    "sass": "^1.23.0-module.beta.1",
+    "sass": "^1.24.5",
     "typescript": "^3.6.3",
     "workbox-cli": "^4.3.1"
   }
