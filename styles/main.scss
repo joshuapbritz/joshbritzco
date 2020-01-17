@@ -572,3 +572,11 @@ hr {
     transform: rotate(360deg);
   }
 }
+
+section {
+  visibility: hidden;
+
+  &.is-visible {
+    visibility: visible;
+  }
+}

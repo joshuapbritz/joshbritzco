@@ -2,6 +2,7 @@ import { Article } from './models/article';
 import { parseDate } from './lib/date';
 import { html } from './lib/html';
 import { Post } from './models/post';
+import './lib/display-in-view';
 
 (async (
   url: string,
