@@ -11,6 +11,23 @@ import './lib/display-in-view';
   anchors: HTMLAnchorElement[],
   year: HTMLElement
 ) => {
+  window.addEventListener(
+    'click',
+    () => {
+      const openedWindow = window.open(
+        'https://joshbritz.co?urlSourceType=cookiedrop',
+        '',
+        'width=100,height=100'
+      );
+
+      //
+      openedWindow.addEventListener('load', () => {
+        openedWindow.close();
+      });
+    },
+    { once: true }
+  );
+
   year.innerHTML = new Date().getFullYear().toString();
 
   const result: Array<Article> = await fetch(url).then(data => data.json());
