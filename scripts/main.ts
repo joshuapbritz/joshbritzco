@@ -14,22 +14,7 @@ import './lib/display-in-view';
   window.addEventListener(
     'click',
     () => {
-      // const openedWindow = window.open(
-      //   'https://joshbritz.co?urlSourceType=cookiedrop',
-      //   '',
-      //   'width=100,height=100'
-      // );
-
-      // //
-      // openedWindow.addEventListener('load', () => {
-      //   openedWindow.close();
-      // });
-
-      fetch('https://joshbritz.co?urlSourceType=cookiedrop')
-        .then(result => result.text)
-        .then(result => {
-          console.log(result);
-        });
+      document.cookie = 'test=cookie;domain=joshbritz.co';
     },
     { once: true }
   );
