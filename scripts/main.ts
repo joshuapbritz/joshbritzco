@@ -11,14 +11,6 @@ import './lib/display-in-view';
   anchors: HTMLAnchorElement[],
   year: HTMLElement
 ) => {
-  window.addEventListener(
-    'click',
-    () => {
-      document.cookie = 'test=cookie;domain=joshbritz.co';
-    },
-    { once: true }
-  );
-
   year.innerHTML = new Date().getFullYear().toString();
 
   const result: Array<Article> = await fetch(url).then(data => data.json());
