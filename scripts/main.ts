@@ -6,7 +6,7 @@ import './lib/display-in-view';
 import { CookieMonster } from './lib/cookies';
 
 const cook = new CookieMonster();
-cook.getAll();
+console.log(cook.getAll());
 
 (async (
   url: string,

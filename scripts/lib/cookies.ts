@@ -6,8 +6,7 @@ export class CookieMonster {
   public getAll(): { [key: string]: string } {
     const values = document.cookie.split('; ');
     const mapped = values.map(d => d.split('='));
-    console.log(mapped);
-    return;
+    return Object.fromEntries(mapped);
   }
 
   public get(key: string): string {
