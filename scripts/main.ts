@@ -3,6 +3,10 @@ import { parseDate } from './lib/date';
 import { html } from './lib/html';
 import { Post } from './models/post';
 import './lib/display-in-view';
+import { CookieMonster } from './lib/cookies';
+
+const cook = new CookieMonster();
+cook.getAll();
 
 (async (
   url: string,
