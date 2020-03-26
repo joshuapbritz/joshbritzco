@@ -22,6 +22,6 @@
     "prettier": "^1.19.1",
     "sass": "^1.23.0-module.beta.1",
     "typescript": "^3.6.3",
-    "workbox-cli": "^4.3.1"
+    "workbox-cli": "^5.1.2"
   }
 }
