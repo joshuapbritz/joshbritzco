@@ -14,7 +14,7 @@
     "deploy:ci:staging": "firebase deploy --only hosting:staging --token=$FIREBASE_DEPLOY_TOKEN"
   },
   "devDependencies": {
-    "fibers": "^4.0.2",
+    "fibers": "^5.0.0",
     "firebase-tools": "^7.12.1",
     "parcel-bundler": "^1.10.3",
     "parcel-plugin-bundle-visualiser-dkadrios": "^1.2.0",
