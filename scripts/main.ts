@@ -3,10 +3,6 @@ import { parseDate } from './lib/date';
 import { html } from './lib/html';
 import { Post } from './models/post';
 import './lib/display-in-view';
-import { CookieMonster } from './lib/cookies';
-
-const cook = new CookieMonster();
-console.log(cook.getAll());
 
 (async (
   url: string,
@@ -119,10 +115,6 @@ console.log(cook.getAll());
             `
           )}
         </ul>
-      </div>
-
-      <div class="body-snippet">
-        ${article.description}
       </div>
     `;
 

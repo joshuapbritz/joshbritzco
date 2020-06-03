@@ -133,3 +133,15 @@
     margin-right: 15px;
   }
 }
+
+@media screen and (max-width: 800px) {
+  .work-grid {
+    display: block;
+  }
+
+  .work-grid .work-item {
+    max-width: unset;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
