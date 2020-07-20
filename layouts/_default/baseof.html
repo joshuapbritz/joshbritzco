@@ -2,19 +2,17 @@
 <html>
   {{- partial "head.html" . -}}
   <body>
-    <nav>
-      {{- partial "nav.html" . -}}
-    </nav>
+    <div class="content-wrapper">
+      {{block "header" .}}
+      <header>
+        {{- partial "header.html" . -}}
+      </header>
+      {{end}}
 
-    {{block "header" .}}
-    <header>
-      {{- partial "header.html" . -}}
-    </header>
-    {{end}}
-
-    <main id="content">
-      {{- block "main" . }}{{- end }}
-    </main>
+      <main id="content">
+        {{- block "main" . }}{{- end }}
+      </main>
+    </div>
 
     {{block "footer" .}}
     <footer>
