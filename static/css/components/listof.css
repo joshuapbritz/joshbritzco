@@ -1,0 +1,37 @@
+.post-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.post-wrapper .post-lists {
+  list-style: none;
+  display: block;
+  margin: 0 auto;
+  padding: 0;
+  width: 90%;
+}
+
+.post-wrapper .post-lists .post {
+  display: block;
+  text-decoration: none;
+}
+
+.post-wrapper .post-lists .post a {
+  text-decoration: none;
+  color: #333333;
+}
+
+.post-wrapper .post-lists .post a .read-more {
+  text-align: right;
+  padding: 10px 0;
+}
+
+.post-wrapper .post-lists .post a .read-more span {
+  display: inline-block;
+  line-height: 40px;
+  text-transform: uppercase;
+  background-color: #333333;
+  color: #ffffff;
+  padding: 0 15px;
+  border-radius: 5px;
+}

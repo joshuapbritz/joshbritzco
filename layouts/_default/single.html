@@ -5,22 +5,10 @@
   <div class="inner-content">
     <h1>{{.Title}}</h1>
     <div class="meta">
-      <div class="author">
-        <strong>Author:</strong>
-        <span>{{.Params.author}}</span>
-      </div>
       <div class="date">
         <strong>Published:</strong>
         <span>{{- .Date.Format "January 2, 2006" -}}</span>
       </div>
-      {{ if .Params.external }}
-      <div class="is-external">
-        <strong>Source:</strong>
-        <span>
-          <a href="{{ .Params.externalLink }}">{{ .Params.externalName }}</a>
-        </span>
-      </div>
-      {{ end }}
     </div>
   </div>
 </header>
