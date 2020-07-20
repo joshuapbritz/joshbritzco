@@ -1,0 +1,28 @@
+{{ define "main" }}
+<div class="post-wrapper">
+  <ul class="post-lists">
+    {{ range .Site.RegularPages }}
+    <li class="post">
+      <a class="post-content" href="{{.Permalink}}">
+        <h2>{{.Title}}</h2>
+        <div class="meta">
+          <div class="author">{{.Params.author}}</div>
+          <div class="date">{{- .Date.Format "January 2, 2006" -}}</div>
+          {{ if .Params.external }}
+          <div class="source">Originally from {{ .Params.externalName }}</div>
+          {{ end }}
+        </div>
+
+        <div class="summary-content">
+          <p>{{.Summary}}</p>
+        </div>
+
+        <div class="read-more">
+          <span class="button">read more</span>
+        </div>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

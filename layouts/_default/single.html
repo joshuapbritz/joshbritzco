@@ -1,0 +1,48 @@
+{{ define "header" }}
+<header class="article-header" role="heading">
+  <link type="text/css" rel="stylesheet" href="css/article.css" />
+
+  <div class="inner-content">
+    <h1>{{.Title}}</h1>
+    <div class="meta">
+      <div class="author">
+        <strong>Author:</strong>
+        <span>{{.Params.author}}</span>
+      </div>
+      <div class="date">
+        <strong>Published:</strong>
+        <span>{{- .Date.Format "January 2, 2006" -}}</span>
+      </div>
+      {{ if .Params.external }}
+      <div class="is-external">
+        <strong>Source:</strong>
+        <span>
+          <a href="{{ .Params.externalLink }}">{{ .Params.externalName }}</a>
+        </span>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</header>
+{{end}} {{ define "main" }}
+<article>
+  {{- .Content -}} {{if .Params.external }}
+
+  <hr />
+
+  <p class="is-external button">
+    <a
+      target="_blank"
+      rel="noopener"
+      href="https://www.gty.org/library/blog/B200622"
+    >
+      Read the full article here
+    </a>
+  </p>
+  {{end}}
+
+  <div class="back-to-listing">
+    <a href="/">Return to post listings</a>
+  </div>
+</article>
+{{end}}
