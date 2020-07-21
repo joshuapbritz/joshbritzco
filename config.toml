@@ -1,4 +1,5 @@
 baseURL = "https://www.joshbritz.co/"
 languageCode = "en-us"
 title = "Joshua Britz | UX Engineer // Front-end developer // Lover of the web"
+description = "Hello World"
 pygmentsUseClasses = true
