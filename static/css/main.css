@@ -104,15 +104,14 @@ footer .footer-social .social-list .social-item {
   margin: 0 15px;
 }
 
-footer .footer-social .social-list .social-item svg {
+footer .footer-social .social-list .social-item img {
   display: block;
   width: 100%;
   margin: auto;
-  fill: var(--text);
 }
 
-footer .footer-social .social-list .social-item svg:hover {
-  fill: var(--accent);
+footer .footer-social .social-list .social-item:hover img {
+  opacity: 0.7;
 }
 
 footer .footer-inner {
