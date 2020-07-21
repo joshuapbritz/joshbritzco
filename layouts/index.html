@@ -1,0 +1,38 @@
+{{ define "main" }}
+<link rel="stylesheet" href="css/components/listof.css" />
+
+<div class="post-header">
+  <h2 class="text-center">My Writings</h2>
+  <p class="text-center">
+    I dev a lot, and that sometimes leads to me learning new things. I write
+    about that here.
+  </p>
+</div>
+
+<div class="post-wrapper">
+  <ul class="post-lists">
+    {{ range .Site.RegularPages }}
+    <li class="post">
+      <a class="post-content" href="{{.Permalink}}">
+        <h4>{{.Title}}</h4>
+        <div class="meta">
+          <div class="author">{{.Params.author}}</div>
+          <div class="date">{{- .Date.Format "January 2, 2006" -}}</div>
+          {{ if .Params.external }}
+          <div class="source">Originally from {{ .Params.externalName }}</div>
+          {{ end }}
+        </div>
+
+        <div class="summary-content">
+          <p>{{.Summary}}</p>
+        </div>
+
+        <div class="read-more">
+          <span class="button" role="button">read more</span>
+        </div>
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

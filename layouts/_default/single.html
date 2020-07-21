@@ -1,0 +1,52 @@
+{{ define "header" }}
+<nav class="article-nav">
+  <div class="inner">
+    <div class="logo">
+      <h5>
+        The blog of <strong><a href="/">Josh Britz</a></strong>
+      </h5>
+    </div>
+
+    <div class="back">
+      <a href="/">Return to Main Page</a>
+    </div>
+  </div>
+</nav>
+
+<header class="article-header" role="heading">
+  <link type="text/css" rel="stylesheet" href="css/article.css" />
+
+  <div class="inner-content">
+    {{if .Params.headerUrl}}
+    <img src="{{.Params.headerUrl}}" alt="Header Cover" /> {{end}}
+    <h1>{{.Title}}</h1>
+    <div class="meta">
+      <div class="date">
+        <strong>Published:</strong>
+        <span>{{- .Date.Format "January 2, 2006" -}}</span>
+      </div>
+    </div>
+  </div>
+</header>
+{{end}} {{ define "main" }}
+<article>
+  {{- .Content -}} {{if .Params.external }}
+
+  <hr />
+
+  <p class="is-external button">
+    <a
+      target="_blank"
+      rel="noopener"
+      href="https://www.gty.org/library/blog/B200622"
+    >
+      Read the full article here
+    </a>
+  </p>
+  {{end}}
+
+  <div class="back-to-listing">
+    <a class="button" role="button" href="/">Return to the main page</a>
+  </div>
+</article>
+{{end}}
