@@ -2,7 +2,12 @@
 <html>
   <head>
     {{- partial "head.html" . -}} 
-    {{- block "article-head" . }} {{- end }}
+    {{- block "article-head" . }}
+    <meta
+      name="description"
+      content="Hello, I'm Joshua Britz. I'm a web developer from South Africa with a special interest in User Experience and Front-end development. My work usually involves creating components libraries for client design systems, creating high-fidelity prototpyes of new components, and working to promote the adoption of design systems company-wide. I'm currently employed at OnePointFour Consulting"
+    />
+    {{- end }}
   </head>
   <body>
     <div class="content-wrapper">
