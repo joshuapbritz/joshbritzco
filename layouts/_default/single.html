@@ -1,8 +1,24 @@
 {{ define "header" }}
+<nav class="article-nav">
+  <div class="inner">
+    <div class="logo">
+      <h5>
+        The blog of <strong><a href="/">Josh Britz</a></strong>
+      </h5>
+    </div>
+
+    <div class="back">
+      <a href="/">Return to Main Page</a>
+    </div>
+  </div>
+</nav>
+
 <header class="article-header" role="heading">
   <link type="text/css" rel="stylesheet" href="css/article.css" />
 
   <div class="inner-content">
+    {{if .Params.headerUrl}}
+    <img src="{{.Params.headerUrl}}" alt="Header Cover" /> {{end}}
     <h1>{{.Title}}</h1>
     <div class="meta">
       <div class="date">
@@ -30,7 +46,7 @@
   {{end}}
 
   <div class="back-to-listing">
-    <a href="/">Return to post listings</a>
+    <a class="button" role="button" href="/">Return to the main page</a>
   </div>
 </article>
 {{end}}

@@ -14,24 +14,26 @@
 .post-wrapper .post-lists .post {
   display: block;
   text-decoration: none;
+  color: var(--text);
 }
 
 .post-wrapper .post-lists .post a {
-  text-decoration: none;
-  color: #333333;
+  color: var(--text);
+}
+
+.post-wrapper .post-lists .post a:hover {
+  color: var(--text);
+}
+
+.post-wrapper .post-lists .post a:hover h4 {
+  text-decoration: underline;
+}
+
+.post-wrapper .post-lists .post a:hover .read-more span.button[role="button"] {
+  background-color: var(--accent);
 }
 
 .post-wrapper .post-lists .post a .read-more {
   text-align: right;
   padding: 10px 0;
-}
-
-.post-wrapper .post-lists .post a .read-more span {
-  display: inline-block;
-  line-height: 40px;
-  text-transform: uppercase;
-  background-color: #333333;
-  color: #ffffff;
-  padding: 0 15px;
-  border-radius: 5px;
 }
