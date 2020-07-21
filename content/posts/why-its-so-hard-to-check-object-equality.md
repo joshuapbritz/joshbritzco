@@ -243,7 +243,3 @@ If you need to check array equality, you may need to look at a different solutio
 #### Solution 4 - Use a library (😱🙀🤯)
 
 Now, I'm not advocating for the use of external packages for every situation. The above three solutions will most like work for the majority of situations you come across. However, if you are already using a library that has support for this, or the need you have can justify adding a package to your app, there are definitely very good solutions out there. I won't go into all of them, but a good one that I know of is loadash's _.isEqual method (https://lodash.com/docs/4.17.11#isEqual). 
-
----
-
-I'm interested to know what other developer's solutions are to this problem. If you have a method that you use, please feel free to share in the comments.

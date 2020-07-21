@@ -70,6 +70,18 @@ footer {
   height: auto;
 }
 
+footer .footer-contact {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+footer .footer-contact h4 {
+  margin-top: 0;
+}
+
 footer .footer-social {
   width: 90%;
   max-width: 900px;
@@ -138,4 +150,41 @@ a {
 
 a:hover {
   color: var(--text);
+}
+
+::-moz-selection {
+  background-color: var(--accent);
+  color: var(--primary);
+  border-radius: 8px;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--primary);
+  border-radius: 8px;
+}
+
+blockquote {
+  display: block;
+  padding: 20px 0;
+  margin: 0;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+blockquote p {
+  margin: 0;
+  padding: 0;
+  font-size: 1.3rem;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+blockquote::before {
+  content: "“";
+  font-size: 100px;
+  position: absolute;
+  color: var(--accent);
+  font-weight: bold;
+  top: -80%;
 }
