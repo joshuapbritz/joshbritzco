@@ -79,7 +79,7 @@ But there is a simple way around this problem. Instead of just opting for the th
 
 This code will produce something like this.
 
-{% codepen https://codepen.io/joshuapaulbritz/pen/gObQmBj %}
+<!-- {% codepen https://codepen.io/joshuapaulbritz/pen/gObQmBj %} -->
 
 Awesome, so this code works! However, you could remove the `@supports` part of the above code and it would work perfectly fine, in **all** browsers. In fact, we can decrease the size of our CSS file by removing it. Does this then mean that you should go through all your CSS from all your projects and delete any fallback CSS you can find? Absolutely not! While there is a large amount of redundant CSS out there, there is another factor to consider when you face the issue of write fallback (or progressively enhanced) CSS: Accessibility.
 
