@@ -38,6 +38,16 @@ nav.article-nav .inner .logo h5 strong a:hover {
   color: var(--accent);
 }
 
+@media screen and (max-width: 750px) {
+  nav.article-nav .inner {
+    justify-content: center;
+  }
+
+  nav.article-nav .inner .back {
+    display: none;
+  }
+}
+
 .back-to-listing {
   display: block;
   text-align: center;
@@ -58,5 +68,11 @@ nav.article-nav .inner .logo h5 strong a:hover {
 @media screen and (max-width: 750px) {
   .article-header .inner-content img {
     display: none;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  header.article-header h1 {
+    font-size: 2.5rem;
   }
 }

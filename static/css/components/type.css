@@ -61,3 +61,9 @@ small,
 .text_small {
   font-size: 0.707em;
 }
+
+@media screen and (max-width: 650px) {
+  :root {
+    font-size: 14px;
+  }
+}

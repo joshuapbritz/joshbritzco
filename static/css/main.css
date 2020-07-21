@@ -20,6 +20,12 @@ body {
   text-align: center;
 }
 
+@media screen and (max-width: 650px) {
+  .content-wrapper header {
+    padding: 20px 0;
+  }
+}
+
 .content-wrapper header .inner-content {
   max-width: 900px;
   margin: auto;
@@ -46,6 +52,13 @@ body {
   max-width: 900px;
   margin: auto;
   padding-bottom: 100px;
+}
+
+@media screen and (max-width: 650px) {
+  .content-wrapper main {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .post-header {
@@ -80,6 +93,12 @@ footer .footer-contact {
 
 footer .footer-contact h4 {
   margin-top: 0;
+}
+
+@media screen and (max-width: 650px) {
+  footer .footer-contact h4 {
+    font-size: 1.5rem;
+  }
 }
 
 footer .footer-social {
