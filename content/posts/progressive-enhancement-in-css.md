@@ -151,4 +151,4 @@ When you are trying to build a feature with CSS, you need to find a solution tha
 
 ---
 
-So, what can be concluded from the rant of an article? I'm not trying to say that you shouldn't use new CSS or that you should only use old CSS. Rather, I want to advocate that you take time to consider the CSS you use for projects. Don't just automatically opt for new shiny CSS for its own sake as nice as it is. 
+So, what can be concluded from this rant of an article? I'm not trying to say that you shouldn't use new CSS or that you should only use old CSS. Rather, I want to advocate that you take time to consider the CSS you use for projects. Don't just automatically opt for new shiny CSS for its own sake as nice as it is. 
