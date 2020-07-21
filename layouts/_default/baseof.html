@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
-  {{- partial "head.html" . -}}
+  <head>
+    {{- partial "head.html" . -}} 
+    {{- block "article-head" . }} {{- end }}
+  </head>
   <body>
     <div class="content-wrapper">
       {{block "header" .}}
