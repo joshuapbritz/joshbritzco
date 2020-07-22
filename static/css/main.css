@@ -208,3 +208,38 @@ blockquote::before {
   font-weight: bold;
   top: -80%;
 }
+
+ol,
+ul {
+  display: block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+ol {
+  counter-reset: markdown-list;
+}
+
+ol li {
+  counter-increment: markdown-list;
+  position: relative;
+  padding: 0 20px;
+  margin-bottom: 5px;
+}
+
+ol li::before {
+  content: counter(markdown-list) ". ";
+  color: var(--text);
+  font-weight: bold;
+  transform: translateX(-2px);
+}
+
+ol li:hover::before {
+  color: var(--accent);
+}
+
+ol li:last-child {
+  margin-bottom: 0;
+}
