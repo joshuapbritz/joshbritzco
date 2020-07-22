@@ -30,18 +30,21 @@
     </div>
 
     <div class="back">
-      <a href="/">Return to Main Page</a>
+      <a aria-hidden="true" href="/">Return to Main Page</a>
     </div>
   </div>
 </nav>
 
-<header class="article-header" role="heading">
+<header class="article-header">
   <link type="text/css" rel="stylesheet" href="css/article.css" />
 
   <div class="inner-content">
     {{if .Params.headerUrl}}
     <img src="{{.Params.headerUrl}}" alt="Header Cover" /> {{end}}
     <h1>{{.Title}}</h1>
+    {{if .Params.subtitle}}
+    <h4>{{ .Params.subtitle }}</h4>
+    {{end}}
     <div class="meta">
       <div class="date">
         <strong>Published:</strong>
