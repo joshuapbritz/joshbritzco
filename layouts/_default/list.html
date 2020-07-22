@@ -1,8 +1,27 @@
 {{ define "header" }}
+<link rel="stylesheet" href="css/components/listof.css" />
+
+<nav class="article-nav">
+  <div class="inner">
+    <div class="logo">
+      <h5>
+        <strong><a href="/">Josh Britz</a></strong>
+      </h5>
+    </div>
+
+    <div class="back">
+      <a aria-hidden="true" href="/">Return to Main Page</a>
+    </div>
+  </div>
+</nav>
+
 <header class="article-header" role="heading">
   <div class="inner-content">
-    <h1>Our Newsrooms</h1>
-    <h5>View all our latest posts here</h5>
+    <h1>Stuff I've Written</h1>
+    <h5>
+      I code a lot, and that sometimes leads to me learning new things. I write
+      about that here.
+    </h5>
   </div>
 </header>
 {{ end }} {{ define "main" }}
@@ -11,7 +30,7 @@
     {{ range .Site.RegularPages }}
     <li class="post">
       <a class="post-content" href="{{.Permalink}}">
-        <h2>{{.Title}}</h2>
+        <h4>{{.Title}}</h4>
         <div class="meta">
           <div class="author">{{.Params.author}}</div>
           <div class="date">{{- .Date.Format "January 2, 2006" -}}</div>
@@ -25,7 +44,7 @@
         </div>
 
         <div class="read-more">
-          <span class="button">read more</span>
+          <span class="button" role="button">read more</span>
         </div>
       </a>
     </li>

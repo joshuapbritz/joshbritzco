@@ -243,3 +243,53 @@ ol li:hover::before {
 ol li:last-child {
   margin-bottom: 0;
 }
+
+nav.article-nav {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  position: sticky;
+  top: 0;
+  left: 0;
+  height: 70px;
+  background-color: var(--primary);
+  border-bottom: solid 2px var(--border);
+  z-index: 10;
+}
+
+nav.article-nav .inner {
+  margin: auto;
+  height: 100%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* nav.article-nav .inner .logo {
+    height: 100%;
+} */
+
+nav.article-nav .inner .logo h5 {
+  margin: 0;
+  font-weight: 300;
+}
+
+nav.article-nav .inner .logo h5 strong a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+nav.article-nav .inner .logo h5 strong a:hover {
+  color: var(--accent);
+}
+
+@media screen and (max-width: 750px) {
+  nav.article-nav .inner {
+    justify-content: center;
+  }
+
+  nav.article-nav .inner .back {
+    display: none;
+  }
+}
