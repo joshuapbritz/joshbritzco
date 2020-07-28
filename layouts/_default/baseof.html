@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    {{- partial "head.html" . -}} 
-    {{- block "article-head" . }}
+    {{- partial "head.html" . -}} {{- block "article-head" . }}
     <meta
       name="description"
       content="Hello, I'm Joshua Britz. I'm a web developer from South Africa with a special interest in User Experience and Front-end development. My work usually involves creating components libraries for client design systems, creating high-fidelity prototpyes of new components, and working to promote the adoption of design systems company-wide. I'm currently employed at OnePointFour Consulting"
@@ -27,5 +26,20 @@
       {{- partial "footer.html" . -}}
     </footer>
     {{end}}
+
+    <script async type="text/javascript">
+      var sheets = [
+        "https://fonts.googleapis.com/css?family=Merriweather:300,400|Lato:400",
+      ];
+
+      window.onload = function () {
+        for (var e = 0; e < sheets.length; e++) {
+          var s = document.createElement("link");
+          (s.rel = "stylesheet"), (s.href = sheets[e]), (s.type = "text/css");
+          var a = document.getElementsByTagName("link")[0];
+          a.parentNode.insertBefore(s, a);
+        }
+      };
+    </script>
   </body>
 </html>
