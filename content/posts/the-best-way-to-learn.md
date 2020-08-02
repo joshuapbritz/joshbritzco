@@ -2,6 +2,7 @@
 title: "The Best Way to Learn... Teach"
 date: 2020-07-20T07:43:10+02:00
 draft: true
+tags: ['Development', 'Learning', 'Process']
 ---
 
 > If you can't explain it simply, you don't understand it well enough. - _Albert Einstein_
