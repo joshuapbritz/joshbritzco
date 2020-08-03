@@ -18,9 +18,6 @@
         <div class="meta">
           <div class="author">{{.Params.author}}</div>
           <div class="date">{{- .Date.Format "January 2, 2006" -}}</div>
-          {{ if .Params.external }}
-          <div class="source">Originally from {{ .Params.externalName }}</div>
-          {{ end }}
         </div>
 
         <div class="summary-content">
