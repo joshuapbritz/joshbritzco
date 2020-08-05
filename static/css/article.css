@@ -119,6 +119,10 @@
     flex-flow: column;
   }
 
+  .latest-articles .article-wrapper .article-card {
+    max-width: unset;
+  }
+
   .latest-articles .article-wrapper .article-card:first-child {
     margin-right: 0;
   }
