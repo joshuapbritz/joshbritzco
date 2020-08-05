@@ -257,6 +257,11 @@ nav.article-nav {
   z-index: 10;
 }
 
+body.safari nav.article-nav {
+  background-color: #ffffff !important;
+  border-bottom: solid 2px #dddddd !important;
+}
+
 nav.article-nav .inner {
   margin: auto;
   height: 100%;

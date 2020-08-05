@@ -33,6 +33,16 @@
   background-color: var(--accent);
 }
 
+body.safari
+  .post-wrapper
+  .post-lists
+  .post
+  a:hover
+  .read-more
+  span.button[role="button"] {
+  background-color: #f67280 !important;
+}
+
 .post-wrapper .post-lists .post a .read-more {
   text-align: right;
   padding: 10px 0;

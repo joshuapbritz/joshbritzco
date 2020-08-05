@@ -55,20 +55,22 @@
 </header>
 {{end}} {{ define "main" }}
 <article>
-  {{- .Content -}} {{if .Params.external }}
+  {{- .Content -}}
 
-  <hr />
-
-  <p class="is-external button">
-    <a
-      target="_blank"
-      rel="noopener"
-      href="https://www.gty.org/library/blog/B200622"
-    >
-      Read the full article here
-    </a>
-  </p>
-  {{end}}
+  <div class="latest-articles">
+    <div class="latest-articles-header">
+      <h4>Other Articles I've Written</h4>
+    </div>
+    <div class="article-wrapper">
+      {{range first 2 (where .CurrentSection.RegularPages "Title" "!=" .Title)}}
+      <a href="{{.Permalink}}" class="article-card">
+        <h5>{{.Title}}</h5>
+        <h6>{{- .Date.Format "January 2, 2006" -}}</h6>
+        <p>{{.Summary}}</p>
+      </a>
+      {{end}}
+    </div>
+  </div>
 
   <div class="back-to-listing">
     <a class="button" role="button" href="/">Return to the main page</a>

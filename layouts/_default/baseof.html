@@ -9,6 +9,14 @@
     {{- end }}
   </head>
   <body>
+    <script>
+      if (
+        navigator.userAgent.search("Safari") >= 0 &&
+        navigator.userAgent.search("Chrome") < 0
+      ) {
+        document.getElementsByTagName("BODY")[0].className += " safari";
+      }
+    </script>
     <div class="content-wrapper">
       {{block "header" .}}
       <header>
