@@ -51,7 +51,7 @@
   padding: 15px;
   border: solid 2px var(--border);
   color: var(--text);
-  max-width: calc(50% - 50px);
+  max-width: 50%;
 }
 
 .latest-articles .article-wrapper .article-card:first-child {
