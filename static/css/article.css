@@ -88,16 +88,6 @@
   position: relative;
 }
 
-/* .latest-articles .article-wrapper .article-card p::after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 20px;
-  width: 100%;
-  bottom: 0;
-  background: linear-gradient(to top, #ffffff, hsla(0, 0%, 100%, 0));
-} */
-
 @supports (gap: 50px) {
   .latest-articles .article-wrapper {
     gap: 50px;
