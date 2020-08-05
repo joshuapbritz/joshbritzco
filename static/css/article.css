@@ -69,6 +69,9 @@
   margin-top: 0;
   font-size: 1.1rem;
   font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .latest-articles .article-wrapper .article-card h6 {
@@ -78,7 +81,21 @@
 
 .latest-articles .article-wrapper .article-card p {
   margin-bottom: 0;
+  max-height: 150px;
+  overflow: hidden;
+  padding-bottom: 5px;
+  position: relative;
 }
+
+/* .latest-articles .article-wrapper .article-card p::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  bottom: 0;
+  background: linear-gradient(to top, #ffffff, hsla(0, 0%, 100%, 0));
+} */
 
 @supports (gap: 50px) {
   .latest-articles .article-wrapper {
