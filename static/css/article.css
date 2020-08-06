@@ -51,7 +51,7 @@
   padding: 15px;
   border: solid 2px var(--border);
   color: var(--text);
-  max-width: 50%;
+  max-width: calc(50% - 25px);
 }
 
 .latest-articles .article-wrapper .article-card:first-child {
@@ -88,25 +88,10 @@
   position: relative;
 }
 
-@supports (gap: 50px) {
-  .latest-articles .article-wrapper {
-    gap: 50px;
-  }
-}
-
-@supports (gap: 50px) {
-  .latest-articles .article-wrapper .article-card:first-child {
-    margin-right: 0;
-  }
-
-  .latest-articles .article-wrapper .article-card:last-child {
-    margin-left: 0;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .latest-articles .article-wrapper {
     flex-flow: column;
+    gap: 50px;
   }
 
   .latest-articles .article-wrapper .article-card {
