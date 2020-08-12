@@ -82,10 +82,11 @@
 
 .latest-articles .article-wrapper .article-card p {
   margin-bottom: 0;
-  max-height: 150px;
+  max-height: calc(28px * 6);
   overflow: hidden;
   padding-bottom: 5px;
   position: relative;
+  line-height: 28px;
 }
 
 @media screen and (max-width: 768px) {
