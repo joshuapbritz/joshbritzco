@@ -107,3 +107,31 @@
     margin-left: 0;
   }
 }
+
+ul li {
+  padding: 0 20px;
+  margin-bottom: 5px;
+  position: relative;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+ul li::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  background-color: var(--accent);
+  border-radius: 2px;
+  left: 0;
+  top: 10px;
+}
+
+ul li:hover::before {
+  background-color: var(--text);
+}
+
+ul li:last-child {
+  margin-bottom: 0;
+}
