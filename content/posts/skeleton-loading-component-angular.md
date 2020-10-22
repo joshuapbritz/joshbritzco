@@ -7,3 +7,10 @@ draft: true
 47% of consumers today expect web pages to load in 2 seconds or less. Every second it takes for a page to load, a user becomes more likely to abandon your site. Because of this, it is important to ensure that your site loads as fast as possible. Part of that is ensure that your site is small and not too code heavy. However, we sometimes have to deal with external services and apis that are super slow - resulting in our pages getting slowed. Because of this, we have to be smart. Thanks to the tools given to us by most modern web browsers, we can get around this problem by progressively loading our pages. A common approach is to load that shell of your website (eg. navbar, footer, landing page) while deferring the loading of your data. This plays into something we call perceived load time. When users see even a part of your page loaded, they feel like the site has loaded, even if there is no meaningful data for a while. So, for example, if your data takes 6 seconds to load, you can still make users feel that you page loads in under 2 seconds because there are elements of it on the screen.
 
 Now, this can be achieved by using a loader or a spinner. Really anything other than a blank screen. However, I feel that these options fall short as loading patterns. They can become frustrating because they do not give your users any expectations about what to expect once your page loads. Enter skeleton loaders. This loading pattern is a create bridge between your page loading and fetching your data. You can use a skeleton loader to show what the structure of your page before it is even loaded.
+
+So, in this article, we are going to learn how to build a skeleton loader component in Angular. To do this, you will need to have NodeJS and Angular installed on your computer. To start, you are going to need to get an Angular project up and running.
+
+```bash
+$ ng new data-application
+```
+
