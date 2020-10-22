@@ -27,6 +27,13 @@
   }
 }
 
+article img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: none !important;
+}
+
 .latest-articles {
   margin-top: 50px;
   padding-bottom: 50px;
