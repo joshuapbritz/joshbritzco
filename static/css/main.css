@@ -295,3 +295,33 @@ nav.article-nav .inner .logo h5 strong a:hover {
     display: none;
   }
 }
+
+.portfolio-wrapper {
+  width: 100%;
+  height: auto;
+}
+
+.portfolio-wrapper .portfolio-list {
+  display: flex;
+  flex-flow: row wrap;
+  width: calc(100% + 40px);
+}
+
+.portfolio-wrapper .portfolio-list .portfolio-list-item {
+  width: calc(50% - 40px);
+  margin-right: 40px;
+}
+
+.portfolio-wrapper .portfolio-list .portfolio-list-item .portfolio-list-link {
+  display: block;
+}
+
+.portfolio-wrapper
+  .portfolio-list
+  .portfolio-list-item
+  .portfolio-list-link
+  img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
