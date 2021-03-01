@@ -11,7 +11,7 @@
 
 <div class="post-wrapper">
   <ul class="post-lists">
-    {{ range .Site.RegularPages }}
+    {{ range where .Site.RegularPages "Section" "!=" "portfolio" }}
     <li class="post">
       <a class="post-content" href="{{.Permalink}}">
         <h4>{{.Title}}</h4>
@@ -33,39 +33,41 @@
   </ul>
 </div>
 
-<!-- <br />
+<br />
 <br />
 
 <div class="post-header">
   <h2 class="text-center">My Portfolio</h2>
   <p class="text-center">
-    Along with the articles I write, I also try to expand my skills by
-    developing a variety of fun side-projects. <br />
-    Here are some of my favorites.
+    Some of my favorite things I have worked on, from client work to learning
+    curves.
   </p>
 </div>
 
 <div class="portfolio-wrapper">
   <ul class="portfolio-list">
+    {{range where .Site.RegularPages "Section" "portfolio" }}
     <li class="portfolio-list-item">
       <a
         class="portfolio-list-link"
-        href="https://noodle-notes.web.app/"
         target="_blank"
-        rel="noreferrer noopener"
+        rel="noopener noreferrer"
+        href="{{.Params.href}}"
       >
-        <img src="images/design-for-developers.jpg" alt="Developers" />
+        <img src="{{.Params.imageUrl}}" alt="Developers" />
 
         <div class="portfolio-list-content">
-          <h3>Noodle Notes</h3>
+          <h4>{{.Title}}</h4>
 
-          <p>
-            This was an experiment I did when I was learning React and UI
-            Design. It is a landing page for a conceptual note taking app.
-          </p>
+          <div class="tags">
+            {{range .Params.types}}
+            <div class="tag">{{ . }}</div>
+            {{end}}
+          </div>
         </div>
       </a>
     </li>
+    {{end}}
   </ul>
-</div> -->
+</div>
 {{ end }}
