@@ -1,8 +1,10 @@
 ---
 title: "The Best Way to Learn... Teach"
+subtitle: "A practical guide to learning and studying using the Feynman Technique"
 date: 2021-03-18T07:43:10+02:00
-draft: true
+draft: false
 tags: ['Development', 'Learning', 'Process']
+headerUrl: "images/learn-by-teaching.jpeg"
 ---
 
 > If you can't explain it simply, you don't understand it well enough. - _Albert Einstein_
