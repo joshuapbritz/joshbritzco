@@ -1,5 +1,5 @@
 ---
-title: "App State on Steroids: Part 1"
+title: "App State on Steroids"
 subtitle: "An Introduction to CerebralJS and declarative state"
 date: 2021-04-16T09:52:41+02:00
 draft: false
@@ -48,7 +48,7 @@ export default App(
   },
   {
     devtools: DevTools({
-      host: "localhost:8585",
+      host: "localhost:8008",
     }),
   }
 );
@@ -80,7 +80,7 @@ export default App(
   },
   {
     devtools: DevTools({
-      host: "localhost:8585",
+      host: "localhost:8008",
     }),
   }
 );
@@ -157,7 +157,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { Container } from "@cerebral/react";
 import App from "./config/index";
-import {} from './pages/home/home.tsx';
+import { Home } from './pages/home/home';
 
 ReactDOM.render(
   <Container app={App}>
@@ -170,8 +170,14 @@ ReactDOM.render(
 If you run `yarn start` now, your should see **Hello Jane Doe** displayed on the screen.
 
 #### Wiring up the Debugger
-One of the great things about CerebralJS is that is come with and absolutely fantastic debugger. I recommend that you get your hands on it at this point as it will help as we develop this application further. You can [download the debugger here](https://cerebraljs.com/docs/introduction/devtools.html).
+One of the great things about CerebralJS is that is come with and absolutely fantastic debugger. I recommend that you get your hands on it at this point as it will help as we develop this application further. You can [download the debugger here](https://cerebraljs.com/docs/introduction/devtools.html). When you set up the debugger, use the port you specified in your **index.tsx** in the dev tools function call.
 
---- 
+```typescript
+{
+  devtools: DevTools({
+    host: "localhost:8008",
+  }),
+}
+```
 
-That is all for now as it would make the article far too long to have this whole guide on one page. The part two of this series will be available soon where we will dig deeper into CerebralJS and how you can use it to make awesome applications.
+#### 
