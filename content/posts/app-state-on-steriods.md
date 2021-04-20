@@ -180,4 +180,134 @@ One of the great things about CerebralJS is that is come with and absolutely fan
 }
 ```
 
-#### 
+#### Getting more complicated
+
+We now have our basic application set up. We have CerebralJS wired into our flow, and we are able to read our global application state in our pages. So, let's start creating something that is a little more complicated than displaying a name. Naturally, we will want to be able to update our global application state from within our pages, so we will start by setting up *actions* and *sequences*. This is how we will interact with CerebralJS and our state throughout our app.
+
+In your **config** folder, create another file called **actions.ts**. In that file, let's start by adding two functions. One function will be used to do any initialization work that is needed to get Cerebral up and running, the other will be used to create a random id.
+
+```typescript
+export function initialize(...args: any[]) {
+  console.log(...args);
+}
+
+export function createId() {
+  // This is not the best way to create a random id,
+  // but for now it will do what we need
+  return Date.now().toString();
+}
+```
+
+For this example, we will be creating a garage app that will show all the cars in a person's garage. So, let's also update our app state with some new data.
+
+```typescript
+interface StateTree {
+  name: string;
+  surname: string;
+  selectedCar: Car | null;
+  cars: Car[];
+}
+
+interface Car {
+  id: string;
+  make: string;
+  model: string;
+  color: CarColor;
+}
+
+interface CarColor {
+  name: string;
+  value: string;
+}
+
+const State: StateTree = {
+  name: "Joshua",
+  surname: "Britz",
+  selectedCar: null,
+  cars: [
+    {
+      id: "d54dg7jhgy7",
+      make: "Suzuki",
+      model: "Swift",
+      color: { name: "Red", value: "#e62e00" },
+    },
+  ],
+};
+
+export default State;
+```
+
+The final step here will be to setup our application sequences. Sequences are instructions that we can send to cerebral to perform certain tasks. Sequences are composed of one or more actions. In the **config** folder, create another file called **sequences.ts**. In this file, we will start by adding only one sequence for now.
+
+```typescript
+import * as actions from "./actions";
+
+export const initialize = actions.initialize;
+```
+
+Now, we can import our sequences into Cerebral by adding the following code into **config/index.ts**.
+
+```typescript
+import App from "cerebral";
+import DevTools from "cerebral/devtools";
+import state from "./state";
+import * as sequences from "./sequences";
+
+export default App(
+  ({ app }) => {
+    app.on("initialized", () => {
+      app.getSequence("initialize")();
+    });
+
+    return {
+      state,
+      sequences,
+    };
+  },
+  {
+    devtools: DevTools({
+      host: "localhost:8008",
+    }),
+  }
+);
+```
+
+If you reload you app, you will see that the CerebralJS debugger has updated. Under the *state* tab, you will see your new application state. If you click on the *sequences* tab, you will see that there is one sequence called **initialize**. We are now ready to build out the full application.
+
+#### Displaying Our Cars
+Let's start by displaying our cars on the home page. We will do that by adding a declaration in the **connect()** function in **home.tsx**. This will allow us to always have the latest version of that variable.
+
+```typescript
+{ name: state`name`, surname: state`surname`, cars: state`cars` },
+```
+
+We can then display the make and model of our cars in a list
+
+```typescript
+({ name, surname, cars }: HomeProps) => {
+  return (
+    <div className="HomePage">
+      <h1>
+        Hello {name} {surname}
+      </h1>
+
+      {!!cars?.length && (
+        <ul>
+          {cars.map((car) => {
+            return (
+              <li key={car.id}>
+                {car.make} {car.model}
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
+  );
+}
+```
+
+We won't worry about styling right now, so let's move on to the next step. For this app, we will allow the user to view the details about each of their vehicles. To do this, let's create a new folder called components, and in that folder, we will create a component **view-panel/view-panel.tsx**. This will house a component that will conditionally render.
+
+
+
