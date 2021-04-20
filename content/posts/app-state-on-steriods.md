@@ -2,7 +2,7 @@
 title: "App State on Steroids"
 subtitle: "An Introduction to CerebralJS and declarative state"
 date: 2021-04-16T09:52:41+02:00
-draft: false
+draft: true
 headerUrl: "/images/app-state.jpeg"
 ---
 
