@@ -1,6 +1,7 @@
 :root {
   --primary: #ffffff;
-  --accent: #f67280;
+  /* --accent: #f67280; */
+  --accent: #fa1212;
   --border: #dbdbdb;
   --text: #0e2431;
 }
