@@ -34,6 +34,7 @@
   </div>
 </article>
 
+{{ if gt (len .Site.RegularPages) 7 }}
 <article class="other-articles">
   {{ range after 7 .Site.RegularPages }}
     <a href="{{ .Permalink }}" class="other-article">
@@ -42,4 +43,5 @@
     </a>
   {{ end }}
 </article>
+{{end}}
 {{ end }}
