@@ -72,7 +72,7 @@
 
 .articles-grid-layout .articles-grid .articles-grid-item .articles-grid-summary h4 {
   padding: 0;
-  margin: 0;
+  margin: 0 0 10px 0;
 }
 
 .articles-grid-layout .articles-grid .articles-grid-item .articles-grid-summary .articles-grid-summary-info {

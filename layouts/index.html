@@ -17,9 +17,9 @@
         <h4>{{ .Title }}</h4>
 
         {{ if (eq $index 2) }}
-        <p>{{ .Content | safeHTML | truncate 1000 }}</p>
+        <p>{{ .Summary | safeHTML | truncate 1000 }}</p>
         {{else}}
-        <p>{{ .Content | safeHTML | truncate 300 }}</p>
+        <p>{{ .Summary | safeHTML | truncate 300 }}</p>
         {{end}}
 
         <ul class="articles-grid-summary-info">
@@ -65,46 +65,5 @@
     </li>
     {{ end }}
   </ul>
-<<<<<<< HEAD
-=======
-</div>
-
-<!-- <br />
-<br /> -->
-
-<!-- <div class="post-header">
-  <h2 class="text-center">My Portfolio</h2>
-  <p class="text-center">
-    Some of my favorite things I have worked on, from client work to learning
-    curves.
-  </p>
-</div> -->
-
-<!-- <div class="portfolio-wrapper">
-  <ul class="portfolio-list">
-    {{range where .Site.RegularPages "Section" "portfolio" }}
-    <li class="portfolio-list-item">
-      <a
-        class="portfolio-list-link"
-        target="_blank"
-        rel="noopener noreferrer"
-        href="{{.Params.href}}"
-      >
-        <img src="{{.Params.imageUrl}}" alt="Developers" />
-
-        <div class="portfolio-list-content">
-          <h4>{{.Title}}</h4>
-
-          <div class="tags">
-            {{range .Params.types}}
-            <div class="tag">{{ . }}</div>
-            {{end}}
-          </div>
-        </div>
-      </a>
-    </li>
-    {{end}}
-  </ul>
->>>>>>> 4a3ce254cf40477540339fcc64dd6942ce4ee3ec
 </div> -->
 {{ end }}
