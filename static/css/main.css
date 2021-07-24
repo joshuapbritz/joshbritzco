@@ -75,7 +75,7 @@ body {
   transition: height cubic-bezier(0.455, 0.03, 0.515, 0.955) 350ms;
 }
 
-.find-me-online .icon-wrapper .icon-inner .icon svg {
+.find-me-online .icon-wrapper .icon-inner .icon img {
   display: block;
   width: 45px;
   height: auto;
@@ -95,7 +95,7 @@ body {
   height: 35px;
 }
 
-.find-me-online .icon-wrapper .icon-inner:hover .icon svg {
+.find-me-online .icon-wrapper .icon-inner:hover .icon img {
   width: 35px;
   stroke: var(--accent);
 }
