@@ -5,6 +5,12 @@ nav.application-global-nav {
   border-bottom: solid 1px var(--border);
 }
 
+@media screen and (max-width: 530px) {
+  nav.application-global-nav {
+    padding: 30px;
+  }
+}
+
 nav.application-global-nav .inner {
   height: auto;
   width: 100%;

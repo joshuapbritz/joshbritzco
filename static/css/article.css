@@ -5,6 +5,12 @@ figure.cover-image-wrapper {
   border-bottom: solid 1px var(--border);
 }
 
+@media screen and (max-width: 530px) {
+  figure.cover-image-wrapper {
+    padding: 30px;
+  }
+}
+
 figure.cover-image-wrapper img {
   display: block;
   width: 100%;
@@ -21,6 +27,12 @@ header.article-header {
   border-bottom: solid 1px var(--border);
 }
 
+@media screen and (max-width: 530px) {
+  header.article-header {
+    padding: 30px;
+  }
+}
+
 header.article-header h1,
 header.article-header h5 {
   margin: 0;
@@ -34,6 +46,12 @@ header.article-header h1 {
 article.article-wrapper {
   padding: 55px;
   border-bottom: solid 1px var(--border);
+}
+
+@media screen and (max-width: 530px) {
+  article.article-wrapper {
+    padding: 30px;
+  }
 }
 
 article ul li {
@@ -100,7 +118,7 @@ article img {
 }
 
 .back-to-listing a.invert:hover {
-    color: var(--accent);
+  color: var(--accent);
 }
 
 .back-to-listing a:first-child {

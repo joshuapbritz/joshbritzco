@@ -20,6 +20,7 @@ body {
 
 @media screen and (max-width: 530px) {
   .footer-inner {
+    padding: 30px;
     display: block;
     text-align: center;
   }

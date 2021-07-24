@@ -3,8 +3,13 @@
   width: 100%;
   height: auto;
   overflow: hidden;
-  padding-bottom: 55px;
   border-bottom: solid 1px var(--border);
+}
+
+@media screen and (max-width: 530px) {
+  .articles-grid-layout {
+    padding: 30px;
+  }
 }
 
 .articles-grid-layout .articles-grid {
@@ -163,6 +168,12 @@
   display: flex;
   flex-flow: row wrap;
   border-bottom: solid 1px var(--border);
+}
+
+@media screen and (max-width: 530px) {
+  .other-articles {
+    padding: 30px;
+  }
 }
 
 .other-articles .other-article {
