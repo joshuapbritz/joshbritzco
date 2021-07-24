@@ -1,122 +1,60 @@
-.back-to-listing {
+figure.cover-image-wrapper {
   display: block;
-  text-align: center;
-  padding: 20px 0 0 0;
-}
-
-.article-header .inner-content img {
-  margin-top: -50px;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  height: 250px;
-  object-fit: cover;
-  margin-bottom: 40px;
-}
-
-@media screen and (max-width: 750px) {
-  .article-header .inner-content img {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 750px) {
-  header.article-header h1 {
-    font-size: 2.5rem;
-  }
-}
-
-article img {
-  width: 100%;
-  height: auto;
-  display: block;
-  margin: 70px auto;
-  border: none !important;
-}
-
-.latest-articles {
-  margin-top: 50px;
-  padding-bottom: 50px;
-  margin-bottom: 30px;
-  border-top: solid 1px var(--border);
+  padding: 55px;
+  margin: 0;
   border-bottom: solid 1px var(--border);
 }
 
-.latest-articles .article-wrapper {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+@media screen and (max-width: 530px) {
+  figure.cover-image-wrapper {
+    padding: 30px;
+  }
 }
 
-.latest-articles h4 {
-  padding-bottom: 15px;
-}
-
-.latest-articles .article-wrapper .article-card {
+figure.cover-image-wrapper img {
   display: block;
-  padding: 15px;
-  border: solid 2px var(--border);
-  color: var(--text);
-  max-width: calc(50% - 25px);
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
 }
 
-.latest-articles .article-wrapper .article-card:first-child {
-  margin-right: 25px;
-}
-
-.latest-articles .article-wrapper .article-card:last-child {
-  margin-left: 25px;
-}
-
-.latest-articles .article-wrapper .article-card:hover {
-  border-color: var(--accent);
-}
-
-.latest-articles .article-wrapper .article-card h5 {
-  margin-top: 0;
-  font-size: 0.9rem;
-  font-weight: bold;
-  white-space: nowrap;
+header.article-header {
+  width: 100%;
+  height: auto;
   overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.latest-articles .article-wrapper .article-card h6 {
-  margin-top: -10px;
-  opacity: 0.7;
-}
-
-.latest-articles .article-wrapper .article-card p {
-  margin-bottom: 0;
-  max-height: calc(28px * 6);
-  overflow: hidden;
-  padding-bottom: 5px;
   position: relative;
-  line-height: 28px;
+  padding: 55px;
+  border-bottom: solid 1px var(--border);
 }
 
-@media screen and (max-width: 768px) {
-  .latest-articles .article-wrapper {
-    flex-flow: column;
-    gap: 50px;
-  }
-
-  .latest-articles .article-wrapper .article-card {
-    max-width: unset;
-  }
-
-  .latest-articles .article-wrapper .article-card:first-child {
-    margin-right: 0;
-  }
-
-  .latest-articles .article-wrapper .article-card:last-child {
-    margin-left: 0;
+@media screen and (max-width: 530px) {
+  header.article-header {
+    padding: 30px;
   }
 }
 
-ul li {
+header.article-header h1,
+header.article-header h5 {
+  margin: 0;
+  padding: 0;
+}
+
+header.article-header h1 {
+  margin-bottom: 10px;
+}
+
+article.article-wrapper {
+  padding: 55px;
+  border-bottom: solid 1px var(--border);
+}
+
+@media screen and (max-width: 530px) {
+  article.article-wrapper {
+    padding: 30px;
+  }
+}
+
+article ul li {
   padding: 0 20px;
   margin-bottom: 5px;
   position: relative;
@@ -124,7 +62,7 @@ ul li {
   cursor: pointer;
 }
 
-ul li::before {
+article ul li::before {
   content: "";
   display: block;
   width: 8px;
@@ -136,10 +74,57 @@ ul li::before {
   top: 10px;
 }
 
-ul li:hover::before {
+article ul li:hover::before {
   background-color: var(--text);
 }
 
-ul li:last-child {
+article ul li:last-child {
   margin-bottom: 0;
+}
+
+article img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 70px auto;
+  border: none !important;
+}
+
+.back-to-listing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.back-to-listing a {
+  display: inline-block;
+  padding: 15px;
+  border: solid 2px var(--text);
+  color: var(--primary);
+  text-decoration: none;
+  background-color: var(--text);
+  cursor: pointer;
+}
+
+.back-to-listing a:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.back-to-listing a.invert {
+  background-color: var(--primary);
+  color: var(--text);
+}
+
+.back-to-listing a.invert:hover {
+  color: var(--accent);
+}
+
+.back-to-listing a:first-child {
+  margin-right: 15px;
+}
+
+.back-to-listing a[hidden] {
+  display: none;
 }

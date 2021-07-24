@@ -6,6 +6,8 @@
 <meta property="og:title" content="Joshua Britz | {{.Title}}" />
 <meta property="og:description" content="{{.Summary}}" />
 
+<link type="text/css" rel="stylesheet" href="css/article.css" />
+
 {{if .Params.headerUrl}}
 <meta property="og:image" content="{{ .Site.BaseURL }}{{.Params.headerUrl}}" />
 {{end}}
@@ -20,63 +22,28 @@
   property="twitter:image"
   content="{{ .Site.BaseURL }}{{.Params.headerUrl}}"
 />
-{{end}} {{end}} {{ define "header" }}
-<nav class="article-nav">
-  <div class="inner">
-    <div class="logo">
-      <h5>
-        <strong><a href="/">Josh Britz</a></strong>
-      </h5>
-    </div>
-
-    <div class="back">
-      <a aria-hidden="true" href="/">Return to Main Page</a>
-    </div>
-  </div>
-</nav>
+{{end}} {{end}} {{ define "main" }} {{ if .Params.headerUrl }}
+<figure class="cover-image-wrapper">
+  <img src="{{ .Params.headerUrl }}" alt="{{ .Title }} Cover" />
+</figure>
+{{ end }}
 
 <header class="article-header">
-  <link type="text/css" rel="stylesheet" href="css/article.css" />
-
-  <div class="inner-content">
-    {{if .Params.headerUrl}}
-    <img src="{{.Params.headerUrl}}" alt="Header Cover" /> {{end}}
-    <h1>{{.Title}}</h1>
-    {{if .Params.subtitle}}
-    <h4>{{ .Params.subtitle }}</h4>
-    {{end}}
-    <div class="meta">
-      <div class="date">
-        <strong>Published:</strong>
-        <span>{{- .Date.Format "January 2, 2006" -}}</span>
-      </div>
-    </div>
-  </div>
+  <h1>{{ .Title }}</h1>
+  <h5>
+    Published on <strong>{{ .Date.Format "January 2, 2006" }}</strong> by Joshua
+    Britz
+  </h5>
 </header>
-{{end}} {{ define "main" }}
-<article>
+<article class="article-wrapper">
   {{- .Content -}}
 
-  <div class="latest-articles">
-    <div class="latest-articles-header">
-      <h4>Other Articles I've Written</h4>
-    </div>
-    <div class="article-wrapper">
-      {{range first 2 (where .CurrentSection.RegularPages "Title" "!=" .Title)}}
-      <a href="{{.Permalink}}" class="article-card">
-        <h5>{{.Title}}</h5>
-        <h6>{{- .Date.Format "January 2, 2006" -}}</h6>
-        <p>{{.Summary}}</p>
-      </a>
-      {{end}}
-    </div>
-  </div>
-
   <div class="back-to-listing">
-    <a class="button invert" role="button" hidden id="share-button"
-      >Share This Article</a
-    >
-    <a class="button" role="button" href="/">Return to the main page</a>
+    <a class="button invert" role="button" hidden id="share-button">
+      Share This Article
+    </a>
+
+    <a class="button" role="button" href="/">Return to the Main Page</a>
   </div>
 </article>
 

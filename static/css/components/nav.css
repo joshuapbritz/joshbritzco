@@ -1,0 +1,83 @@
+nav.application-global-nav {
+  width: 100%;
+  height: auto;
+  padding: 40px 55px;
+  border-bottom: solid 1px var(--border);
+}
+
+@media screen and (max-width: 530px) {
+  nav.application-global-nav {
+    padding: 30px;
+  }
+}
+
+nav.application-global-nav .inner {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 770px) {
+  nav.application-global-nav .inner {
+    display: block;
+  }
+}
+
+nav.application-global-nav .inner .logo {
+  display: block;
+  text-decoration: none;
+}
+
+nav.application-global-nav .inner .logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+@media screen and (max-width: 1050px) {
+  nav.application-global-nav .inner .logo img {
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  nav.application-global-nav .inner .logo {
+    margin-bottom: 15px;
+  }
+}
+
+nav.application-global-nav .inner .nav-intro {
+  display: block;
+  text-align: right;
+}
+
+nav.application-global-nav .inner .nav-intro .nav-intro-h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0 0 5px 0;
+}
+
+nav.application-global-nav .inner .nav-intro .nav-intro-h2 {
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 1050px) {
+  nav.application-global-nav .inner .nav-intro .nav-intro-h1 {
+    font-size: 16px;
+  }
+
+  nav.application-global-nav .inner .nav-intro .nav-intro-h2 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  nav.application-global-nav .inner .nav-intro .nav-intro-h1,
+  nav.application-global-nav .inner .nav-intro .nav-intro-h2 {
+    text-align: left;
+  }
+}
