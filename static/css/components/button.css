@@ -1,0 +1,53 @@
+<<<<<<< HEAD
+=======
+button.button,
+a.button[role="button"],
+span.button[role="button"] {
+  --button-background: var(--text);
+  --button-background-hover: var(--accent);
+  --button-color: var(--primary);
+
+  display: inline-block;
+  line-height: 40px;
+  text-transform: uppercase;
+  background-color: var(--button-background);
+  color: var(--button-color);
+  padding: 0 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  will-change: background-color;
+  transition: all cubic-bezier(0.455, 0.03, 0.515, 0.955) 150ms;
+}
+
+button.button:hover,
+a.button[role="button"]:hover,
+span.button[role="button"]:hover {
+  background-color: var(--button-background-hover);
+  color: var(--button-color);
+}
+
+body.safari button.button,
+body.safari a.button[role="button"],
+body.safari span.button[role="button"] {
+  -webkit-text-fill-color: #ffffff;
+}
+
+body.safari button.button:hover,
+body.safari a.button[role="button"]:hover,
+body.safari span.button[role="button"]:hover {
+  background-color: #f67280 !important;
+  -webkit-text-fill-color: #ffffff;
+}
+
+button.button.invert,
+a.button[role="button"].invert,
+span.button[role="button"].invert {
+  --button-background: var(--accent);
+  --button-background-hover: var(--text);
+  --button-color: var(--primary);
+}
+
+[hidden] {
+  display: none !important;
+}
+>>>>>>> 4a3ce254cf40477540339fcc64dd6942ce4ee3ec

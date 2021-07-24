@@ -73,7 +73,38 @@
   </div>
 
   <div class="back-to-listing">
+    <a class="button invert" role="button" hidden id="share-button"
+      >Share This Article</a
+    >
     <a class="button" role="button" href="/">Return to the main page</a>
   </div>
 </article>
+
+<script async type="text/javascript">
+  const button = document.getElementById("share-button");
+
+  if (
+    navigator.canShare &&
+    navigator.canShare({
+      url: window.location.toString(),
+      title: document.title.replace("Joshua Britz | ", ""),
+    })
+  ) {
+    button.removeAttribute("hidden");
+    button.addEventListener("click", () => {
+      navigator
+        .share({
+          url: window.location.toString(),
+          title: document.title.replace("Joshua Britz | ", ""),
+        })
+        .then(() => console.log("Share was successful."))
+        .catch((error) => console.log("Sharing failed", error));
+    });
+  } else {
+    console.log({
+      url: window.location.toString(),
+      title: document.title.replace("Joshua Britz | ", ""),
+    });
+  }
+</script>
 {{end}}

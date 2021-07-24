@@ -45,10 +45,10 @@
 
 <!-- <div class="post-wrapper">
   <ul class="post-lists">
-    {{ range .Site.RegularPages }}
+    {{ range where .Site.RegularPages "Section" "!=" "portfolio" }}
     <li class="post">
       <a class="post-content" href="{{.Permalink}}">
-        <h4>{{.Title}}</h4>
+        <h5>{{.Title}}</h5>
         <div class="meta">
           <div class="author">{{.Params.author}}</div>
           <div class="date">{{- .Date.Format "January 2, 2006" -}}</div>
@@ -65,5 +65,46 @@
     </li>
     {{ end }}
   </ul>
+<<<<<<< HEAD
+=======
+</div>
+
+<!-- <br />
+<br /> -->
+
+<!-- <div class="post-header">
+  <h2 class="text-center">My Portfolio</h2>
+  <p class="text-center">
+    Some of my favorite things I have worked on, from client work to learning
+    curves.
+  </p>
+</div> -->
+
+<!-- <div class="portfolio-wrapper">
+  <ul class="portfolio-list">
+    {{range where .Site.RegularPages "Section" "portfolio" }}
+    <li class="portfolio-list-item">
+      <a
+        class="portfolio-list-link"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="{{.Params.href}}"
+      >
+        <img src="{{.Params.imageUrl}}" alt="Developers" />
+
+        <div class="portfolio-list-content">
+          <h4>{{.Title}}</h4>
+
+          <div class="tags">
+            {{range .Params.types}}
+            <div class="tag">{{ . }}</div>
+            {{end}}
+          </div>
+        </div>
+      </a>
+    </li>
+    {{end}}
+  </ul>
+>>>>>>> 4a3ce254cf40477540339fcc64dd6942ce4ee3ec
 </div> -->
 {{ end }}
