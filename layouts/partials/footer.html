@@ -1,4 +1,20 @@
-<div class="footer-contact">
+<div class="footer-inner">
+  <div class="social-stuff">
+    <h5>If you would like to get in touch with me, feel free to pop me an email:</h5>
+    <h6><a href="mailto:joshuabritz@gmail.com">joshuabritz@gmail.com</a></h6>
+  </div>
+
+  <div class="copyright-stuff">
+    <div>&copy; Joshua Britz 2019-<span id="year"></span></div>
+
+    <script async>
+      const year = document.querySelector("#year");
+      year.textContent = new Date().getFullYear();
+    </script>
+  </div>
+</div>
+
+<!-- <div class="footer-contact">
   <h5>
     If you would like to get in touch with me, feel free to pop me an email:
   </h5>
@@ -44,4 +60,4 @@
     const year = document.querySelector("#year");
     year.textContent = new Date().getFullYear();
   </script>
-</div>
+</div> -->

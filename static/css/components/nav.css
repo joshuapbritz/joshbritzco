@@ -1,0 +1,41 @@
+nav.application-global-nav {
+  width: 100%;
+  height: auto;
+  padding: 40px 55px;
+  border-bottom: solid 1px var(--border);
+}
+
+nav.application-global-nav .inner {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav.application-global-nav .inner .logo {
+  display: block;
+  text-decoration: none;
+}
+
+nav.application-global-nav .inner .logo img {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+nav.application-global-nav .inner .nav-intro {
+  display: block;
+}
+
+nav.application-global-nav .inner .nav-intro .nav-intro-h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0 0 5px 0;
+}
+
+nav.application-global-nav .inner .nav-intro .nav-intro-h2 {
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
