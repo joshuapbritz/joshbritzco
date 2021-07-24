@@ -19,7 +19,7 @@
         {{ if (eq $index 2) }}
         <p>{{ .Summary | safeHTML | truncate 1000 }}</p>
         {{else}}
-        <p>{{ .Summary | safeHTML | truncate 300 }}</p>
+        <p>{{ .Summary | safeHTML | truncate 200 }}</p>
         {{end}}
 
         <ul class="articles-grid-summary-info">

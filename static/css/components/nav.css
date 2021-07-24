@@ -13,6 +13,12 @@ nav.application-global-nav .inner {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 770px) {
+  nav.application-global-nav .inner {
+    display: block;
+  }
+}
+
 nav.application-global-nav .inner .logo {
   display: block;
   text-decoration: none;
@@ -24,8 +30,21 @@ nav.application-global-nav .inner .logo img {
   display: block;
 }
 
+@media screen and (max-width: 1050px) {
+  nav.application-global-nav .inner .logo img {
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  nav.application-global-nav .inner .logo {
+    margin-bottom: 15px;
+  }
+}
+
 nav.application-global-nav .inner .nav-intro {
   display: block;
+  text-align: right;
 }
 
 nav.application-global-nav .inner .nav-intro .nav-intro-h1 {
@@ -38,4 +57,21 @@ nav.application-global-nav .inner .nav-intro .nav-intro-h2 {
   font-size: 18px;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 1050px) {
+  nav.application-global-nav .inner .nav-intro .nav-intro-h1 {
+    font-size: 16px;
+  }
+
+  nav.application-global-nav .inner .nav-intro .nav-intro-h2 {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  nav.application-global-nav .inner .nav-intro .nav-intro-h1,
+  nav.application-global-nav .inner .nav-intro .nav-intro-h2 {
+    text-align: left;
+  }
 }

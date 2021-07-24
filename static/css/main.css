@@ -13,77 +13,111 @@ body {
 
 .footer-inner {
   padding: 55px;
-}
-
-.portfolio-wrapper {
-  width: 100%;
-  height: auto;
-}
-
-.portfolio-wrapper .portfolio-list {
   display: flex;
-  flex-flow: row wrap;
-  width: calc(100% + 60px);
-  padding: 60px 0;
-  margin-bottom: -40px;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.portfolio-wrapper .portfolio-list .portfolio-list-item {
-  width: calc(50% - 60px);
-  margin-right: 60px;
-}
-
-@media screen and (max-width: 1000px) {
-  .portfolio-wrapper .portfolio-list {
+@media screen and (max-width: 530px) {
+  .footer-inner {
     display: block;
-    max-width: 600px;
-    width: 90%;
-    margin: auto;
-  }
-
-  .portfolio-wrapper .portfolio-list .portfolio-list-item {
-    width: 100%;
-    margin-right: 0px;
-    padding-bottom: 25px;
+    text-align: center;
   }
 }
 
-.portfolio-wrapper .portfolio-list .portfolio-list-item .portfolio-list-link {
+.footer-inner .social-stuff {
+  flex: 1;
+}
+
+@media screen and (max-width: 530px) {
+  .footer-inner .social-stuff {
+    padding-bottom: 20px;
+  }
+}
+
+.footer-inner .social-stuff .find-me-online {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (max-width: 530px) {
+  .footer-inner .social-stuff .find-me-online {
+    justify-content: center;
+  }
+}
+
+.footer-inner .social-stuff .find-me-online .icon-wrapper {
+  width: 70px;
+  height: 60px;
+  overflow: hidden;
+}
+
+.footer-inner .social-stuff .find-me-online .icon-wrapper .icon-inner {
   display: block;
+  width: 70px;
+  height: 60px;
+  overflow: hidden;
+  text-decoration: none;
   color: var(--text);
-  text-align: center;
-  padding-bottom: 40px;
 }
 
-.portfolio-wrapper
-  .portfolio-list
-  .portfolio-list-item
-  .portfolio-list-link
-  img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-.portfolio-wrapper
-  .portfolio-list
-  .portfolio-list-item
-  .portfolio-list-link
-  .portfolio-list-content
-  .tags {
+.find-me-online .icon-wrapper .icon-inner .icon {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 70px;
+  height: 60px;
+  transition: height cubic-bezier(0.455, 0.03, 0.515, 0.955) 350ms;
 }
 
-.portfolio-wrapper
-  .portfolio-list
-  .portfolio-list-item
-  .portfolio-list-link
-  .portfolio-list-content
-  .tags
-  .tag {
-  line-height: 30px;
-  display: inline-block;
-  padding: 0 10px;
+.find-me-online .icon-wrapper .icon-inner .icon svg {
+  display: block;
+  width: 45px;
+  height: auto;
+  transition: width cubic-bezier(0.455, 0.03, 0.515, 0.955) 250ms,
+    stroke cubic-bezier(0.455, 0.03, 0.515, 0.955) 250ms;
+}
+
+.find-me-online .icon-wrapper .icon-inner .label {
+  line-height: calc(60px - 35px);
+  font-size: 10px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform cubic-bezier(0.455, 0.03, 0.515, 0.955) 350ms;
+}
+
+.find-me-online .icon-wrapper .icon-inner:hover .icon {
+  height: 35px;
+}
+
+.find-me-online .icon-wrapper .icon-inner:hover .icon svg {
+  width: 35px;
+  stroke: var(--accent);
+}
+
+.find-me-online .icon-wrapper .icon-inner:hover .label {
+  transform: translateY(0);
+}
+
+/* Code Highlighting */
+.highlight {
+  background-color: #2f1e2e;
+  padding: 20px;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  overflow-x: auto;
+}
+
+/* Lines */
+hr {
+  border: none;
+  width: 70%;
+  max-width: 300px;
+  margin: 3rem auto;
+  height: 2px;
+  background-color: var(--border);
 }

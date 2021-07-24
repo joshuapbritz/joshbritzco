@@ -1,0 +1,112 @@
+figure.cover-image-wrapper {
+  display: block;
+  padding: 55px;
+  margin: 0;
+  border-bottom: solid 1px var(--border);
+}
+
+figure.cover-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+header.article-header {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  position: relative;
+  padding: 55px;
+  border-bottom: solid 1px var(--border);
+}
+
+header.article-header h1,
+header.article-header h5 {
+  margin: 0;
+  padding: 0;
+}
+
+header.article-header h1 {
+  margin-bottom: 10px;
+}
+
+article.article-wrapper {
+  padding: 55px;
+  border-bottom: solid 1px var(--border);
+}
+
+article ul li {
+  padding: 0 20px;
+  margin-bottom: 5px;
+  position: relative;
+  line-height: 28px;
+  cursor: pointer;
+}
+
+article ul li::before {
+  content: "";
+  display: block;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  background-color: var(--accent);
+  border-radius: 2px;
+  left: 0;
+  top: 10px;
+}
+
+article ul li:hover::before {
+  background-color: var(--text);
+}
+
+article ul li:last-child {
+  margin-bottom: 0;
+}
+
+article img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 70px auto;
+  border: none !important;
+}
+
+.back-to-listing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+.back-to-listing a {
+  display: inline-block;
+  padding: 15px;
+  border: solid 2px var(--text);
+  color: var(--primary);
+  text-decoration: none;
+  background-color: var(--text);
+  cursor: pointer;
+}
+
+.back-to-listing a:hover {
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.back-to-listing a.invert {
+  background-color: var(--primary);
+  color: var(--text);
+}
+
+.back-to-listing a.invert:hover {
+    color: var(--accent);
+}
+
+.back-to-listing a:first-child {
+  margin-right: 15px;
+}
+
+.back-to-listing a[hidden] {
+  display: none;
+}
