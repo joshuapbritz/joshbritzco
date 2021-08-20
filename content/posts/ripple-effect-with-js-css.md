@@ -3,7 +3,7 @@ title: "Create a Material Style Ripple Effect With JavaScript and CSS"
 subtitle: "Add some style to your clicks using material designs ripple effect"
 date: 2021-08-20T09:22:15+02:00
 draft: false
-headerUrl: "/images/ripple.jpeg"
+headerUrl: "/images/ripple.png"
 ---
 
 Possibly one of the most iconic designs patterns to come out of Google's material design is the ripple effect. It is such a simple interaction, but feels so satisfying to use. It gives a user really good context of what action they have taken in your application and, let face it, it just looks really cool. Now, if you are using a framework that is build by Google (such as Angular Material, Material Flutter, or their native Android Toolkit), you have probably not had to worry about adding this interaction to your code. However, if you are using, or building, your own framework or tooling, you may want to consider adding a ripple effect to your belt. 
