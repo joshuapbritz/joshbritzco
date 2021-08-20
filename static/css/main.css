@@ -122,3 +122,23 @@ hr {
   height: 2px;
   background-color: var(--border);
 }
+
+[data-ripple] {
+  position: relative;
+  overflow: hidden;
+}
+
+[data-ripple] .ripple-pad {
+  background: var(--ripple-dark);
+  position: absolute;
+  opacity: 1;
+  transform: scale(0);
+  animation: RippleEffect 1700ms cubic-bezier(0, 0, 0.2, 1) forwards;
+}
+
+@keyframes RippleEffect {
+  to {
+    transform: scale(1);
+    opacity: 0;
+  }
+}

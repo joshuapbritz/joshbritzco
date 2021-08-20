@@ -2,6 +2,8 @@
   --primary: #ffffff;
   /* --accent: #f67280; */
   --accent: #fa1212;
+  --ripple: hsla(0, 96%, 53%, 0.3);
   --border: #dbdbdb;
   --text: #0e2431;
+  --ripple-dark: hsla(202, 56%, 12%, 0.3);
 }
