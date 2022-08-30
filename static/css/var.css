@@ -1,9 +1,13 @@
 :root {
-  --primary: #ffffff;
-  /* --accent: #f67280; */
-  --accent: #fa1212;
-  --ripple: hsla(0, 96%, 53%, 0.3);
-  --border: #dbdbdb;
-  --text: #0e2431;
-  --ripple-dark: hsla(202, 56%, 12%, 0.3);
+  --background: hsla(0, 0%, 95%, 1);
+  --background_1: hsla(0, 0%, 95%, 0.65);
+  --background_2: hsla(0, 0%, 95%, 0.3);
+
+  --text: hsla(212, 15%, 22%, 1);
+  --text_1: hsla(212, 15%, 22%, 0.65);
+  --text_2: hsla(212, 15%, 22%, 0.3);
+
+  --primary: hsla(152, 29%, 33%, 1);
+  --primary_1: hsla(152, 29%, 33%, 0.65);
+  --primary_2: hsla(152, 29%, 33%, 0.3);
 }
