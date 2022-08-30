@@ -3,7 +3,7 @@ title: "The Best Way to Learn... Teach"
 subtitle: "A practical guide to learning and studying using the Feynman Technique"
 date: 2021-03-18T07:43:10+02:00
 draft: false
-tags: ['Development', 'Learning', 'Process']
+tags: ['Development', 'Learning', 'Process', "Education"]
 headerUrl: "images/learn-by-teaching.jpeg"
 ---
 

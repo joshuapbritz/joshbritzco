@@ -4,6 +4,7 @@ subtitle: "Creating a component library is easy. Creating a good component libra
 date: 2020-08-05T13:00:43+02:00
 draft: false
 headerUrl: "images/create-useful-components.jpg"
+tags: ["UX/UI", "Components", "Web Dev"]
 ---
 
 One of the great benefits of the many SPA frameworks that we use nowadays (such as Angular and React) is that it is super easy to make reusable UI components that are clean and self-contained. Components that are built in these frameworks are easier to debug and far more reliable than the traditional sort of component. We can create a project with something like the Angular CLI and have a nice little directory for the components we are using in our app and it's all hunky-dory from there. If a component is not working, you simply have to make a change in one place and the problem is sorted all across your app. Now, this is great for a project where the components you have will only be used in one application. We do, however, run into some major issues when it comes to a situation where you need to use the same components for multiple, separate projects. 

@@ -2,6 +2,8 @@
 title: "The Sexiness of Headless UI Components"
 date: 2019-12-02T07:36:20+02:00
 draft: false
+tags: ["React", "TypeScript", "Web Dev", "CSS"]
+headerUrl: "images/components.jpeg"
 ---
 
 Something I enjoy doing most on the web is creating things that help other developers to be more productive. I especially love creating component libraries and core development kits that can be used to make project bootstrapping and deveopment easier. As a result I have spent a substantial amount of time trying to find newer and better ways of making sure that the components I make are robust, versatile, and easy to use. One of the things I've noticed about components is that we developers have a natural tendency of just make them work in the given immediate use case or context. So often we incorporate business logic, layout logic, and other specifics as part of the component's makeup. Many components are just  abstracted into a separate project from where they are being used, but take no advantage of the benefits provided by doing that. One of the biggest reasons for this, in my opinion, is that components are way too tied to the design iteration they represent. They are made to cater for the designs that can be found at the time of them being made, but have no mindfulness of future enhancements. There have been many times when I've poured hours into making components that work according to specification, look good, are well tested, and have proper documentation. Yet the very next day, I'll get to work only to find that the design has changed or a new use case had been added and so the component has to be updated. This is very frustrating and is the cause of a lot of (often) easily avoidable bugs. 

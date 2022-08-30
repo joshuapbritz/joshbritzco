@@ -1,6 +1,6 @@
-<div class="footer-inner">
-  <div class="social-stuff">
-    <ul class="find-me-online">
+<footer>
+  <div class="footer-inner inner">
+    <ul class="social-stuff">
       <li class="icon-wrapper">
         <a href="mailto:joshuabritz@gmail.com" class="icon-inner">
           <div class="icon">
@@ -33,12 +33,12 @@
     </ul>
   </div>
 
-  <div class="copyright-stuff">
-    <div>&copy; Joshua Britz 2019-<span id="year"></span></div>
+  <div class="copyright">
+    <div class="inner">&copy; Joshua Britz 2019-<span id="year"></span></div>
 
     <script async>
       const year = document.querySelector("#year");
       year.textContent = new Date().getFullYear();
     </script>
   </div>
-</div>
+</footer>

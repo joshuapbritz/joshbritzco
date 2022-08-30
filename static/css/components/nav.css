@@ -17,7 +17,7 @@ nav .inner {
 
 nav .inner .logo {
   font-size: 35px;
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
   color: var(--text);
 }
@@ -26,7 +26,45 @@ nav .inner .logo:hover {
   color: var(--primary);
 }
 
+nav .inner ul.nav-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 15px;
+}
+
+nav .inner ul.nav-list li {
+  background: var(--cards);
+  border-radius: 60px;
+  cursor: pointer;
+}
+
+nav .inner ul.nav-list li a {
+  line-height: 40px;
+  padding: 0 35px;
+  font-weight: 400;
+  color: var(--text);
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+nav .inner ul.nav-list li:hover {
+  background: var(--primary_2);
+}
+
+nav .inner ul.nav-list li.active {
+  background: var(--primary);
+}
+
+nav .inner ul.nav-list li.active a {
+  color: var(--background);
+}
+
 nav.has-scrolled {
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2),
-    inset 0px 0px 25px rgba(209, 217, 230, 0.3);
+  box-shadow: 0px 0px 20px rgba(51, 51, 51, 0.25),
+    inset 0px 0px 25px rgba(209, 217, 230, 0.2);
 }

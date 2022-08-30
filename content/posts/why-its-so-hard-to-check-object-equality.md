@@ -3,6 +3,7 @@ title: "Why It's So Hard to Check Object Equality in JavaScript"
 date: 2019-11-19T08:23:48+02:00
 draft: false
 headerUrl: "images/why-its-so-hard-to-check-object-equality.jpg"
+tags: ["JavaScript", "Web Dev", "Utilities"]
 ---
 
 The other day I was working on a bit of code where I found myself having to check if two JavaScript objects were equal, namely, do two objects have the same keys and values. The first thing I tried was putting them into a simple equality check (using ===) and thought that my problem was solved. However, it turns out that comparing JavaScripts objects is much harder than I thought.

@@ -3,6 +3,10 @@
   --background_1: hsla(0, 0%, 95%, 0.65);
   --background_2: hsla(0, 0%, 95%, 0.3);
 
+  --cards: hsla(0, 0%, 88%, 1);
+  --cards_1: hsla(0, 0%, 88%, 0.65);
+  --cards_2: hsla(0, 0%, 88%, 0.3);
+
   --text: hsla(212, 15%, 22%, 1);
   --text_1: hsla(212, 15%, 22%, 0.65);
   --text_2: hsla(212, 15%, 22%, 0.3);
