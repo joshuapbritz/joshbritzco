@@ -3,6 +3,7 @@ title: "Create a Keybinding Service in Angular"
 date: 2019-11-06T08:26:30+02:00
 draft: false
 headerUrl: "images/create-a-keybinding-service-in-angular.jpg"
+tags: ["Angular", "TypeScript", "Utilities"]
 ---
 
 A common frustration I come across when working with Angular (or any other framework for that matter), is running functions based on key bindings. The typical method of doing this is unreadable and messy. For example, if you wanted to run a function when a user hit <strong>CTRL+ALT+D</strong>, your code would look something like this.
@@ -11,6 +12,7 @@ A common frustration I come across when working with Angular (or any other frame
 window.addEventListener('keydown', (event: KeyboardEvent) => {
    // Fall back to event.which if event.keyCode is null
    const keycode = event.keyCode || event.which;
+
    if (keycode === 68 && event.ctrlKey && event.altKey) {
      // Do stuff here
    }
@@ -77,13 +79,11 @@ export const MODIFIERS = ['altKey', 'shiftKey', 'ctrlKey', 'metaKey'];
  * Checks whether a modifier key is pressed.
  * @param event Event to be checked.
  */
-export function hasModifierKey(
-  event: KeyboardEvent,
-  ...modifiers: ModifierKey[]
-): boolean {
+export function hasModifierKey(event: KeyboardEvent, ...modifiers: ModifierKey[]): boolean {
   if (modifiers.length) {
     return modifiers.some(modifier => event[modifier]);
   }
+  
   return event.altKey || event.shiftKey || event.ctrlKey || event.metaKey;
 }
 ```
@@ -95,10 +95,8 @@ Theoretically, they would already make your life easier. You could use them as b
 ```typescript
 window.addEventListener('keydown', (event: KeyboardEvent) => {
   const { D } = KEYS;
-  if (
-    hasKeycode(event, D) &&
-    hasModifierKey(event, 'ctrlKey', 'altKey')
-  ) {
+
+  if (hasKeycode(event, D) && hasModifierKey(event, 'ctrlKey', 'altKey')) {
     // Do action
   }
 });
@@ -109,12 +107,9 @@ This code is much cleaner, but we can do better than that. What we want is a dec
 In the key bind service, you will create a new method called **match()**. We will have parameters so that you can specify the keys and modifiers you want to listen for, some extra options, and we will return an Observable that fires when the binding is matched.
 
 ```typescript
-public match(
-  matchKey: KeyNames,
-  matchModifiers: ModifierKey[] = [],
-  options?: MatchConfig
-): Observable<KeyboardEvent> {
+public match(matchKey: KeyNames, matchModifiers: ModifierKey[] = [], options?: MatchConfig): Observable<KeyboardEvent> {
   const { listenOn } = new MatchConfig(options);
+
   return new Observable((observer) => {
     const listener$ = fromEvent(listenOn, 'keydown');
   });
@@ -126,6 +121,7 @@ And a class for your extra config
 ```typescript
 export class MatchConfig {
   public listenOn: EventTarget = window;
+
   constructor(init: Partial<MatchConfig>) {
     Object.assign(this, init);
   }
@@ -135,19 +131,15 @@ export class MatchConfig {
 Now that we have out plumbing in place, we will need to subscribe to our keydown listener and check if the current event's keys match the binding specified. To do that, we will use the methods defined in **keycodes.ts** and **modifiers.ts**.
 
 ```typescript
-public match(
-  matchKey: KeyNames,
-  matchModifiers: ModifierKey[] = [],
-  options?: MatchConfig
-): Observable<KeyboardEvent> {
+public match(matchKey: KeyNames, matchModifiers: ModifierKey[] = [], options?: MatchConfig): Observable<KeyboardEvent> {
   const { listenOn } = new MatchConfig(options);
+
   return new Observable((observer) => {
     const listener$ = fromEvent(listenOn, 'keydown');
+    
     listener$.subscribe((event: KeyboardEvent) => {
       if (
-        hasKeycode(event, KEYS[matchKey]) &&
-        (!matchModifiers.length || hasModifierKey(event, ...matchModifiers))
-      ) {
+        hasKeycode(event, KEYS[matchKey]) && (!matchModifiers.length || hasModifierKey(event, ...matchModifiers))) {
         observer.next(event);
       }
     });

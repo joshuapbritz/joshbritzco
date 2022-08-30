@@ -2,6 +2,8 @@
 title: "6 Principles to Make Your Projects More \"Team Friendly\""
 date: 2019-11-07T08:28:29+02:00
 draft: false
+tags: ["Workflow", "Team"]
+headerUrl: "images/team.jpeg"
 ---
 
 The other day I was reflecting on the team that I am currently working with on a massive project at our company. We have recently gone through a huge overhaul in our process and structures, so I wanted to see how those changes had reflected in projects. Namely, I wanted to try and see what we did well, what maybe needed some work, and what we needed to start (or stop) doing. 

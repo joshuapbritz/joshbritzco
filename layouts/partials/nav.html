@@ -1,10 +1,33 @@
 <div class="inner">
-  <a href="/" class="logo">
-    <img src="images/logo_dark.png" alt="Joshua Britz" />
-  </a>
+  <a href="/" class="logo">Joshua Britz</a>
 
   <div class="nav-intro">
-    <h1 class="nav-intro-h1">UX Engineer // Front-end Developer // Web Tinkerer</h1>
-    <h2 class="nav-intro-h2">Writings and musings of a developer</h2>
+    <ul class="nav-list">
+      <li id="home">
+        <a href="/">Home</a>
+      </li>
+
+      <!-- <li id="about">
+        <a href="/about/">About</a>
+      </li> -->
+
+      <li id="posts">
+        <a href="/posts/">Writings</a>
+      </li>
+    </ul>
   </div>
 </div>
+
+<script async>
+  (() => {
+    const path = window.location.pathname;
+
+    if (path === "/") {
+      document.getElementById("home").classList.add("active");
+    } else if (path.includes("/about/")) {
+      document.getElementById("about").classList.add("active");
+    } else if (path.includes("/posts/")) {
+      document.getElementById("posts").classList.add("active");
+    }
+  })();
+</script>

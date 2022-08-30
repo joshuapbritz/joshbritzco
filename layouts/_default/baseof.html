@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    {{- partial "head.html" . -}} 
-    
-    {{- block "article-head" . }}
-      <meta
-        name="description"
-        content="Hello, I'm Joshua Britz. I'm a web developer from South Africa with a special interest in User Experience and Front-end development. My work usually involves creating components libraries for client design systems, creating high-fidelity prototpyes of new components, and working to promote the adoption of design systems company-wide. I'm currently employed at OnePointFour Consulting"
-      />
+    {{- partial "head.html" . -}} {{- block "article-head" . }}
+    <meta
+      name="description"
+      content="Hello, I'm Joshua Britz. I'm a web developer from South Africa with a special interest in User Experience and Front-end development. My work usually involves creating components libraries for client design systems, creating high-fidelity prototpyes of new components, and working to promote the adoption of design systems company-wide. I'm currently employed at OnePointFour Consulting"
+    />
     {{- end }}
   </head>
   <body>
@@ -17,7 +15,7 @@
         src="https://www.googletagmanager.com/ns.html?id=GTM-NQSR5SV"
         height="0"
         width="0"
-        style="display: none; visibility: hidden;"
+        style="display: none; visibility: hidden"
       ></iframe
     ></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -31,19 +29,11 @@
       }
     </script>
 
-    <nav class="application-global-nav">
-      {{- partial "nav.html" . -}}
-    </nav>
+    <nav id="navigation-bar">{{- partial "nav.html" . -}}</nav>
 
-    <div class="content-wrapper">
-      <main id="content">
-        {{- block "main" . }}{{- end }}
-      </main>
-    </div>
+    {{- block "main" . }}{{- end }}
 
-    <footer>
-      {{- partial "footer.html" . -}}
-    </footer>
+    {{- partial "footer.html" . -}}
 
     <script src="/index.js" async></script>
 

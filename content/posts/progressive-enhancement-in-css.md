@@ -2,6 +2,7 @@
 title: "An Opinion on Progressive Enhancement in CSS"
 date: 2020-03-08T10:16:27+02:00
 draft: false
+tags: ["CSS", "Web Dev", "Opinion"]
 ---
 
 Although support for the "plague browsers" is dropping by the year, developers across the world are faced with the challenge of having to support older web browsers like Internet Explorer. Such browsers have very limited support for new web technologies like grid, flexbox, or custom properties. Because of browsers like this, the CSS spec gives specific instructions to browsers about how they should treat CSS rules that they do no understand. That is, that browsers should discard any line of CSS they do not understand. For example, let's look at the below selector that uses logical properties.

@@ -1,47 +1,82 @@
 {{ define "main" }}
-<article class="articles-grid-layout">
-  <div class="articles-grid">
-    {{ range $index, $arrya := first 7 .Site.RegularPages }}
-    <a href="{{.Permalink}}" class="articles-grid-item">
-      {{ if (eq $index 2) }}
-      <div class="article-grid-image">
-        {{ if .Params.headerUrl }}
-        <img src="{{ .Params.headerUrl }}" alt="Header Image" />
-        {{ else }}
-        <img src="images/default.jpeg" alt="Header Image" />
-        {{ end }}
-      </div>
-      {{ end }}
+<div class="header-wrapper">
+  <header>
+    <div class="content">
+      <h1>Welcome</h1>
+      <h4>
+        My name is Joshua. I am a User Experience Engineer working on awesome
+        things at
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.keplerco.io"
+          >Kepler + Co.</a
+        >
+      </h4>
+    </div>
 
-      <div class="articles-grid-summary">
-        <h4>{{ .Title }}</h4>
+    <div class="image">
+      <img draggable="false" src="/images/bust.png" alt="Bust" />
+    </div>
+  </header>
+</div>
 
-        {{ if (eq $index 2) }}
-        <p>{{ .Summary | safeHTML | truncate 1000 }}</p>
-        {{else}}
-        <p>{{ .Summary | safeHTML | truncate 200 }}</p>
-        {{end}}
+<main id="content">
+  <section class="information-card">
+    <div class="inner">
+      <h2>Hello</h2>
+      <h5>
+        I am a Front-end Developer with a specific passion and interest in user
+        experience and optimized UI development. I am officially called a UX
+        Engineer which means that I work closely with designers to ensure that
+        the components and pages we build are user-friendly and technically
+        feasible. I am also responsible for promoting the adoption of design
+        systems amongst both designers and developers.
+      </h5>
+    </div>
+  </section>
 
-        <ul class="articles-grid-summary-info">
-          <li>
-            <strong>Published</strong>
-            <span>{{- .Date.Format "January 2, 2006" -}}</span>
-          </li>
-        </ul>
-      </div>
-    </a>
-    {{end}}
-  </div>
-</article>
+  <section class="articles-sections">
+    <div class="header">
+      <!-- <h3>My Interests</h3>
+      <h5>Here are some of the things I enjoy doing</h5> -->
+      <h3>My Writings</h3>
+      <h5>
+        Articles that I have written about various topics that I enjoy
+      </h5>
+    </div>
 
-{{ if gt (len .Site.RegularPages) 7 }}
-<article class="other-articles">
-  {{ range after 7 .Site.RegularPages }}
-    <a href="{{ .Permalink }}" class="other-article">
-      <h4>{{ .Title }}</h4>
-      <p>{{ .Summary | safeHTML | truncate 400 }}</p>
-    </a>
-  {{ end }}
-</article>
-{{end}}
+    <article class="articles inner">
+      {{ range $index, $arrya := first 9 .Site.RegularPages }}
+      <a href="{{ .Permalink }}" class="article-item">
+        <div class="article-image">
+          {{ if .Params.headerUrl }}
+          <img src="{{ .Params.headerUrl }}" alt="Header Image" />
+          {{ else }}
+          <img src="images/default.jpeg" alt="Header Image" />
+          {{ end }}
+        </div>
+
+        <div class="articles-summary">
+          <h5>{{ .Title }}</h5>
+          <p>{{ .Summary | safeHTML | truncate 350 }}</p>
+
+          <ul class="articles-summary-info">
+            <li>
+              <strong>Published</strong>
+              <span>{{- .Date.Format "January 2, 2006" -}}</span>
+            </li>
+
+            {{ range .Params.tags }}
+            <li class="light">
+              <span>{{- . -}}</span>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+      </a>
+      {{end}}
+    </article>
+  </section>
+</main>
 {{ end }}

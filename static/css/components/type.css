@@ -1,9 +1,14 @@
 :root {
   font-size: 16px;
-  font-family: 'Libre Baskerville', serif;
   font-weight: 400;
   line-height: 1.65;
   color: var(--text);
+}
+
+@media screen and (max-width: 850px) {
+  :root {
+    font-size: 14px;
+  }
 }
 
 h1,
@@ -24,7 +29,6 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 2.75rem 0 1.05rem;
   font-weight: 400;
   line-height: 1.27;
 }
