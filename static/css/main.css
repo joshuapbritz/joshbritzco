@@ -26,6 +26,12 @@ body {
   padding-left: 5%;
 }
 
+@media screen and (max-width: 970px) {
+  .header-wrapper {
+    padding: 0 5%;
+  }
+}
+
 header {
   display: block;
   height: calc(100vh - 80px);
@@ -72,6 +78,30 @@ header .content h1::after {
   content: " />";
 }
 
+@media screen and (max-width: 1200px) {
+  header .content {
+    max-width: 600px;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  header .content {
+    top: auto;
+    left: auto;
+    position: relative;
+    transform: none;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  header {
+    height: auto;
+    padding: 40px 0;
+  }
+}
+
 header .image {
   width: auto;
   height: 100%;
@@ -87,6 +117,24 @@ header .image img {
   position: relative;
   z-index: 4;
   filter: grayscale(100%) drop-shadow(0px 0px 20px rgba(51, 51, 51, 0.2));
+}
+
+@media screen and (max-width: 1200px) {
+  header .image {
+    height: 80%;
+  }
+}
+
+@media screen and (max-width: 970px) {
+  header .image {
+    bottom: -10vh;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  header .image {
+    display: none;
+  }
 }
 
 header .image::after {
@@ -154,7 +202,7 @@ main section.articles-sections .header.static {
   margin: -130px 0 50px 0;
   width: 100%;
   max-width: 100%;
-  padding: 40px 0;
+  padding: 40px 5%;
   border-radius: 0;
   box-shadow: none;
 }
@@ -163,6 +211,20 @@ main section.articles-sections .articles {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 45px;
+}
+
+@media screen and (max-width: 970px) {
+  main section.articles-sections .articles {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  main section.articles-sections .articles {
+    max-width: 600px;
+    margin: auto;
+    grid-template-columns: 1fr;
+  }
 }
 
 main section.articles-sections .articles .article-item {
@@ -197,7 +259,12 @@ main section.articles-sections .articles .article-item .articles-summary p {
   color: var(--text_1);
 }
 
-main section.articles-sections .articles .article-item .articles-summary .articles-summary-info {
+main
+  section.articles-sections
+  .articles
+  .article-item
+  .articles-summary
+  .articles-summary-info {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -208,14 +275,26 @@ main section.articles-sections .articles .article-item .articles-summary .articl
   flex-flow: row wrap;
 }
 
-main section.articles-sections .articles .article-item .articles-summary .articles-summary-info li {
+main
+  section.articles-sections
+  .articles
+  .article-item
+  .articles-summary
+  .articles-summary-info
+  li {
   background: var(--primary);
   color: var(--background);
   padding: 0 15px;
   border-radius: 20px;
 }
 
-main section.articles-sections .articles .article-item .articles-summary .articles-summary-info li.light {
+main
+  section.articles-sections
+  .articles
+  .article-item
+  .articles-summary
+  .articles-summary-info
+  li.light {
   background: var(--cards);
   color: var(--text);
 }
@@ -225,7 +304,6 @@ footer {
 }
 
 footer .footer-inner {
-  
 }
 
 footer .footer-inner .social-stuff {

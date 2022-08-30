@@ -5,6 +5,12 @@
   color: var(--text);
 }
 
+@media screen and (max-width: 850px) {
+  :root {
+    font-size: 14px;
+  }
+}
+
 h1,
 h2,
 h3,

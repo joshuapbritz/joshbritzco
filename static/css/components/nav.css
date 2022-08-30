@@ -22,6 +22,12 @@ nav .inner .logo {
   color: var(--text);
 }
 
+@media screen and (max-width: 580px) {
+  nav .inner .logo {
+    font-size: 18px;
+  }
+}
+
 nav .inner .logo:hover {
   color: var(--primary);
 }
@@ -50,6 +56,12 @@ nav .inner ul.nav-list li a {
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+@media screen and (max-width: 580px) {
+  nav .inner ul.nav-list li a {
+    padding: 0 15px;
+  }
 }
 
 nav .inner ul.nav-list li:hover {
