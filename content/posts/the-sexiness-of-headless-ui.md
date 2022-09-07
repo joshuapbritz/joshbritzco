@@ -2,7 +2,7 @@
 title: "The Sexiness of Headless UI Components"
 date: 2019-12-02T07:36:20+02:00
 draft: false
-tags: ["React", "TypeScript", "Web Dev", "CSS"]
+tags: ["React", "TypeScript", "Web Dev", "CSS", "UI/UX"]
 headerUrl: "images/components.jpeg"
 ---
 
