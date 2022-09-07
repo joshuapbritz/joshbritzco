@@ -366,3 +366,24 @@ footer .copyright {
   background-color: var(--cards);
   padding: 15px 0;
 }
+
+code:not([class*="language-"]) {
+  background-color: var(--primary);
+  color: var(--background);
+  padding: 1px 5px;
+  border-radius: 5px;
+}
+
+p a {
+  color: var(--primary);
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  will-change: color, transform;
+  transition: color ease-in-out 250ms, transform ease-in-out 250ms;
+}
+
+p a:hover {
+  color: var(--primary_1);
+  transform: translateY(-1px);
+}
