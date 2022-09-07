@@ -36,6 +36,9 @@
 <div class="inner skinny">
   <div class="article-header">
     <h1>{{ .Title }}</h1>
+    {{ if .Params.subtitle }}
+    <h4>{{ .Params.subtitle }}</h4>
+    {{ end }}
     <h5>
       Published on <strong>{{ .Date.Format "January 2, 2006" }}</strong> by
       Joshua Britz

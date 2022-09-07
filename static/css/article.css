@@ -22,6 +22,11 @@
   font-size: 5rem;
 }
 
+.article-header h4 {
+  font-weight: lighter;
+  padding-bottom: 15px;
+}
+
 article.article-wrapper {
   padding: 50px 0;
 }

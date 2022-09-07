@@ -1,6 +1,6 @@
 ---
 title: "Create a Material Style Ripple Effect With JavaScript and CSS"
-subtitle: "Add some style to your clicks using material designs ripple effect"
+subtitle: "Add some style to your clicks using material designs ripple effect, built from scratch"
 date: 2021-08-20T09:22:15+02:00
 draft: false
 headerUrl: "/images/ripple.png"

@@ -157,13 +157,35 @@ header .image::after {
   transform: rotate(-110deg);
   z-index: 1;
   opacity: 0.5;
+  border-radius: 20px;
 }
 
 main section.information-card {
   background: var(--text);
   padding: 70px 0;
   text-align: left;
-  padding-bottom: 150px;
+  padding-bottom: 160px;
+  position: relative;
+  overflow: hidden;
+}
+
+main section.information-card .shape {
+  position: absolute;
+  aspect-ratio: 1 / 1;
+  height: 150%;
+  width: auto;
+  background-color: var(--primary_2);
+  border-radius: 20px;
+  right: 0;
+  top: 0;
+  transform: translateY(-70%) rotate(-15deg);
+  z-index: 5;
+  opacity: 0.5;
+}
+
+main section.information-card .inner {
+  position: relative;
+  z-index: 10;
 }
 
 main section.information-card h2,
@@ -193,15 +215,18 @@ main section.articles-sections .header {
   width: 70%;
   max-width: 550px;
   position: absolute;
-  left: 50%;
+  left: 20px;
   top: 0;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%) rotate(7deg);
   background: var(--background);
-  padding: 20px 70px;
-  text-align: center;
+  padding: 20px 50px 50px 50px;
+  text-align: left;
   z-index: 20;
   border-radius: 20px;
-  box-shadow: 0px 0px 14px rgba(91, 91, 91, 0.2);
+}
+
+main section.articles-sections .header .header-inner {
+  transform: rotate(-7deg);
 }
 
 main section.articles-sections .header.static {
