@@ -3,7 +3,7 @@ title: "A Quick Guide to State Management in React"
 subtitle: "An non-exhaustive walk-through of how to manage state in your React applications without too much hassle"
 date: 2022-09-06T00:00:00+00:00
 draft: false
-tags: ["Workflow", "React", "State Management", "UI", "UX"]
+tags: ["Workflow", "React", "State Management", "UI/UX", "Web Dev"]
 headerUrl: "images/state-management.jpeg"
 ---
 
