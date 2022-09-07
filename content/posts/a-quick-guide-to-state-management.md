@@ -1,6 +1,6 @@
 ---
 title: "A Quick Guide to State Management in React"
-subtitle: "An non-exhaustive walk-through of how to manage state in your React applications without too much hassle"
+subtitle: "A non-exhaustive walk-through of how to manage state in your React applications without too much hassle"
 date: 2022-09-07T00:00:00+00:00
 draft: false
 tags: ["Workflow", "React", "State Management", "UI/UX", "Web Dev"]
