@@ -337,6 +337,10 @@ main
   color: var(--text);
 }
 
+main section.articles-sections .articles .article-item:hover h5 {
+  color: var(--primary);
+}
+
 footer {
   background: var(--primary);
 }
