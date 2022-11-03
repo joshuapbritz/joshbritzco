@@ -1,0 +1,41 @@
+.not-found-page {
+  padding: 15vh 0;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.not-found-page .inner {
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  z-index: 5;
+}
+
+.not-found-page .inner .image {
+  width: 100%;
+}
+
+.not-found-page .inner .image object {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.not-found-page .inner .title {
+  text-align: center;
+}
+
+.not-found-page::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -40%;
+  right: -30%;
+  width: 50vw;
+  height: 50vw;
+  background: var(--primary_2);
+  border-radius: 50px;
+  transform: rotate(45deg);
+  z-index: 2;
+}
