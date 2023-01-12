@@ -2,7 +2,7 @@
 title: "What CSS Layout Looks Like and How it Works"
 date: 2023-01-12T08:28:29+02:00
 draft: false
-tags: ["Workflow", "Team"]
+tags: ["CSS", "Web Dev", "Learning"]
 headerUrl: "images/css-layout.jpeg"
 ---
 
