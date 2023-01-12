@@ -1,0 +1,72 @@
+{{define "article-head"}}
+<meta name="description" content="{{.Summary}}" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:title" content="Joshua Britz | {{.Title}}" />
+<meta property="og:description" content="{{.Summary}}" />
+
+<link type="text/css" rel="stylesheet" href="css/article.css" />
+{{end}} {{ define "main" }}
+<figure class="cover-image-wrapper">
+  <img src="/images/about/header.jpeg" alt="{{ .Title }} Cover" />
+</figure>
+
+<div class="inner skinny">
+  <div class="article-header">
+    <h1>About Me</h1>
+    <h4>I am a developer by trade, but I am into many other things.</h4>
+  </div>
+
+  <article class="article-wrapper">
+    <p>
+        <h5>Outside of work, I am an avid athlete. I'm a runner and rock climber first and foremost, but I also love hiking, caving, and the occasional game of golf.</h5>
+    </p>
+
+    <p>
+        <img src="/images/about/landscape.jpeg" alt="fig 1">
+    </p>
+        
+
+    <p>
+        <img src="/images/about/landscape2.jpeg" alt="fig 1">
+    </p>
+
+    <p>
+        <img src="/images/about/climbing.jpeg" alt="fig 1">
+    </p>
+        
+    <p>
+        <img src="/images/about/caves.jpeg" alt="fig 1">
+    </p>
+        
+    <p>
+        <img src="/images/about/caves2.jpeg" alt="fig 1">
+    </p>
+
+    <p>
+        <h5>When I am not doing that, I enjoy cooking, making coffee and drinking good whisky - the older the better. I am also involved in directing an amateur drama group.</h5>
+    </p>
+
+    <p>
+        <img src="/images/about/drama.jpeg" alt="fig 1">
+    </p>
+
+    <p>
+        <img src="/images/about/tart.jpeg" alt="fig 1">
+    </p>
+
+    <p>
+        <img src="/images/about/gin.jpeg" alt="fig 1">
+    </p>
+
+    <p>
+        <img src="/images/about/drama2.jpeg" alt="fig 1">
+    </p>
+
+    <p>
+        <img src="/images/about/whisky.jpeg" alt="fig 1">
+    </p>
+  </article>
+</div>
+{{end}}
