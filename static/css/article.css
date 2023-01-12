@@ -66,3 +66,9 @@ blockquote p {
   font-size: 22px;
   font-weight: lighter;
 }
+
+p img {
+  display: block;
+  width: 100%;
+  margin: 20px 0;
+}
